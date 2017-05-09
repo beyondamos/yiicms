@@ -6,6 +6,19 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    /**
+     * 增加后台模块
+     */
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'defaultRoute' => 'index',  //修改默认控制器名称为index
+            'aliases' => [
+                '@admin' => '/assets/admin',
+                '@lib' => '@admin/lib',
+            ],
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -38,6 +51,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -47,6 +61,7 @@ $config = [
         ],
         */
     ],
+
     'params' => $params,
 ];
 
