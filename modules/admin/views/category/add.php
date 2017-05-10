@@ -23,6 +23,12 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="alias" class="col-md-1 control-label">分类别名</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" id="alias" name="alias" placeholder="请输入分类别名">
+				</div>
+			</div>
+			<div class="form-group">
 				<label for="parent_category" class="col-md-1 control-label">上级分类</label>
 				<div class="col-md-3">
 					<select name="parent_id" class="form-control">
@@ -31,12 +37,6 @@
 							<option value="<{$category.cate_id}>"><{:str_repeat('&nbsp;&nbsp;',$category['level']*2)}><{$category.cate_name}></option>
 						</volist>
 					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="img" class="col-md-1 control-label">分类图片</label>
-				<div class="col-md-3">
-					<input type="file" class="form-control" id="img" name="cate_img">
 				</div>
 			</div>
 			<div class="form-group">

@@ -11,8 +11,17 @@ class ArticleController extends CommonController{
      * 文章列表
      */
     public function actionIndex(){
+
         return $this->renderPartial('index');
     }
+
+    /**
+     * 未审核列表
+     */
+    public function actionUnaudited(){
+        return $this->renderPartial('unaudited');
+    }
+
 
     /**
      * 文章添加
