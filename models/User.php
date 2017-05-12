@@ -2,39 +2,19 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
-{
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
-
+/**
+ * Class User
+ * @package app\models
+ * 用户模型
+ */
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
     /**
-     * @inheritdoc
+     * 根据主键id获得用户
      */
-    public static function findIdentity($id)
-    {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+    public static function findIdentity($id){
+        return self::findOne(['id' => $id]);
     }
+
 
     /**
      * @inheritdoc
@@ -68,27 +48,25 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * 用来标识 Yii::$app->request->user->id 的返回值
      */
-    public function getId()
-    {
-        return $this->id;
+    public function getId(){
+        return $this->getPrimaryKey();
+    }
+
+    /**
+     * 获取auth_key
+     */
+    public function getAuthKey(){
+        return $this->auth_key;
     }
 
     /**
      * @inheritdoc
+     * 验证auth_key
      */
-    public function getAuthKey()
-    {
-        return $this->authKey;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function validateAuthKey($authKey)
-    {
-        return $this->authKey === $authKey;
+    public function validateAuthKey($authKey){
+        return $this->getAuthKey() === $authKey;
     }
 
     /**
