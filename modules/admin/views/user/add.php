@@ -1,5 +1,8 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+$labels = $model->attributeLabels(); //标签属性
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -18,39 +21,39 @@ use yii\helpers\Url;
         <li class="active">用户添加</li>
     </ol>
     <a class="btn btn-primary" href="<?=Url::to(['user/index'])?>" role="button"><span class="glyphicon glyphicon-remove"></span> 取消</a>
-    <form action="<{:U('add')}>" class="form-horizontal" method="post">
+    <?php $form = ActiveForm::begin(['options' => ['class'=> 'form-horizontal', 'method' => 'post', 'id' => 'add_form', 'action' => ['user/add']]]);?>
         <div class="form-group">
-            <label for="username" class="col-md-2 control-label">用户名称</label>
+            <label for="username" class="col-md-2 control-label"><?=$labels['username'];?></label>
             <div class="col-md-2">
-                <input type="text" class="form-control" id="username" placeholder="角色名称" name="username">
+                <input type="text" class="form-control" id="username" name="User[username]">
             </div>
         </div>
         <div class="form-group">
             <label for="password" class="col-md-2 control-label">密码</label>
             <div class="col-md-2">
-                <input type="password" name="password" id="password" class="form-control" placeholder="密码">
+                <input type="password" name="User[password]" id="password" class="form-control" >
             </div>
         </div>
         <div class="form-group">
             <label for="password2" class="col-md-2 control-label">重复密码</label>
             <div class="col-md-2">
-                <input type="password" name="password2" id="password2" class="form-control" placeholder="重复密码">
+                <input type="password" name="User[password2]" id="password2" class="form-control" >
             </div>
         </div>
         <div class="form-group">
             <label for="email" class="col-md-2 control-label">邮箱</label>
             <div class="col-md-2">
-                <input type="email" name="email" id="email" class="form-control" placeholder="邮箱">
+                <input type="email" name="User[email]" id="email" class="form-control" >
             </div>
         </div>
         <div class="form-group">
             <label for="role_id" class="col-md-2 control-label">用户角色</label>
             <div class="col-md-2">
-                <select class="form-control" name="role_id">
+                <select class="form-control" name="User[role_id]">
                     <option value="0">请选择角色</option>
-                    <volist name="role_data" id="vo">
-                        <option value="<{$vo.role_id}>"><{$vo.role_name}></option>
-                    </volist>
+                    <option value="1">超级管理员</option>
+                    <option value="2">数据分析员</option>
+                    <option value="3">普通用户</option>
                 </select>
             </div>
         </div>
@@ -60,7 +63,7 @@ use yii\helpers\Url;
                 <button type="reset" class="btn btn-warning">重置</button>
             </div>
         </div>
-    </form>
+    <?php ActiveForm::end();?>
 </div>
 <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
 <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js'?>"></script>

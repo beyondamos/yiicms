@@ -22,4 +22,7 @@ class IndexController extends Controller{
         $country->save();
     }
 
+    public function actionIndex(){
+        return $this->renderPartial('index');
+    }
 }

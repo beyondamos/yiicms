@@ -8,6 +8,17 @@ namespace app\models;
  * 用户模型
  */
 class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
+    public function rules(){
+        return [
+            ['username', 'filter', 'filter' => 'trim', 'skipOnArray' => true],
+        ];
+    }
+
+
+
+
+
+
     /**
      * 根据主键id获得用户
      */
@@ -79,4 +90,23 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
     {
         return $this->password === $password;
     }
+
+    /**
+     * 增加用户
+     */
+    public function addUser(){
+
+    }
+
+    public function attributeLabels(){
+        return [
+            'username' => '用户名称',
+        ];
+    }
+
 }
+
+
+
+
+

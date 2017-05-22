@@ -7,6 +7,12 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'index',
+    'aliases' => [
+        '@home' => '/assets/home',
+        '@lib' => '@home/lib',
+        '@image' => '@home/images',
+        '@css' => '@home/css',
+    ],
     /**
      * 增加后台模块
      */
