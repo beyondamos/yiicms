@@ -17,7 +17,7 @@ class Category extends \app\models\AdminCommon{
 
     public function rules(){
         return [
-            [['name', 'alias', 'parent_id', 'required']],
+            [['name', 'alias', 'parent_id'], 'required'],
             ['name', 'string', 'length' => [2,10]],
             ['alias', 'match', 'pattern' => '/^[a-zA-Z]+$/i'],
             ['parent_id', 'integer'],

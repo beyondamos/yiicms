@@ -9,10 +9,11 @@ use yii\helpers\Url;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>后台登录</title>
     <link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
+    <link rel="stylesheet" href="<?=Yii::getAlias('@admin').'/css/login.css';?>">
 </head>
 <body>
 <div class="container-fluid">
-    <div class="col-md-offset-4 col-md-3">
+    <div class="col-md-offset-4 col-md-3 main">
         <div class="row" >
         <h3 class="page-header">DayDayLearn后台登录</h3>
         </div>

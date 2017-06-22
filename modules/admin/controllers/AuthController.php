@@ -1,31 +1,35 @@
 <?php
 namespace app\modules\admin\controllers;
-use app\models\Role;
 use app\modules\admin\controllers\CommonController;
 use Yii;
-
+use app\models\Auth;
 /**
- * Class RoleController 角色控制器
+ * Class AuthController
  * @package app\modules\admin\controllers
+ * 后台权限控制器
  */
-class RoleController extends CommonController{
+class AuthController extends CommonController{
     /**
-     * 角色列表
+     * 权限列表
      */
     public function actionIndex(){
         return $this->renderPartial('index');
     }
 
-    /**
-     * 角色添加
-     */
     public function actionAdd(){
-        $model = new Role();
-        if(Yii::$app->request->isPost){
+        $request = Yii::$app->request;
+        $model = new Auth();
+        if($model->load($request->post()) && $model->validate()){
+            if($model->save(false)){
 
+            }else{
+
+            }
         }else{
             return $this->renderPartial('add', ['model' => $model]);
         }
 
     }
+
+
 }

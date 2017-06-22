@@ -10,7 +10,12 @@ namespace app\models;
 class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
     public function rules(){
         return [
-            ['username', 'filter', 'filter' => 'trim', 'skipOnArray' => true],
+            [['username', 'email'], 'filter', 'filter' => 'trim', 'skipOnArray' => true],
+            ['username', 'required', 'message' => '用户名不能为空'],
+            ['username', 'unique', 'message' => '用户名已经存在'],
+            ['username', 'string', 'min' => 2, 'max' => 50],
+            ['email', 'required', 'message' => '邮箱不能为空'],
+            ['email', 'email', 'message' => '邮箱格式不正确'],
         ];
     }
 

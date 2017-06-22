@@ -1,12 +1,15 @@
 <?php
+namespace app\modules\admin\controllers;
+
+use app\modules\admin\controllers\CommonController;
+use Yii;
+use app\models\Article;
+
 /**
  * 后台文章控制器
  */
-namespace app\modules\admin\controllers;
-use app\modules\admin\controllers\CommonController;
-use Yii;
-
-class ArticleController extends CommonController{
+class ArticleController extends CommonController
+{
     /**
      * 文章列表
      */
@@ -26,12 +29,13 @@ class ArticleController extends CommonController{
     /**
      * 文章添加
      */
-    public function actionAdd(){
-        $request = Yii::$app->request;
-        if($request->isPost){
+    public function actionAdd()
+    {
+        $model = new Article();
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-        }else{
-            return $this->renderPartial('add');
+        } else {
+            return $this->renderPartial('add',['model' => $model]);
         }
     }
 }

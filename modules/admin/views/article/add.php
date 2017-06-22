@@ -1,3 +1,7 @@
+<?php
+use yii\bootstrap\ActiveForm;
+use yii\helper\Html;
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -16,13 +20,20 @@
         <li class="active">文章添加</li>
     </ol>
     <div class="row">
-        <form class="form-horizontal col-md-8" action="<{:U('add')}>" method="post" enctype="multipart/form-data">
+        <?php $form = ActiveForm::begin([
+            'options' => [
+                'class' => 'form-horizontal col-md-8',
+                'method' => 'method',
+                'enctype' => 'multipart/form-data',
+            ]
+        ]);?>
             <div class="form-group">
                 <label for="title" class="col-md-2 control-label">标题</label>
                 <div class="col-md-8">
-                    <input class="form-control" id="title" name="title" placeholder="请输入标题">
+                    <?php echo $form->field($model, 'title',['template' => '{label}{input}'])->textInput(['class' => 'form-control', 'placeholder' => '请输入标题'])?>
                 </div>
             </div>
+
             <div class="form-group">
                 <label class="col-md-2 control-label">文章分类</label>
                 <div class="col-md-3">
@@ -116,7 +127,7 @@
                     <input class="btn btn-warning" type="reset" value="重置">
                 </div>
             </div>
-        </form>
+        <?php ActiveForm::end();?>
     </div>
 </div>
 <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
