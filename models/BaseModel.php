@@ -4,6 +4,6 @@
  */
 namespace app\models;
 
-class Common extends \yii\db\ActiveRecord{
+class BaseModel extends \yii\db\ActiveRecord{
 
 }

@@ -18,7 +18,7 @@ $config = [
      */
     'modules' => [
         'admin' => [
-            'class' => 'app\modules\admin\Module',
+            'class' => 'app\modules\admin\Admin',
             'defaultRoute' => 'index',  //修改默认控制器名称为index
             'aliases' => [
                 '@admin' => '/assets/admin',

@@ -1,14 +1,13 @@
 <?php
+namespace app\modules\admin\controllers;
+
+use app\modules\admin\controllers\AdminBaseController;
+
 /**
  * 后台首页控制器
  */
-namespace app\modules\admin\controllers;
-use app\modules\admin\controllers\CommonController;
-
-/**
- * Default controller for the `admin` module
- */
-class IndexController extends CommonController{
+class IndexController extends AdminBaseController
+{
     /**
      * 后台首页
      * @return string

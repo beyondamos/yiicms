@@ -4,6 +4,7 @@
  */
 namespace app\models;
 
-class AdminCommon extends \app\models\Common{
+class AdminBase extends \app\models\BaseModel
+{
 
 }

@@ -1,13 +1,20 @@
 <?php
+namespace app\models\admin;
 
-namespace app\models;
+use app\models\AdminBase;
+use Yii;
 
 /**
  * Class User
  * @package app\models
  * 用户模型
  */
-class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
+class User extends AdminBase
+{
+    public $password;   //用户密码
+    public $password2;   //重复密码
+
+
     public function rules(){
         return [
             [['username', 'email'], 'filter', 'filter' => 'trim', 'skipOnArray' => true],
@@ -16,12 +23,21 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
             ['username', 'string', 'min' => 2, 'max' => 50],
             ['email', 'required', 'message' => '邮箱不能为空'],
             ['email', 'email', 'message' => '邮箱格式不正确'],
+            ['email', 'unique', 'message' => '邮箱已经存在'],
+            ['password', 'required', 'message' => '密码不能为空'],
+            ['password', 'match', 'pattern' => '/^\w{8,16}$/i', 'message' => '密码必须为数字、字母和下划线的组合'],
+            ['password2', 'required', 'message' => '重复密码不能为空'],
+            ['password2', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致'],
+            ['role_id', 'number', 'min' => 1, 'message' => '必须选择用户角色'],
         ];
     }
 
-
-
-
+    public function scenarios()
+    {
+        return [
+            'add' => ['username', 'email', 'password', 'password2', 'role_id'],
+        ];
+    }
 
 
     /**
@@ -96,22 +112,33 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface{
         return $this->password === $password;
     }
 
-    /**
-     * 增加用户
-     */
-    public function addUser(){
 
+    public function addUser($user_data)
+    {
+        $this->scenario = 'add';
+        if ($this->load($user_data) && $this->validate()) {
+            $this->createtime = time();
+            $this->password_hash = Yii::$app->getSecurity()->generatePasswordHash($this->password);
+            if ($this->save(false)) {
+                return true;
+            } 
+            return false;
+        } 
+        return false;
     }
 
     public function attributeLabels(){
         return [
-            'username' => '用户名称',
+            'username' => '用户名',
+            'password' => '密码',
+            'password2' => '重复密码',
+            'email' => '邮箱',
+            'role_id' => '用户角色',
         ];
     }
 
+
+
+
+
 }
-
-
-
-
-
