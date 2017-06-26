@@ -13,7 +13,7 @@ use yii\helpers\Url;
 <body>
     <div class="container-fluid">
         <ol class="breadcrumb">
-            <li><a href="#">首页</a></li>
+            <li><a href="/">首页</a></li>
             <li>用户中心</li>
             <li class="active">角色管理</li>
         </ol>
@@ -28,20 +28,21 @@ use yii\helpers\Url;
                 <th class="text-center">角色描述</th>
                 <th class="text-center">操作</th>
             </tr>
-            <volist name="role_data" id="vo">
+            <?php foreach($role_data as $val):?>
                 <tr>
-                    <td class="text-center"><{$vo.role_id}></td>
-                    <td class="text-center"><{$vo.role_name}></td>
-                    <td class="text-center"><{$vo.role_desc}></td>
-                    <if condition="$vo['role_id'] != 1">
+                    <td class="text-center"><?php echo $val['role_id'];?></td>
+                    <td class="text-center"><?php echo $val['role_name'];?></td>
+                    <td class="text-center"><?php echo $val['role_desc'];?></td>
+                    <?php if($val['role_id'] != 1):?> 
                         <td class="text-center">
-                            <a class="btn btn-info" href="<{:U('Role/edit',array('role_id' => $vo['role_id']))}>" role="button">编辑</a>
-                            <a class="btn btn-danger" href="<{:U('Role/delete',array('role_id' => $vo['role_id']))}>" role="button">删除</a>
+                            <a class="btn btn-info" href="<?php echo Url::to(['role/edit', 'role_id' => $val['role_id']])?>" role="button">编辑</a>
+                            <a class="btn btn-danger" href="<?php echo Url::to(['role/edit', 'role_id' => $val['role_id']]);?>" role="button">删除</a>
                         </td>
-                    </if>
+                    <?php endif;?>
                 </tr>
-            </volist>
+            <?php endforeach;?>
         </table>
+        
     </div>
     <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
     <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js'?>"></script>

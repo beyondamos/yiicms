@@ -5,6 +5,7 @@ use app\models\admin\Role;
 use app\modules\admin\controllers\AdminBaseController;
 use app\models\admin\Auth;
 use Yii;
+use yii\data\Pagination;
 
 /**
  * Class RoleController 角色控制器
@@ -19,7 +20,9 @@ class RoleController extends AdminBaseController
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Role();
+        $role_data = $model->find()->asArray()->all();
+        return $this->render('index', ['role_data' => $role_data]);
     }
 
     /**
