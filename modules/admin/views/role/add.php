@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Url;
-use yii\widgets\ActiveForm;
+use yii\bootstrap\ActiveForm;
 
 $labels = $model->attributeLabels();
 ?>
@@ -14,153 +14,71 @@ $labels = $model->attributeLabels();
     <link rel="stylesheet" href="<?= Yii::getAlias('@admin/lib') . '/bootstrap/css/bootstrap.css'; ?>">
 </head>
 <body>
-<div class="container-fluid">
-    <ol class="breadcrumb">
-        <li><a href="#">首页</a></li>
-        <li>用户中心</li>
-        <li>角色管理</li>
-        <li class="active">角色添加</li>
-    </ol>
-    <a class="btn btn-primary" href="<?= Url::to(['role/index']) ?>" role="button"><span
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li>用户中心</li>
+            <li>角色管理</li>
+            <li class="active">角色添加</li>
+        </ol>
+        <a class="btn btn-primary" href="<?= Url::to(['role/index']) ?>" role="button"><span
             class="glyphicon glyphicon-remove"></span> 取消</a>
-    <?php ActiveForm::begin(['options' => ['id' => 'role','class' => 'form-horizontal']]) ?>
-    <div class="form-group">
-        <label for="role_name" class="col-md-2 control-label"><?= $labels['role_name'] ?></label>
-        <div class="col-md-2">
-            <input type="text" class="form-control" id="role_name" placeholder="请输入角色名称" name="Role[role_name]">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="role_desc" class="col-md-2 control-label"><?= $labels['role_desc'] ?></label>
-        <div class="col-md-2">
-            <textarea class="form-control" id="role_desc" rows="4" name="Role[role_desc]"></textarea>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label"><?= $labels['role_auth'] ?></label>
-        <div class="col-md-10">
-            <div class="row">
-                <label class="control-label col-md-1">
-                    <input type="checkbox"> 信息中心
-                </label>
-                <div class="col-md-7">
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 文章管理
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 分类管理
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
+            <?php if (Yii::$app->session->hasFlash('fail')):?>
+            <div class="alert alert-danger" role="alert">添加角色失败</div>
+            <?php endif;?>
+            <?php  $form = ActiveForm::begin(['options' => ['id' => 'role','class' => 'form-horizontal']]) ?>
+            <div class="form-group">
+                <label for="role_name" class="col-md-2 control-label"><?= $labels['role_name'] ?></label>
+                <div class="col-md-2">
+                    <?php echo $form->field($model, 'role_name')->textInput(['class' => 'form-control', 'placeholder' => '请输入角色名称'])->label(false);?>
                 </div>
             </div>
-            <div class="row">
-                <label class="control-label col-md-1">
-                    <input type="checkbox"> 信息中心
-                </label>
-                <div class="col-md-7">
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 文章管理
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 分类管理
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
-                    <label class="control-label col-md-2">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 未审核信息
-                    </label>
+            <div class="form-group">
+                <label for="role_desc" class="col-md-2 control-label"><?= $labels['role_desc'] ?></label>
+                <div class="col-md-2">
+                    <?php echo $form->field($model, 'role_desc')->textarea(['class' => 'form-control', 'rows' => '4', 'placeholder' => '请输入角色描述信息'])->label(false);?>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label"><?= $labels['role_auth'] ?></label>
+                <div class="col-md-10">
+                    <?php foreach($auth_list as $val):?>
+                        <?php if($val['parent_id'] == 0):?>
+                            <div class="row">
+                                <label class="control-label col-md-1">
+                                    <input type="checkbox"> <?php echo $val['auth_name'];?>
+                                </label>
+                                <div class="col-md-7">
+                                <?php foreach($auth_list as $value):?>
+                                        <?php if($value['parent_id'] == $val['auth_id']):?>
+                                            <label class="control-label col-md-2">
+                                                <input type="checkbox" name="Role[role_auth][]" value="<?php echo $value['auth_id']?>"> <?php echo $value['auth_name'];?>
+                                            </label>
+                                        <?php endif;?>
+                                    <?php endforeach;?>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                    <p class="help-block help-block-error" style="color: #a94442;">
+                        <?php 
+                            if(isset($model->errors['role_auth'][0])) {
+                                echo $model->errors['role_auth'][0];
+                            }
+                        ?>
+                    </p>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-info">提交</button>
-            <button type="reset" class="btn btn-warning">重置</button>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-info">提交</button>
+                    <button type="reset" class="btn btn-warning">重置</button>
+                </div>
+            </div>
+            <?php ActiveForm::end(); ?>
         </div>
-    </div>
-    <?php ActiveForm::end(); ?>
-</div>
-<script src="<?= Yii::getAlias('@admin/lib') . '/jquery/jquery-1.11.3.js'; ?>"></script>
-<script src="<?= Yii::getAlias('@admin/lib') . '/bootstrap/js/bootstrap.min.js'; ?>"></script>
-</body>
-</html>
+        <script src="<?= Yii::getAlias('@admin/lib') . '/jquery/jquery-1.11.3.js'; ?>"></script>
+        <script src="<?= Yii::getAlias('@admin/lib') . '/bootstrap/js/bootstrap.min.js'; ?>"></script>
+    </body>
+    </html>

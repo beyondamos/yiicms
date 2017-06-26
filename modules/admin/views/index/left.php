@@ -26,7 +26,6 @@ use yii\helpers\Url;
 					<li><a href="<{:U('User/modifypersonal')}>" target="main-frame">修改个人资料</a></li>
 					<li><a href="<?=Url::to(['user/index'])?>" target="main-frame">用户管理</a></li>
 					<li><a href="<?=Url::to(['role/index'])?>" target="main-frame">角色管理</a></li>
-					<li><a href="<?=Url::to(['auth/index'])?>" target="main-frame">权限管理</a></li>
 				</ul>
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> 会员管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
