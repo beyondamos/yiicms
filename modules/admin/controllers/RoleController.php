@@ -72,6 +72,25 @@ class RoleController extends AdminBaseController
         return $this->render('edit', ['model' => $model, 'auth_list' => $auth_list]);
     }
 
+    public function actionDelete()
+    {
+        $role_id = Yii::$app->request->get('role_id');
+        //角色id为1的是管理员，不允许删除
+        if ($role_id == 1) {
+            Yii::$app->session->setFlash('fail', '管理员角色不允许删除');
+            return $this->redirect(['role/index']);
+        }
+        $model = new Role();
+        if ($model->deleteRole($role_id)) {
+            Yii::$app->session->setFlash('success', '删除角色信息成功');
+            return $this->redirect(['role/index']);
+        } else {
+            Yii::$app->session->setFlash('fail', $model->fail_info);
+            return $this->redirect(['role/index']);
+        }
+
+    }
+
 
 
 }

@@ -2,6 +2,7 @@
 namespace app\models\admin;
 
 use app\models\AdminBase;
+use app\models\admin\User;
 
 /**
  * Class Role
@@ -13,6 +14,8 @@ use app\models\AdminBase;
  * role_auth    角色权限列表
  */
 class Role extends AdminBase {
+
+    public $fail_info; //保存的错误信息
 
     public static function tableName()
     {
@@ -69,7 +72,11 @@ class Role extends AdminBase {
         return false;
     }
 
-
+    /**
+     * 编辑角色信息
+     * @param  $data 接收到的角色信息
+     * @return bool
+     */
     public function editRole($data)
     {
         if ($this->load($data) && $this->validate()) {
@@ -84,6 +91,30 @@ class Role extends AdminBase {
             return false;
         }
         return false;
+    }
+
+    /**
+     * 角色信息的删除
+     * @param  int $id 需要删除的角色id
+     * @return bool    
+     */
+    public function deleteRole($id)
+    {
+        $model = $this->find()->where('role_id = :id', [':id' => $id])->one();
+        if (!$model) {
+            $this->fail_info = '不存在的角色信息';
+            return false;
+        }
+
+        //判断是否存在用户是此角色，不能删除
+        $user_model = User::find()->where('role_id = :id', [':id' => $id])->one();
+        if ($user_model) {
+            $this->fail_info = '存在用户在此角色下, 不能删除';
+            return false;
+        }
+
+        $model->delete();
+        return true;
     }
 
 

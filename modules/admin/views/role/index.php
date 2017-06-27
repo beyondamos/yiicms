@@ -21,6 +21,9 @@ use yii\helpers\Url;
         <?php if(Yii::$app->session->hasFlash('success')):?>
             <div class="alert alert-success" role="alert"><?php echo Yii::$app->session->getFlash('success');?></div>
         <?php endif;?>
+        <?php if(Yii::$app->session->hasFlash('fail')):?>
+            <div class="alert alert-danger" role="alert"><?php echo Yii::$app->session->getFlash('fail');?></div>
+        <?php endif;?>
         <table class="table table-striped table-bordered">
             <tr class="text-center">
                 <th class="text-center">角色id</th>
@@ -36,7 +39,7 @@ use yii\helpers\Url;
                     <?php if($val['role_id'] != 1):?> 
                         <td class="text-center">
                             <a class="btn btn-info" href="<?php echo Url::to(['role/edit', 'role_id' => $val['role_id']])?>" role="button">编辑</a>
-                            <a class="btn btn-danger" href="<?php echo Url::to(['role/edit', 'role_id' => $val['role_id']]);?>" role="button">删除</a>
+                            <a class="btn btn-danger" href="<?php echo Url::to(['role/delete', 'role_id' => $val['role_id']]);?>" role="button">删除</a>
                         </td>
                     <?php endif;?>
                 </tr>
