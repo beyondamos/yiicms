@@ -31,9 +31,9 @@ class Role extends AdminBase {
 
     public function scenarios()
     {
-        return [
-            'add' => ['role_name', 'role_desc'],
-        ];
+        $scenarios = parent::scenarios();
+        $scenarios['add'] = ['role_name', 'role_desc']; 
+        return $scenarios;
     }
 
 
@@ -48,9 +48,30 @@ class Role extends AdminBase {
         ];
     }
 
+    /**
+     * 添加角色信息
+     * @param bool 
+     */
     public function addRole($data)
     {
         $this->scenario = 'add';
+        if ($this->load($data) && $this->validate()) {
+            if (!isset($data['Role']['role_auth'])) {
+                $this->addError('role_auth', '角色权限不能为空');
+                return false;
+            }
+            $this->role_auth = implode(',', $data['Role']['role_auth']);
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+
+    public function editRole($data)
+    {
         if ($this->load($data) && $this->validate()) {
             if (!isset($data['Role']['role_auth'])) {
                 $this->addError('role_auth', '角色权限不能为空');

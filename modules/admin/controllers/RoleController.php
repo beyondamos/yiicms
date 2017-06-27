@@ -47,4 +47,31 @@ class RoleController extends AdminBaseController
         $auth_list = $auth_model->getSortAuth();
         return $this->render('add', ['model' => $model, 'auth_list' => $auth_list]);
     }
+
+
+    public function actionEdit()
+    {
+        $role_id = Yii::$app->request->get('role_id');
+        $model = Role::find()->where('role_id = :id', [':id' => $role_id])->one();
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            if ($model->editRole($data)) {
+                //如果成功保存跳转列表页
+                Yii::$app->session->setFlash('success', '角色信息编辑成功');
+                return $this->redirect(['role/index']);
+            } else {
+                //如果失败 保存失败信息
+                Yii::$app->session->setFlash('fail', '角色信息编辑失败');
+            }
+        }
+
+        $auth_model = new Auth();
+        $auth_list = $auth_model->getSortAuth();
+        //把角色权限列表转换成数组
+        $model->role_auth = explode(',', $model->role_auth);
+        return $this->render('edit', ['model' => $model, 'auth_list' => $auth_list]);
+    }
+
+
+
 }

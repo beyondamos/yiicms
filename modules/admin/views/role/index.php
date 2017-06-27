@@ -19,7 +19,7 @@ use yii\helpers\Url;
         </ol>
         <a class="btn btn-primary" href="<?=Url::to(['role/add'])?>" role="button"><span class="glyphicon glyphicon-plus"></span> 角色添加</a>
         <?php if(Yii::$app->session->hasFlash('success')):?>
-            <div class="alert alert-success" role="alert">添加角色信息成功</div>
+            <div class="alert alert-success" role="alert"><?php echo Yii::$app->session->getFlash('success');?></div>
         <?php endif;?>
         <table class="table table-striped table-bordered">
             <tr class="text-center">
