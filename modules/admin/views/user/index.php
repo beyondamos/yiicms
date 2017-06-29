@@ -13,7 +13,7 @@ use yii\widgets\LinkPager;
     <link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
 </head>
 <body>
-<?php $this->beginBody() ?>
+    <?php $this->beginBody() ?>
     <div class="container-fluid">
         <ol class="breadcrumb">
             <li><a href="#">首页</a></li>
@@ -23,6 +23,9 @@ use yii\widgets\LinkPager;
         <a class="btn btn-primary" href="<?=Url::to(['user/add'])?>" role="button"><span class="glyphicon glyphicon-plus"></span> 用户添加</a>
         <?php if (Yii::$app->session->hasFlash('success')) : ?>
             <div class="alert alert-success" role="alert"><?php echo Yii::$app->session->getFlash('success');?></div>
+        <?php endif;?>
+        <?php if (Yii::$app->session->hasFlash('fail')) : ?>
+            <div class="alert alert-danger" role="alert"><?php echo Yii::$app->session->getFlash('fail');?></div>
         <?php endif;?>
 
         <table class="table table-striped table-bordered">
@@ -42,7 +45,7 @@ use yii\widgets\LinkPager;
                     <td class="text-center">
                         <a class="btn btn-info" href="<?php echo Url::to(['user/edit', 'id' => $user['id'], 'page' => $page]);?>" role="button">编辑</a>
                         <?php if($user['id'] != 1):?>
-                            <a class="btn btn-danger" href="<?php echo Url::to(['user/delete', 'id' => $user['id']]);?>" role="button">删除</a>
+                        <a class="btn btn-danger" href="<?php echo Url::to(['user/delete', 'id' => $user['id'], 'page' => $page]);?>" role="button">删除</a>
                         <?php endif;?>
                     </td>
                 </tr>
@@ -54,11 +57,11 @@ use yii\widgets\LinkPager;
             'prevPageLabel' => '上一页',
             'nextPageLabel' => '下一页',
             'lastPageLabel' => '末页',
-        ]);?>
+            ]);?>
     </div>
     <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
     <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js';?>"></script>
-    <?php $this->endBody() ?>
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

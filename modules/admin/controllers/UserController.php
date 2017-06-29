@@ -21,7 +21,7 @@ class UserController extends AdminBaseController
     {
         $query = User::find();
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 2]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 20]);
         $users = $query->limit($pagination->limit)->offset($pagination->offset)->with('role')->asArray()->all();
         $page = Yii::$app->request->get('page');
         return $this->render('index', ['users' => $users, 'pagination' => $pagination, 'page' => $page]);
@@ -46,6 +46,9 @@ class UserController extends AdminBaseController
         return $this->renderPartial('add',['model' => $user_model]);
     }
 
+    /**
+     * 用户编辑
+     */
     public function actionEdit()
     {
         $id = Yii::$app->request->get('id');
@@ -63,8 +66,28 @@ class UserController extends AdminBaseController
         //获取角色信息
         $role = Role::getRoleBaseInfo();
         return $this->render('edit', ['model' => $model, 'role' => $role]);
+    }
+
+    public function actionDelete()
+    {
+        $id = Yii::$app->request->get('id');
+        $page = Yii::$app->request->get('page');
+        if ($id == 1) {
+            Yii::$app->session->setFlash('fail', '第一位管理员不能删除');
+            return $this->redirect(['user/index']);
+        }
+
+        $user = User::findOne($id);
+        if ($user->delete()) {
+            Yii::$app->session->setFlash('success', '删除用户成功');
+            return $this->redirect(['user/index', 'page' => $page]);
+        } else {
+            Yii::$app->session->setFlash('fail', '未知错误');
+            return $this->redirect(['user/index', 'page' => $page]);
+        }
 
     }
+
 
 
 }
