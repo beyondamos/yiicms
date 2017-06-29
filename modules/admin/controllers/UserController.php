@@ -20,8 +20,8 @@ class UserController extends AdminBaseController
     {
         $query = User::find();
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 2]);
-        $users = $query->limit($pagination->limit)->offset($pagination->offset)->asArray()->all();
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 10]);
+        $users = $query->limit($pagination->limit)->offset($pagination->offset)->with('role')->asArray()->all();
         return $this->render('index', ['users' => $users, 'pagination' => $pagination]);
     }
 
@@ -44,7 +44,12 @@ class UserController extends AdminBaseController
         return $this->renderPartial('add',['model' => $user_model]);
     }
 
+    public function actionEdit()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = User::find()->where('id = :id', [':id' => $id])->one();
 
+    }
 
 
 }

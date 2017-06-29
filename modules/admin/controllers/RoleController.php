@@ -48,7 +48,9 @@ class RoleController extends AdminBaseController
         return $this->render('add', ['model' => $model, 'auth_list' => $auth_list]);
     }
 
-
+    /**
+     * 角色编辑
+     */
     public function actionEdit()
     {
         $role_id = Yii::$app->request->get('role_id');
@@ -72,6 +74,9 @@ class RoleController extends AdminBaseController
         return $this->render('edit', ['model' => $model, 'auth_list' => $auth_list]);
     }
 
+    /**
+     * 角色删除
+     */
     public function actionDelete()
     {
         $role_id = Yii::$app->request->get('role_id');

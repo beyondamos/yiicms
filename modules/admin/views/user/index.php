@@ -2,6 +2,7 @@
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -12,6 +13,7 @@ use yii\widgets\LinkPager;
     <link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
 </head>
 <body>
+<?php $this->beginBody() ?>
     <div class="container-fluid">
         <ol class="breadcrumb">
             <li><a href="#">首页</a></li>
@@ -31,7 +33,7 @@ use yii\widgets\LinkPager;
                 <tr>
                     <td class="text-center"><?php echo $user['id'];?></td>
                     <td class="text-center"><?php echo $user['username'];?></td>
-                    <td class="text-center"><?php echo $user['role_id'];?></td>
+                    <td class="text-center"><?php echo $user['role']['role_name'];?></td>
                     <td class="text-center"><?php echo date('Y-m-d H:i:s', $user['createtime']);?></td>
                     <td class="text-center">
                         <a class="btn btn-info" href="<?php echo Url::to(['user/edit', 'id' => $user['id']]);?>" role="button">编辑</a>
@@ -52,5 +54,7 @@ use yii\widgets\LinkPager;
     </div>
     <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
     <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js';?>"></script>
+    <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>

@@ -3,6 +3,7 @@ namespace app\models\admin;
 
 use app\models\AdminBase;
 use Yii;
+use app\models\admin\Role;
 
 /**
  * Class User
@@ -37,6 +38,12 @@ class User extends AdminBase
         return [
             'add' => ['username', 'email', 'password', 'password2', 'role_id'],
         ];
+    }
+
+
+    public function getRole()
+    {
+        return $this->hasOne(Role::className(), ['role_id' => 'role_id']);
     }
 
 
@@ -112,7 +119,10 @@ class User extends AdminBase
         return $this->password === $password;
     }
 
-
+    /**
+     * 添加用户
+     * @param array $user_data 接收到的post数据
+     */
     public function addUser($user_data)
     {
         $this->scenario = 'add';
