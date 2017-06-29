@@ -35,9 +35,10 @@ class User extends AdminBase
 
     public function scenarios()
     {
-        return [
-            'add' => ['username', 'email', 'password', 'password2', 'role_id'],
-        ];
+        $scenarios = parent::scenarios();
+        $scenarios['add'] = ['username', 'email', 'password', 'password2', 'role_id'];
+        $scenarios['edit'] = ['username', 'email', 'role_id'];
+        return $scenarios;
     }
 
 
@@ -134,6 +135,23 @@ class User extends AdminBase
             } 
             return false;
         } 
+        return false;
+    }
+
+    /**
+     * 编辑用户信息
+     * @param  array $user_data 用户信息
+     * @return bool  成功返回true 失败返回false
+     */
+    public function editUser($user_data)
+    {
+        $this->scenario = 'edit';
+        if ($this->load($user_data) && $this->validate()) {
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
         return false;
     }
 

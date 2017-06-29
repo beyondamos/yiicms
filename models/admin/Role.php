@@ -117,5 +117,13 @@ class Role extends AdminBase {
         return true;
     }
 
-
+    public static function getRoleBaseInfo()
+    {
+        $info = SELF::find()->orderBy('role_id ASC')->asArray()->all();
+        $role_data[] = '请选择用户角色';
+        foreach ($info as $val) {
+            $role_data[$val['role_id']] = $val['role_name'];
+        }
+        return $role_data;
+    }
 }

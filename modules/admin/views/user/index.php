@@ -21,6 +21,10 @@ use yii\widgets\LinkPager;
             <li class="active">用户管理</li>
         </ol>
         <a class="btn btn-primary" href="<?=Url::to(['user/add'])?>" role="button"><span class="glyphicon glyphicon-plus"></span> 用户添加</a>
+        <?php if (Yii::$app->session->hasFlash('success')) : ?>
+            <div class="alert alert-success" role="alert"><?php echo Yii::$app->session->getFlash('success');?></div>
+        <?php endif;?>
+
         <table class="table table-striped table-bordered">
             <tr class="text-center">
                 <th class="text-center">用户id</th>
@@ -36,7 +40,7 @@ use yii\widgets\LinkPager;
                     <td class="text-center"><?php echo $user['role']['role_name'];?></td>
                     <td class="text-center"><?php echo date('Y-m-d H:i:s', $user['createtime']);?></td>
                     <td class="text-center">
-                        <a class="btn btn-info" href="<?php echo Url::to(['user/edit', 'id' => $user['id']]);?>" role="button">编辑</a>
+                        <a class="btn btn-info" href="<?php echo Url::to(['user/edit', 'id' => $user['id'], 'page' => $page]);?>" role="button">编辑</a>
                         <?php if($user['id'] != 1):?>
                             <a class="btn btn-danger" href="<?php echo Url::to(['user/delete', 'id' => $user['id']]);?>" role="button">删除</a>
                         <?php endif;?>
