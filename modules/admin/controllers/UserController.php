@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 use app\modules\admin\controllers\AdminBaseController;
 use app\models\admin\User;
 use Yii;
+use yii\data\Pagination;
 
 /**
  * Class UserController  后台用户控制器
@@ -11,12 +12,17 @@ use Yii;
  */
 class UserController extends AdminBaseController
 {
+    public $layout = false;
     /**
      * 用户列表
      */
     public function actionIndex()
     {
-        return $this->renderPartial('index');
+        $query = User::find();
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 2]);
+        $users = $query->limit($pagination->limit)->offset($pagination->offset)->asArray()->all();
+        return $this->render('index', ['users' => $users, 'pagination' => $pagination]);
     }
 
     /**
