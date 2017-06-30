@@ -1,8 +1,6 @@
 <?php
 namespace app\models;
 
-
-
 /**
  * 分类模型
  * @property integer $id 分类id
@@ -11,6 +9,8 @@ namespace app\models;
  * @property string $introduction 简介
  */
 class Category extends \app\models\AdminBase{
+
+    public $failInfo = '';
 
     public static function tableName(){
         return 'category';
@@ -23,8 +23,16 @@ class Category extends \app\models\AdminBase{
             ['name', 'unique', 'message' => '该分类名称已经存在'],
             ['parent_id', 'required', 'message' => '上级分类必须选择'],
             ['parent_id', 'integer', 'message' => '非法的上级分类'],
+            // ['parent_id', 'checkParentId'],
             ['introduction', 'safe'],
         ];
+    }
+
+    public function checkParentId($attribute, $params)
+    {
+        var_dump($attribute);
+        var_dump($params);
+        exit();
     }
 
     public function attributeLabels(){
@@ -51,6 +59,40 @@ class Category extends \app\models\AdminBase{
     }
 
     /**
+     * 编辑分类
+     * @param  array $data 分类信息的数据
+     * @return bool       编辑成功返回true 失败返回false
+     */
+    public function editCategory($data)
+    {
+        if ($this->load($data) && $this->validate()) {
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    /**
+     * 删除分类  存在子类不能删除
+     * @return bool 删除成功返回true  失败返回false
+     */
+    public function deleteCategory()
+    {
+        //如果该分类下有子类不能删除
+        $info = Self::find()->where('parent_id = :id', [':id' => $this->id])->one();
+        if ($info) {
+            $this->failInfo = '该分类下存在子类，不能删除!';
+            return false;
+        }
+        if ($this->delete()) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * 获取分类信息
      * @return array 分类信息的二维数组
      */
@@ -60,6 +102,10 @@ class Category extends \app\models\AdminBase{
     }
 
 
+    /**
+     * 下拉框的分类数据  供添加和编辑使用
+     * @return array 分类信息的一维数组
+     */
     public function getSelectCategory()
     {
         $data = $this->getSortCategory();
@@ -89,5 +135,7 @@ class Category extends \app\models\AdminBase{
         }
         return $result;
     }
+
+
 
 }

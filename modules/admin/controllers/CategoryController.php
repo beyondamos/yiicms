@@ -33,9 +33,39 @@ class CategoryController extends AdminBaseController
         return $this->render('add', ['model' => $model, 'category' => $category]);
     }
 
+    /**
+     * 分类编辑
+     */
+    public function actionEdit()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = Category::find()->where('id = :id', [':id' => $id])->one();
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            if ($model->editCategory($data)) {
+                Yii::$app->session->setFlash('success', '编辑分类成功');
+                return $this->redirect(['category/index']);
+            }
+            Yii::$app->session->setFlash('fail', $model->failInfo);
+        }
 
+        $category = $model->getSelectCategory();
+        return $this->render('edit', ['model' => $model, 'category' => $category]);
+    }
 
-
-
+    /**
+     * 删除分类
+     */
+    public function actionDelete()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = Category::find()->where('id = :id', [':id' => $id])->one();
+        if ($model->deleteCategory()) {
+            Yii::$app->session->setFlash('success', '删除分类成功');
+        } else {
+            Yii::$app->session->setFlash('fail', $model->failInfo);
+        }
+        return $this->redirect(['category/index']);
+    }
 
 }
