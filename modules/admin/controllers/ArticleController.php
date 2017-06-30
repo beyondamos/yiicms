@@ -1,21 +1,22 @@
 <?php
 namespace app\modules\admin\controllers;
 
-use app\modules\admin\controllers\CommonController;
+use app\modules\admin\controllers\AdminBaseController;
 use Yii;
 use app\models\Article;
 
 /**
  * 后台文章控制器
  */
-class ArticleController extends CommonController
+class ArticleController extends AdminBaseController
 {
+    public $layout = false;
     /**
      * 文章列表
      */
-    public function actionIndex(){
-
-        return $this->renderPartial('index');
+    public function actionIndex()
+    {
+        return $this->render('index');
     }
 
     /**

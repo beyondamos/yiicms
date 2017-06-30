@@ -1,15 +1,16 @@
 <?php
 namespace app\models;
 
+
+
 /**
  * 分类模型
  * @property integer $id 分类id
  * @property string $name 分类名称
- * @property string $alias 别名 在url中显示
  * @property integer $parent_id 父级分类id
  * @property string $introduction 简介
  */
-class Category extends \app\models\AdminCommon{
+class Category extends \app\models\AdminBase{
 
     public static function tableName(){
         return 'category';
@@ -17,23 +18,76 @@ class Category extends \app\models\AdminCommon{
 
     public function rules(){
         return [
-            [['name', 'alias', 'parent_id'], 'required'],
-            ['name', 'string', 'length' => [2,10]],
-            ['alias', 'match', 'pattern' => '/^[a-zA-Z]+$/i'],
-            ['parent_id', 'integer'],
+            ['name', 'required', 'message' => '分类名称不能为空'],
+            ['name', 'string', 'length' => [2,10], 'message' => '分类名称必须在2-10个字符之间'],
+            ['name', 'unique', 'message' => '该分类名称已经存在'],
+            ['parent_id', 'required', 'message' => '上级分类必须选择'],
+            ['parent_id', 'integer', 'message' => '非法的上级分类'],
             ['introduction', 'safe'],
-            [['name', 'alias'], 'unique'],
         ];
     }
 
     public function attributeLabels(){
         return [
             'name' => '分类名称',
-            'alias' => '分类别名',
             'parent_id' => '上级分类',
             'introduction' => '分类简介',
         ];
     }
 
+    /**
+     * 添加分类
+     * @param array $data 分类数据
+     */
+    public function addCategory($data)
+    {
+        if ($this->load($data) && $this->validate()) {
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    /**
+     * 获取分类信息
+     * @return array 分类信息的二维数组
+     */
+    public function getSortCategory()
+    {
+        return $this->_infiniteClass($this->find()->orderBy('id asc')->asArray()->all());
+    }
+
+
+    public function getSelectCategory()
+    {
+        $data = $this->getSortCategory();
+        $result[0] = '顶级分类';
+        foreach ($data as $val) {
+            $result[$val['id']] = str_repeat('----',$val['level']).$val['name'];
+        }
+        return $result;
+    }
+
+
+    /**
+     * 无限级分类
+     * @param  array $data 需要排序的二维数组
+     * @param  int $pid    开始排序的父级id
+     * @return array       排序好的数组
+     */
+    private function _infiniteClass($data, $pid = 0, $level = 0)
+    {
+        static $result;
+        foreach ($data as $val) {
+            if ($val['parent_id'] == $pid) {
+                $val['level'] = $level;
+                $result[] = $val;
+                $this->_infiniteClass($data, $val['id'], $level+1);
+            }
+        }
+        return $result;
+    }
 
 }

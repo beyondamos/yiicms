@@ -1,6 +1,7 @@
 <?php
 use yii\bootstrap\ActiveForm;
 use yii\helper\Html;
+use yii\helpers\Url;
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -19,18 +20,19 @@ use yii\helper\Html;
         <li><a href="news_list.html">信息中心</a></li>
         <li class="active">文章添加</li>
     </ol>
+        <a class="btn btn-primary" href="<?=Url::to(['article/index']);?>" role="button"></span> 返回</a>
     <div class="row">
         <?php $form = ActiveForm::begin([
             'options' => [
                 'class' => 'form-horizontal col-md-8',
-                'method' => 'method',
+                'method' => 'post',
                 'enctype' => 'multipart/form-data',
             ]
         ]);?>
             <div class="form-group">
                 <label for="title" class="col-md-2 control-label">标题</label>
                 <div class="col-md-8">
-                    <?php echo $form->field($model, 'title',['template' => '{label}{input}'])->textInput(['class' => 'form-control', 'placeholder' => '请输入标题'])?>
+                    <?php echo $form->field($model, 'title',['template' => '{input}{error}'])->textInput(['class' => 'form-control', 'placeholder' => '请输入标题'])->label(false);?>
                 </div>
             </div>
 

@@ -1,3 +1,8 @@
+<?php 
+use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
+$labels = $model->attributeLabels();
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -15,34 +20,35 @@
 			<li>信息中心</li>
 			<li class="active">分类添加</li>
 		</ol>
-		<form action="<{:U('add')}>" class="form-horizontal" method="post" enctype="multipart/form-data">
+		<a class="btn btn-primary" href="<?=Url::to(['category/index']);?>" role="button"></span> 返回</a>
+	    <?php if(Yii::$app->session->hasFlash('fail')):?>
+	    <div class="alert alert-danger alert-dismissible" role="alert">
+	      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      <strong><?php echo Yii::$app->session->getFlash('fail');?></strong>
+	    </div>
+	    <?php endif;?>
+		<?php $form = ActiveForm::begin(['method' => 'post', 
+										'action' => Url::to(['category/add']), 
+										'options' => ['class' => 'form-horizontal', 
+													  'enctype' => 'multipart/form-data'
+													]
+										]);?>
 			<div class="form-group">
-				<label for="category_name" class="col-md-1 control-label">分类名称</label>
+				<label for="category-name" class="col-md-1 control-label"><?php echo $labels['name'];?></label>
 				<div class="col-md-3">
-					<input type="text" class="form-control" id="category_name" name="cate_name" placeholder="请输入分类名称">
+				<?php echo $form->field($model, 'name')->textInput(['class' => 'form-control', 'placeholder'=> '请输入分类名称'])->label(false);?>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="alias" class="col-md-1 control-label">分类别名</label>
+				<label for="category-parent_id" class="col-md-1 control-label"><?php echo $labels['parent_id'];?></label>
 				<div class="col-md-3">
-					<input type="text" class="form-control" id="alias" name="alias" placeholder="请输入分类别名">
+				<?php echo $form->field($model, 'parent_id')->dropDownList($category)->label(false);?>	
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="parent_category" class="col-md-1 control-label">上级分类</label>
-				<div class="col-md-3">
-					<select name="parent_id" class="form-control">
-						<option value="0">顶级分类</option>
-						<volist name="category_data" id="category">
-							<option value="<{$category.cate_id}>"><{:str_repeat('&nbsp;&nbsp;',$category['level']*2)}><{$category.cate_name}></option>
-						</volist>
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="description" class="col-md-1 control-label">分类描述</label>
+				<label for="category-introduction" class="col-md-1 control-label"><?php echo $labels['introduction'];?></label>
 				<div class="col-md-4">
-					<textarea name="description" id="description" class="form-control" rows="4"></textarea>
+				<?php echo $form->field($model, 'introduction')->textarea(['class' => 'form-control', 'rows' => 4])->label(false);?>
 				</div>
 			</div>
 			<div class="form-group">
@@ -52,7 +58,7 @@
 				</div>
 
 			</div>
-		</form>
+		<?php ActiveForm::end();?>
 	</div>
 	<script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
 	<script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js';?>"></script>

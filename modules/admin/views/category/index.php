@@ -19,6 +19,14 @@ use yii\helpers\Url;
         <li class="active">分类管理</li>
     </ol>
     <a class="btn btn-primary" href="<?=Url::to(['category/add']);?>" role="button"><span class="glyphicon glyphicon-plus"></span> 添加分类</a>
+
+    <?php if(Yii::$app->session->hasFlash('success')):?>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong><?php echo Yii::$app->session->getFlash('success');?></strong>
+    </div>
+    <?php endif;?>
+
     <table class="table table-striped table-bordered">
         <tr class="text-center">
             <th class="text-center">分类id</th>
@@ -27,18 +35,18 @@ use yii\helpers\Url;
             <th class="text-center">访问量</th>
             <th class="text-center">操作</th>
         </tr>
-        <volist name="category_data" id="val">
+            <?php foreach($categories as $category):?>
             <tr>
-                <td class="text-center"><{$val.cate_id}></td>
-                <td><{:str_repeat('----',$val['level'])}><{$val.cate_name}></td>
+                <td class="text-center"><?php echo $category['id'];?></td>
+                <td><?php echo str_repeat('------', $category['level']).$category['name'];?></td>
                 <td class="text-center">3</td>
                 <td class="text-center">4</td>
                 <td class="text-center">
-                    <a class="btn btn-info" href="#" role="button">编辑</a>
-                    <a class="btn btn-danger" href="#" role="button">删除</a>
+                    <a class="btn btn-info" href="<?php echo Url::to(['category/edit', 'id' => $category['id']]);?>" role="button">编辑</a>
+                    <a class="btn btn-danger" href="<?php echo Url::to(['category/delete', 'id' => $category['id']]);?>" role="button">删除</a>
                 </td>
             </tr>
-        </volist>
+            <?php endforeach;?>
     </table>
 </div>
 <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>

@@ -1,12 +1,12 @@
 <?php
 namespace app\models;
 
-use yii\db\ActiveRecord;
+use app\models\AdminBase;
 
 /**
  * 文章模型
  */
-class Article extends ActiveRecord
+class Article extends AdminBase
 {
 
 }

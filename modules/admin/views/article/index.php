@@ -18,9 +18,7 @@ use yii\helpers\Url;
         <li><a href="#">信息中心</a></li>
         <li class="active">文章管理</li>
     </ol>
-    <button id="unCheck" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 批量取消审核</button>
     <a class="btn btn-primary" href="<?=Url::to(['article/add']);?>" role="button"><span class="glyphicon glyphicon-plus"></span> 添加文章</a>
-    <form id="checkform" method="post" action="">
         <table class="table table-bordered table-striped table-condensed table-hover">
             <tr>
                 <th class="text-center">选择</th>
@@ -39,12 +37,11 @@ use yii\helpers\Url;
                     <td class="text-center"><{:date('Y-m-d H:i:s',$vo['newstime'])}></td>
                     <td class="text-center">
                         <a class="btn btn-info" href="<{:U('edit', array('article_id' => $vo['article_id']))}>" role="button">编辑</a>
-                        <a class="btn btn-warning" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">取消审核</a>
+                        <a class="btn btn-warning" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">回收站</a>
                     </td>
                 </tr>
             </volist>
         </table>
-    </form>
 </div>
 <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
 <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js';?>"></script>
