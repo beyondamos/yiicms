@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 use app\modules\admin\controllers\AdminBaseController;
 use Yii;
 use app\models\Article;
+use app\models\Category;
 
 /**
  * 后台文章控制器
@@ -23,7 +24,7 @@ class ArticleController extends AdminBaseController
      * 未审核列表
      */
     public function actionUnaudited(){
-        return $this->renderPartial('unaudited');
+        return $this->render('unaudited');
     }
 
 
@@ -33,10 +34,19 @@ class ArticleController extends AdminBaseController
     public function actionAdd()
     {
         $model = new Article();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            if ($model->addArticle($data)) {
+                Yii::$app->session->setFlash('success', '添加文章成功');
+                return $this->redirect(['article/index']);
+            } else {
+                Yii::$app->session->setFlash('fail', '添加文章失败');
+            }
+        } 
 
-        } else {
-            return $this->renderPartial('add',['model' => $model]);
-        }
+        $category = new Category();
+        $categories = $category->getSelectCategory();
+        return $this->render('add',['model' => $model, 'category' => $categories]);
+        
     }
 }

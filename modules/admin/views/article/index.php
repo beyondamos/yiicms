@@ -19,6 +19,18 @@ use yii\helpers\Url;
         <li class="active">文章管理</li>
     </ol>
     <a class="btn btn-primary" href="<?=Url::to(['article/add']);?>" role="button"><span class="glyphicon glyphicon-plus"></span> 添加文章</a>
+    <?php if(Yii::$app->session->hasFlash('success')):?>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong><?php echo Yii::$app->session->getFlash('success');?></strong>
+    </div>
+    <?php endif;?>
+    <?php if(Yii::$app->session->hasFlash('fail')):?>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong><?php echo Yii::$app->session->getFlash('fail');?></strong>
+    </div>
+    <?php endif;?>
         <table class="table table-bordered table-striped table-condensed table-hover">
             <tr>
                 <th class="text-center">选择</th>
