@@ -53,6 +53,7 @@ class CategoryController extends AdminBaseController
         return $this->render('edit', ['model' => $model, 'category' => $category]);
     }
 
+
     /**
      * 删除分类
      */
