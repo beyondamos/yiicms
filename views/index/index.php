@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>DayDayLearn</title>
-    <link href="<?= Yii::getAlias('@lib') . '/bootstrap/css/bootstrap.min.css'; ?>" rel="stylesheet">
-    <link rel="stylesheet" href="<?= Yii::getAlias('@css') . '/main.css'; ?>">
+    <link href="/home/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/home/css/main.css">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -62,15 +62,15 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive center-block" src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt="First slide">
+                            <img class="img-responsive center-block" src="home/images/1.jpg" alt="First slide">
                             <div class="carousel-caption">情绪不佳时的说话方式</div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive center-block" src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt="Second slide">
+                            <img class="img-responsive center-block" src="home/images/1.jpg" alt="Second slide">
                             <div class="carousel-caption">情绪不佳时的说话方式</div>
                         </div>
                         <div class="item">
-                            <img class="img-responsive center-block" src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt="Third slide">
+                            <img class="img-responsive center-block" src="home/images/1.jpg" alt="Third slide">
                             <div class="carousel-caption">情绪不佳时的说话方式</div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
         </div>
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -120,7 +120,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -133,7 +133,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -146,7 +146,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -159,7 +159,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -172,7 +172,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -185,7 +185,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -198,7 +198,7 @@
         <!--单篇文章开始-->
         <div class="article-box row clearfix">
             <div class="col-md-4">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <div class="caption">
                 <h3><a href="">情绪不佳时的说话方式,最见素养</a></h3>
@@ -233,7 +233,7 @@
     <div class="col-md-3 col-md-offset-1">
         <!--广告位置-->
         <div class="adv">
-            <div class="thumbnail"><a href=""><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a></div>
+            <div class="thumbnail"><a href=""><img src="home/images/1.jpg" alt=""></a></div>
         </div>
         <!--热门文章排行-->
         <div class="page-header">
@@ -257,25 +257,25 @@
         </div>
         <div class=" row clearfix">
             <div class="col-md-7">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <p>情绪不佳时的说话方式,最见素养</p>
         </div>
         <div class=" row clearfix">
             <div class="col-md-7">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <p>情绪不佳时的说话方式,最见素养</p>
         </div>
         <div class=" row clearfix">
             <div class="col-md-7">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <p>情绪不佳时的说话方式,最见素养</p>
         </div>
         <div class=" row clearfix">
             <div class="col-md-7">
-                <a href="/" class="thumbnail"><img src="<?= Yii::getAlias('@image') . '/1.jpg' ?>" alt=""></a>
+                <a href="/" class="thumbnail"><img src="home/images/1.jpg" alt=""></a>
             </div>
             <p>情绪不佳时的说话方式,最见素养</p>
         </div>
@@ -301,7 +301,7 @@
     <p class="text-center">苏公网安备 32128202000324号</p>
 </footer><!--底部-->
 
-<script src="<?= Yii::getAlias('@lib') . '/jquery/jquery-1.11.3.js'; ?>"></script>
-<script src="<?= Yii::getAlias('@lib') . '/bootstrap/js/bootstrap.min.js' ?>"></script>
+<script src="home/lib/jquery/jquery-1.11.3.js"></script>
+<script src="home/lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -7,12 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'index',
-    'aliases' => [
-        '@home' => '/assets/home',
-        '@lib' => '@home/lib',
-        '@image' => '@home/images',
-        '@css' => '@home/css',
-    ],
+
     /**
      * 增加后台模块
      */
@@ -20,10 +15,6 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Admin',
             'defaultRoute' => 'index',  //修改默认控制器名称为index
-            'aliases' => [
-                '@admin' => '/assets/admin',
-                '@lib' => '@admin/lib',
-            ],
         ],
     ],
     'components' => [
