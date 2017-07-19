@@ -23,5 +23,5 @@ phpunit.phar
 tests/_output/*
 tests/_support/_generated
 
-runtime/logs/
-runtime/debug/
+runtime/logs/*
+runtime/debug/*
