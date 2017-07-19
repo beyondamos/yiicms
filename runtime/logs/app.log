@@ -14658,3 +14658,195 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1500499269.135
     'REQUEST_TIME' => 1500499269
 ]
+2017-07-19 21:22:16 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @admin/lib' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 D:\wamp64\www\yiicms\modules\admin\views\article\unaudited.php(49): yii\BaseYii::getAlias('@admin/lib')
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(328): require('D:\\wamp64\\www\\y...')
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\wamp64\\www\\y...', Array)
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\wamp64\\www\\y...', Array, Object(app\modules\admin\controllers\ArticleController))
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('unaudited', Array, Object(app\modules\admin\controllers\ArticleController))
+#5 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(27): yii\base\Controller->render('unaudited')
+#6 [internal function]: app\modules\admin\controllers\ArticleController->actionUnaudited()
+#7 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('unaudited', Array)
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/u...', Array)
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-07-19 21:22:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/unaudited'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '5937815552'
+    'PHPSESSID' => 'ivc0qiru42bpku71ip5jbmn0u3'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Findex%2Fleft'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'pgv_pvi=5937815552; PHPSESSID=ivc0qiru42bpku71ip5jbmn0u3'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;C:\\Program Files\\TortoiseSVN\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/5.6.25 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/5.6.25'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '51192'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Funaudited'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Funaudited'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1500499336.132
+    'REQUEST_TIME' => 1500499336
+]
+2017-07-19 21:22:17 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @admin/lib' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 D:\wamp64\www\yiicms\modules\admin\views\article\unaudited.php(49): yii\BaseYii::getAlias('@admin/lib')
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(328): require('D:\\wamp64\\www\\y...')
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\wamp64\\www\\y...', Array)
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\wamp64\\www\\y...', Array, Object(app\modules\admin\controllers\ArticleController))
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('unaudited', Array, Object(app\modules\admin\controllers\ArticleController))
+#5 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(27): yii\base\Controller->render('unaudited')
+#6 [internal function]: app\modules\admin\controllers\ArticleController->actionUnaudited()
+#7 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('unaudited', Array)
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/u...', Array)
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-07-19 21:22:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/unaudited'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '5937815552'
+    'PHPSESSID' => 'ivc0qiru42bpku71ip5jbmn0u3'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Findex%2Fleft'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'pgv_pvi=5937815552; PHPSESSID=ivc0qiru42bpku71ip5jbmn0u3'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;C:\\Program Files\\TortoiseSVN\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/5.6.25 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/5.6.25'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '51190'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Funaudited'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Funaudited'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1500499337.6
+    'REQUEST_TIME' => 1500499337
+]
+2017-07-19 22:24:31 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @admin/lib' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 D:\wamp64\www\yiicms\modules\admin\views\article\unaudited.php(49): yii\BaseYii::getAlias('@admin/lib')
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(328): require('D:\\wamp64\\www\\y...')
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\wamp64\\www\\y...', Array)
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\wamp64\\www\\y...', Array, Object(app\modules\admin\controllers\ArticleController))
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('unaudited', Array, Object(app\modules\admin\controllers\ArticleController))
+#5 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(27): yii\base\Controller->render('unaudited')
+#6 [internal function]: app\modules\admin\controllers\ArticleController->actionUnaudited()
+#7 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('unaudited', Array)
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/u...', Array)
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-07-19 22:24:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/unaudited'
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '5937815552'
+    'PHPSESSID' => 'ivc0qiru42bpku71ip5jbmn0u3'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Findex%2Fleft'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'pgv_pvi=5937815552; PHPSESSID=ivc0qiru42bpku71ip5jbmn0u3'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;C:\\Program Files\\TortoiseSVN\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/5.6.25 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/5.6.25'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '54245'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Funaudited'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Funaudited'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1500503071.755
+    'REQUEST_TIME' => 1500503071
+]
