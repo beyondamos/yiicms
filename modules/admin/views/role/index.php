@@ -8,7 +8,7 @@ use yii\helpers\Url;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>角色列表</title>
-    <link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -47,7 +47,7 @@ use yii\helpers\Url;
         </table>
         
     </div>
-    <script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
-    <script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js'?>"></script>
+    <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
