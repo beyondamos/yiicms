@@ -8,7 +8,7 @@ use yii\helpers\Url;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
-	<link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
+	<link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
 </head>
 <body>
 	<div class="container-fluid">

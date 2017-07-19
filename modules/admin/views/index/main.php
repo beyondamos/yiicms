@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>后台首页</title>
-	<link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
-	<link rel="stylesheet" href="__CSS__/main.css">
+	<link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="/admin/css/main.css">
 </head>
 <body>
 	<div class="container-fluid">
