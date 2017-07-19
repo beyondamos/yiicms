@@ -1,0 +1,59 @@
+/**
+公共样式
+*/
+.block-base {
+    border: solid 1px gainsboro;
+    margin-bottom: 10px;
+}
+.article-box {
+    border-bottom: solid 1px gainsboro;
+    margin-bottom: 10px;
+}
+.hot-article a {
+    color: #747f8c;
+}
+.hot-article li {
+    line-height: 25px;
+}
+
+.footer {
+    background-color: #0f0f0f;
+    color: #ABA6A6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/**内容页**/
+.content-container img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+.article-meta .item {
+    margin-right:10px;
+}
+
+.tag {
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right:5px;
+}
+.tag:hover {
+    background-color: #e74c3c;
+    text-decoration: none;
+}
+.page {
+    margin-top: 30px;
+}
+
+.recommend {
+    margin-top: 50px;
+}
+.recommend .page-header span{
+    font-size: 18px;
+    font-weight: bold;
+}
