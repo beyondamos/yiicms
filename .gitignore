@@ -25,3 +25,5 @@ tests/_support/_generated
 
 runtime/logs/*
 runtime/debug/*
+
+vendor/
