@@ -12,6 +12,16 @@ use app\models\Category;
 class ArticleController extends AdminBaseController
 {
     public $layout = false;
+
+    public function actions()
+    {
+        return [
+            'Kupload' => [
+                'class' => 'pjkui\kindeditor\KindEditorAction',
+            ]
+        ];
+    }
+
     /**
      * 文章列表
      */
