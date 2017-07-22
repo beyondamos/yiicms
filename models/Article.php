@@ -58,6 +58,7 @@ class Article extends AdminBase
     {
         if ($this->load($data) && $this->validate()) {
             $this->createtime = time();
+            $this->updatetime = time();
             if ($this->save(false)) {
                 return true;
             }

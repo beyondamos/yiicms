@@ -14916,3 +14916,194 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1500643447.65
     'REQUEST_TIME' => 1500643447
 ]
+2017-07-21 13:38:57 [127.0.0.1][-][ngtsagel1imgl0dadd8l2ung87][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @admin/lib' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 D:\wamp64\www\yiicms\modules\admin\views\article\unaudited.php(49): yii\BaseYii::getAlias('@admin/lib')
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(328): require('D:\\wamp64\\www\\y...')
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('D:\\wamp64\\www\\y...', Array)
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\wamp64\\www\\y...', Array, Object(app\modules\admin\controllers\ArticleController))
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('unaudited', Array, Object(app\modules\admin\controllers\ArticleController))
+#5 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(37): yii\base\Controller->render('unaudited')
+#6 [internal function]: app\modules\admin\controllers\ArticleController->actionUnaudited()
+#7 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('unaudited', Array)
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/u...', Array)
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-07-21 13:38:57 [127.0.0.1][-][ngtsagel1imgl0dadd8l2ung87][info][application] $_GET = [
+    'r' => 'admin/article/unaudited'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ngtsagel1imgl0dadd8l2ung87'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Findex%2Fleft'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ngtsagel1imgl0dadd8l2ung87'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;C:\\Program Files\\TortoiseSVN\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/5.6.25 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/5.6.25'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '61628'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Funaudited'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Funaudited'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1500644337.884
+    'REQUEST_TIME' => 1500644337
+]
+2017-07-22 21:53:38 [127.0.0.1][-][v6rqvke10r2lbce6qv1aogmjb3][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'updatetime' doesn't have a default value' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Command.php:846
+Stack trace:
+#0 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Command.php(846): PDOStatement->execute()
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\BaseActiveRecord.php(635): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 D:\wamp64\www\yiicms\models\Article.php(61): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(40): app\models\Article->addArticle('[<span class="s...')
+#7 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1364 Field 'updatetime' doesn't have a default value
+The SQL being executed was: INSERT INTO `article` (`title`, `catid`, `author`, `text`, `createtime`) VALUES ('123123123', 1, '123123', '<img src=\"/uploads/editor/image/20170722/20170722215326_61427.jpg\" alt=\"\" />', 1500760418)' in D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `ar...')
+#1 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
+#2 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\db\BaseActiveRecord.php(635): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 D:\wamp64\www\yiicms\models\Article.php(61): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 D:\wamp64\www\yiicms\modules\admin\controllers\ArticleController.php(40): app\models\Article->addArticle('[<span class="s...')
+#7 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#8 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 D:\wamp64\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\yiicms\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'updatetime' doesn't have a default value
+)
+
+2017-07-22 21:53:38 [127.0.0.1][-][v6rqvke10r2lbce6qv1aogmjb3][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_POST = [
+    '_csrf' => 'LXdFTlhCcEd1DjMCdRYedQAyL38qKxQuQT0uAjE3RAtPDjQYHDM2Jg=='
+    'Article' => [
+        'title' => '123123123'
+        'catid' => '1'
+        'author' => '123123'
+        'keywords' => ''
+        'tags' => ''
+        'abstract' => ''
+        'text' => '<img src=\"/uploads/editor/image/20170722/20170722215326_61427.jpg\" alt=\"\" />'
+    ]
+]
+
+$_FILES = [
+    'titleimg' => [
+        'name' => ''
+        'type' => ''
+        'tmp_name' => ''
+        'error' => 4
+        'size' => 0
+    ]
+]
+
+$_COOKIE = [
+    'pgv_pvi' => '5937815552'
+    'PHPSESSID' => 'v6rqvke10r2lbce6qv1aogmjb3'
+    '_csrf' => '42921d7084ba381e95ea2aee90a0489ad79fe9cd063848bccb46e4d6b7ff3313a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XyvL-Tn2-Ej1ridilJkLiu4LbyqVDqFa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1144'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://yiicms.xiaoming.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary0hIojrxuJLCPOE5n'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Fadd'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'pgv_pvi=5937815552; PHPSESSID=v6rqvke10r2lbce6qv1aogmjb3; _csrf=42921d7084ba381e95ea2aee90a0489ad79fe9cd063848bccb46e4d6b7ff3313a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XyvL-Tn2-Ej1ridilJkLiu4LbyqVDqFa%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;C:\\Program Files\\TortoiseSVN\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/5.6.25 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/5.6.25'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www/yiicms/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '49539'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1500760418.452
+    'REQUEST_TIME' => 1500760418
+]

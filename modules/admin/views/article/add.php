@@ -13,6 +13,8 @@ $labels = $model->attributeLabels();
     <title>文章添加</title>
     <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/css/main.css">
+    <script charset="utf-8" src="/plugs/kindeditor/kindeditor-all-min.js"></script>
+    <script charset="utf-8" src="/plugs/kindeditor/lang/zh-CN.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -100,13 +102,7 @@ $labels = $model->attributeLabels();
             <div class="form-group">
                 <label for="content" class="col-md-2 control-label"><?php echo $labels['text'];?></label>
                 <div class="col-md-10">
-                <?php echo $form->field($model, 'text')->widget('pjkui\kindeditor\KindEditor', 
-                                                ['clientOptions' => [
-                                                    'allowFileManager' => 'true',
-                                                    'allowUpload' => 'true'
-                                                    ]
-                                                ])->label(false); 
-                ?>
+                    <?php echo $form->field($model, 'text')->textArea()->label(false); ?>
                 </div>
             </div>
             <div class="form-group">
@@ -120,5 +116,17 @@ $labels = $model->attributeLabels();
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+        var options = {
+            height : '500px',
+            uploadJson : '/plugs/kindeditor/php/upload_json.php',
+            fileManagerJson : '/plugs/kindeditor/php/file_manager_json.php',
+            allowFileManager : true,
+            allowImageUpload : true
+        };
+        window.editor = K.create('#article-text', options);
+    });
+</script>
 </body>
 </html>
