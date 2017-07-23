@@ -13,6 +13,7 @@ $labels = $model->attributeLabels();
     <title>文章添加</title>
     <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/plugs/uploadify/uploadify.css" />
     <script charset="utf-8" src="/plugs/kindeditor/kindeditor-all-min.js"></script>
     <script charset="utf-8" src="/plugs/kindeditor/lang/zh-CN.js"></script>
 </head>
@@ -90,7 +91,8 @@ $labels = $model->attributeLabels();
             <div class="form-group">
                 <label for="titleimg" class="col-md-2 control-label"><?php echo $labels['thumbnail'];?></label>
                 <div class="col-md-3">
-                    <input class="form-control" type="file" id="titleimg" name="titleimg">
+                    <!-- <input class="form-control" type="file" id="titleimg" name="titleimg"> -->
+                    <?php echo $form->field($model, 'file_upload')->label(false);?>
                 </div>
             </div>
             <div class="form-group">
@@ -115,6 +117,7 @@ $labels = $model->attributeLabels();
     </div>
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+<script src="/plugs/uploadify//jquery.uploadify.min.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
 <script>
     KindEditor.ready(function(K) {
@@ -127,6 +130,21 @@ $labels = $model->attributeLabels();
         };
         window.editor = K.create('#article-text', options);
     });
+
+    $(function(){
+        <?php $timestamp = time();?>
+        $('#article-file_upload').uploadify({
+            'formData' : {
+                'timestamp' : '<?php echo $timestamp;?>',
+                'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+            },
+            'swf'      : '/plugs/uploadify/uploadify.swf',
+            'uploader' : '/plugs/uploadify/uploadify.php'
+            // Put your options here
+        });
+    });
+
 </script>
+
 </body>
 </html>

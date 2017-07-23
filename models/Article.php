@@ -9,6 +9,8 @@ use app\models\AdminBase;
 class Article extends AdminBase
 {
     public $tags;
+    public $file_upload;
+
 
     public static function tableName()
     {
