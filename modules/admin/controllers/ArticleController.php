@@ -5,6 +5,7 @@ use app\modules\admin\controllers\AdminBaseController;
 use Yii;
 use app\models\Article;
 use app\models\Category;
+use yii\data\Pagination;
 
 /**
  * 后台文章控制器
@@ -18,7 +19,11 @@ class ArticleController extends AdminBaseController
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query = Article::find();
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 30]);
+        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
+        return $this->render('index', ['articles' => $articles, 'pagination' => $pagination]);
     }
 
     /**
@@ -50,4 +55,38 @@ class ArticleController extends AdminBaseController
         return $this->render('add',['model' => $model, 'category' => $categories]);
         
     }
+
+
+    public function actionEdit()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = Article::find()->where('id = :id', [':id' => $id])->one();
+        var_dump($model);
+        $category = $model->getSelectCategory();
+        return $this->render('edit', ['model' => $model, 'category' => $category]);
+    }
+
+
+
+    /**
+     * ajax上传图片
+     * @return [type] [description]
+     */
+    public function actionUploadimage()
+    {
+        $verifyToken = md5('unique_salt' . $_POST['timestamp']);
+        if (!empty($_FILES) && $_POST['token'] == $verifyToken) {
+            $model = new Article();
+            if ($file_url = $model->uploadImage()) {
+                echo $file_url;
+            } else {
+                echo 2;
+            }
+
+        }
+    }
+
+
+
+
 }

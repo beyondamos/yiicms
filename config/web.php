@@ -7,6 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'index',
+    'timeZone' => 'Asia/Shanghai',
 
     /**
      * 增加后台模块

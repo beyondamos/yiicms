@@ -2,6 +2,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\helper\Html;
 use yii\helpers\Url;
+use \Yii;
 $labels = $model->attributeLabels();
 ?>
 <!DOCTYPE html>
@@ -91,8 +92,9 @@ $labels = $model->attributeLabels();
             <div class="form-group">
                 <label for="titleimg" class="col-md-2 control-label"><?php echo $labels['thumbnail'];?></label>
                 <div class="col-md-3">
-                    <!-- <input class="form-control" type="file" id="titleimg" name="titleimg"> -->
                     <?php echo $form->field($model, 'file_upload')->label(false);?>
+                    <img id="thumbnail" src="" width="300px" height="200px" style="display: none">
+                    <?php echo $form->field($model, 'thumbnail')->hiddenInput()->label(false);?>
                 </div>
             </div>
             <div class="form-group">
@@ -135,12 +137,17 @@ $labels = $model->attributeLabels();
         <?php $timestamp = time();?>
         $('#article-file_upload').uploadify({
             'formData' : {
+                '_csrf' : '<?php echo Yii::$app->request->csrfToken;?>',
                 'timestamp' : '<?php echo $timestamp;?>',
                 'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
             },
             'swf'      : '/plugs/uploadify/uploadify.swf',
-            'uploader' : '/plugs/uploadify/uploadify.php'
-            // Put your options here
+            'uploader' : '<?php echo Url::to(['article/uploadimage']);?>',
+            'onUploadSuccess' : function(file, data, response) {
+                $("#thumbnail").attr('src', data);
+                $("#thumbnail").show();
+                $("#article-thumbnail").val(data);
+            }
         });
     });
 
