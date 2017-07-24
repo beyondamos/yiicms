@@ -76,6 +76,24 @@ class Article extends AdminBase
         return false;
     }
 
+    /**
+     * 编辑文章
+     * @param  array $data 需要更改的文章内容
+     * @return bool       
+     */
+    public function editArticle($data)
+    {
+        if ($this->load($data) && $this->validate()) {
+            $this->updatetime = time();
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+
     public function uploadImage()
     {
         $save_url = '/uploads/pictures/';
@@ -143,7 +161,19 @@ class Article extends AdminBase
 
     }
 
-
+    /**
+     * 删除图片  （当编辑文章上传新图片时）
+     * @param  string $image 旧图片
+     * @return [type]        [description]
+     */
+    public function deleteImage($image)
+    {
+        $file = WEB_ROOT.$image;
+        if (is_file($file)) {
+            unlink($file);
+        }
+        
+    }
 
 
 }

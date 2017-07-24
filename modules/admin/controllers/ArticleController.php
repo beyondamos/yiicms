@@ -56,14 +56,31 @@ class ArticleController extends AdminBaseController
         
     }
 
-
+    /**
+     * 文章编辑
+     * @return [type] [description]
+     */
     public function actionEdit()
     {
         $id = Yii::$app->request->get('id');
         $model = Article::find()->where('id = :id', [':id' => $id])->one();
-        var_dump($model);
-        $category = $model->getSelectCategory();
-        return $this->render('edit', ['model' => $model, 'category' => $category]);
+        $oldImage = $model->thumbnail;
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            $newImage = $data['Article']['thumbnail'];
+            if ($model->editArticle($data)) {
+                Yii::$app->session->setFlash('success', '编辑文章成功');
+                if ($oldImage != $newImage) {
+                    $model->deleteImage($oldImage);
+                }
+                return $this->redirect(['article/index']);
+            }
+            Yii::$app->session->setFlash('fail', '编辑文章失败');
+        }
+
+        $category = new Category();
+        $categories = $category->getSelectCategory();
+        return $this->render('edit',['model' => $model, 'category' => $categories]);
     }
 
 
