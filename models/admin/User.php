@@ -4,6 +4,7 @@ namespace app\models\admin;
 use app\models\AdminBase;
 use Yii;
 use app\models\admin\Role;
+use yii\base\Security;
 
 /**
  * Class User
@@ -119,6 +120,25 @@ class User extends AdminBase
     {
         return $this->password === $password;
     }
+
+
+    public function login($data)
+    {
+        $username = trim($data['User']['username']);
+        $password = trim($data['User']['password']);
+        //验证用户名是否存在
+        $user = $this->findOne(['username' => $username]);
+        if (!$user) {
+            return false;
+        }
+        //验证密码是否正确
+        $security = new Security();
+        if (!$security->validatePassword($password, $user->password_hash)) {
+            return false;
+        }
+        return $user->id;
+    }
+
 
     /**
      * 添加用户

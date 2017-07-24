@@ -1,56 +1,74 @@
 <?php
 use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 ?>
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,
+    minimum-scale=1.0">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>后台登录</title>
-    <link rel="stylesheet" href="<?=Yii::getAlias('@admin/lib').'/bootstrap/css/bootstrap.css';?>">
-    <link rel="stylesheet" href="<?=Yii::getAlias('@admin').'/css/login.css';?>">
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/admin/css/login.css">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv/html5shiv.min.js"></script>
+      <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<div class="container-fluid">
-    <div class="col-md-offset-4 col-md-3 main">
-        <div class="row" >
-        <h3 class="page-header">DayDayLearn后台登录</h3>
-        </div>
-        <div class="row">
-        <form action="<?=Url::to(['login/index']);?>" class="form-horizontal " method="post">
-            <div class="form-group">
-                <label for="username" class="col-md-2 control-label">用户名</label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
-                </div>
+    <div class="login-box">
+        <div class="login">
+            <div class="login-title">
+                <span>后台登录</span>
             </div>
-            <div class="form-group">
-                <label for="password" class="col-md-2 control-label">密码</label>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" id="password" name="password" placeholder="请输入用户密码">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="verify" class="col-md-2 control-label">验证码</label>
-                <div class="col-md-6">
-                    <div class="col-md-6 pull-left" >
-                    <input type="text" class="form-control" id="verify" name="verify" placeholder="验证码">
-                    </div>
-                    <img class="pull-right" src="<?=Yii::getAlias('@admin').'/images/verify.png'?>">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-6">
-                    <input class="btn btn-info" type="submit" value="登录" >
-                    <input class="btn btn-danger" type="reset" value="重置">
-                </div>
-            </div>
-        </form>
+            <?php $form = ActiveForm::begin([
+                            'method' => 'post',
+                            'action' => Url::to(['login/index'])
+            ]);?>
+            <table class="login-form">
+                <tr>
+                    <td><label for="username">用户名：</label></td>
+                    <td>
+                        <?php echo $form->field($model, 'username')->textInput()->label(false);?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mima">密 码：</label></td>
+                    <td>
+                        <?php echo $form->field($model, 'password')->passwordInput()->label(false);?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="verificationCode">验证码：</label></td>
+                    <td>
+                        <input class="form-control verification-code" type="text" id="verificationCode">
+                        <img src="" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="login-submit">
+                        <input type="submit" value="登录">
+                    </td>
+                </tr>
+            </table>
+        <?php ActiveForm::end();?>
         </div>
     </div>
-</div>
-<script src="<?=Yii::getAlias('@admin/lib').'/jquery/jquery-1.11.3.js';?>"></script>
-<script src="<?=Yii::getAlias('@admin/lib').'/bootstrap/js/bootstrap.min.js';?>"></script>
+    <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="/admin/js/main.js"></script>
+    <script>
+        $(document).ready(function (){
+         function resize() {
+                var windowHeight = $(window).height();
+                $(".login-box").css("height",windowHeight);
+            }
+             $(window).on("resize",resize).trigger("resize"); 
+        });   
+
+    </script>
 </body>
 </html>

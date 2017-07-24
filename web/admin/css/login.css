@@ -1,11 +1,79 @@
-body {
-    background: #007acf;
+
+.login-box {
+	width: 100%;
+	background: url(../images/login_bg.jpg) repeat center center;
+	background-size: cover;
+	opacity: 1;
+}
+.login {
+	width: 400px;
+	overflow: hidden;
+	position: fixed;
+	left: 71%;
+	margin-left: -127px;
+	top: 30%;
+	border: 1px solid #E2E4E3;
+	padding-bottom: 20px;
+	    -moz-box-shadow: 1px 1px 4px #48afe0;
+    -webkit-box-shadow: 1px 1px 4px #48afe0;
+    box-shadow: 0px 1px 4px #48afe0;
+}
+.login-title {
+	font-size: 26px;
+	font-family: "microsoft yahei";
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color:#128ed6;
+	border-bottom: 2px solid #868686;
+	margin: 0px 20px;
+}
+.login-title span {
+
+}
+table  {
+	margin-top: 20px;
+}
+table td {
+	padding: 10px 0px;
+}
+.login-form td:first-child {
+	width: 25%;
+	text-align: right;
+	padding: 0px;
+	padding-right: 10px;
+}
+label {
+	font-weight: 400;
+	font-family: "microsoft yahei";
+
+	/*width: 20%;*/
+}
+.form-control {
+	display: inline-block;
+	width: 70%;
+}
+.login-form img {
+	display: inline-block;
+	width: 80px;
+	height: 34px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+.verification-code {
+	width: 50%;
 }
 
-.container-fluid {
-    margin-top: 200px;
+.login-submit {
+	
 }
-
-.main {
-    background-color: #c7ddef;
+input[type="submit"] {
+	width: 102px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	background: #1D95E1;
+	border-radius: 3px;
+	border: 1px solid #A8E3FF;
+	color: #fff;
 }

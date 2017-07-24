@@ -13,6 +13,7 @@ class IndexController extends AdminBaseController
      * @return string
      */
     public function actionIndex(){
+
         return $this->renderPartial('index');
     }
 
