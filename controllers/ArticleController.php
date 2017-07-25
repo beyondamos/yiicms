@@ -1,5 +1,6 @@
 <?php
 namespace app\controllers;
+
 use app\controllers\CommonController;
 
 /**
@@ -7,8 +8,9 @@ use app\controllers\CommonController;
  * @package app\controllers
  * 前台文章控制器
  */
-class ArticleController extends CommonController{
+class ArticleController extends CommonController
+{
     public function actionIndex(){
-        return $this->renderPartial('index');
+        return $this->render('index');
     }
 }

@@ -3,6 +3,7 @@ namespace app\models;
 
 use app\models\AdminBase;
 use app\models\Category;
+use app\models\Tags;
 
 /**
  * 文章模型
@@ -25,7 +26,8 @@ class Article extends AdminBase
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
             ['status', 'integer'],
-            ['thumbnail', 'safe']
+            ['thumbnail', 'safe'],
+            ['tags', 'safe']
         ];
     }
 
@@ -58,6 +60,18 @@ class Article extends AdminBase
         return $this->hasOne(Category::className(), ['id' => 'catid']);
     }
 
+    public function getTags()
+    {
+        $tag_ids = $this->tag_ids;
+        $tag_ids = explode(',', $tag_ids);
+        $Tags = new Tags();
+        $tags_arr = $Tags->find()->select(['tag_name'])->where(['id' => $tag_ids])->asArray()->all();
+        $tags = [];
+        foreach ($tags_arr as $tag) {
+            $tags[] = $tag['tag_name'];
+        }
+        return $tags;
+    }
 
     /**
      * 添加文章
@@ -66,6 +80,7 @@ class Article extends AdminBase
     public function addArticle($data)
     {
         if ($this->load($data) && $this->validate()) {
+            
             $this->createtime = time();
             $this->updatetime = time();
             if ($this->save(false)) {
@@ -92,6 +107,24 @@ class Article extends AdminBase
         }
         return false;
     }
+
+    /**
+     * @return [type] [description]
+     */
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $tags = new Tags();
+        $tags->new_tags = $this->tags;
+        $tags->article_id = $this->id;
+        $tags->old_tags = $this->getTags();
+        $tag_ids = $tags->dealTags();
+        $this->tag_ids = implode(',', $tag_ids);
+        $this->save(false);
+
+    }
+
 
 
     public function uploadImage()

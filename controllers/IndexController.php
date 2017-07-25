@@ -1,28 +1,17 @@
 <?php
 namespace app\controllers;
-use app\models\Country;
-use yii\web\Controller;
-use app\models\EntryForm;
+
+use app\controllers\HomeBaseController;
 use Yii;
 
-class IndexController extends Controller{
+class IndexController extends HomeBaseController
+{
+    public $layout = false;
 
-    public function actionTest(){
-        $model = new EntryForm();
-        if($model->load(Yii::$app->request->post()) && $model->validate()){
-            return $this->render('entry-confirm',['model' => $model]);
-        }else{
-            return $this->render('entry', ['model' => $model]);
-        }
+    public function actionIndex()
+    {
+        return $this->render('index');
     }
 
-    public function actionTest2(){
-        $country = Country::findOne('US');
-        $country->name = 'U.S.A';
-        $country->save();
-    }
-
-    public function actionIndex(){
-        return $this->renderPartial('index');
-    }
 }
+

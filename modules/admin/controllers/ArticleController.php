@@ -22,7 +22,7 @@ class ArticleController extends AdminBaseController
         $query = Article::find();
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 30]);
-        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
+        $articles = $query->offset($pagination->offset)->where(['status' => 1])->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
         return $this->render('index', ['articles' => $articles, 'pagination' => $pagination]);
     }
 
@@ -48,7 +48,7 @@ class ArticleController extends AdminBaseController
             } else {
                 Yii::$app->session->setFlash('fail', '添加文章失败');
             }
-        } 
+        }
 
         $category = new Category();
         $categories = $category->getSelectCategory();
@@ -64,7 +64,7 @@ class ArticleController extends AdminBaseController
     {
         $id = Yii::$app->request->get('id');
         $model = Article::find()->where('id = :id', [':id' => $id])->one();
-        $oldImage = $model->thumbnail;
+        $oldImage = $model->thumbnail;  //文章原来的旧图  用来和新图做比较，判断是否上传了新图片
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             $newImage = $data['Article']['thumbnail'];
@@ -78,6 +78,7 @@ class ArticleController extends AdminBaseController
             Yii::$app->session->setFlash('fail', '编辑文章失败');
         }
 
+        $model->tags = implode(',', $model->getTags()); //展示文章的标签列表
         $category = new Category();
         $categories = $category->getSelectCategory();
         return $this->render('edit',['model' => $model, 'category' => $categories]);
