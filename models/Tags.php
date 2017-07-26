@@ -26,7 +26,6 @@ class Tags extends AdminBase
     {
         $this->getAllTagsArray();
 
-
         //新增标签记录
         if (!empty($this->add_tags)) {
             $this->addTagRecord();
@@ -63,7 +62,9 @@ class Tags extends AdminBase
      */
     private function addTagRecord()
     {
-        foreach ($this->add_tags as $tag) {
+
+        foreach ($this->add_tags as $k => $tag) {
+
             $tag_model = $this->findOne(['tag_name' => $tag]);
             //存在就更新article_ids
             if ($tag_model) {
@@ -118,7 +119,10 @@ class Tags extends AdminBase
      */
     private function getAllTagsArray()
     {
+
+
         $this->new_tags = $this->dealTagsArray($this->new_tags);
+
         $this->add_tags = array_diff($this->new_tags, $this->old_tags);
         $this->del_tags = array_diff($this->old_tags, $this->new_tags);
 

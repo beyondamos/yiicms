@@ -12,6 +12,7 @@ class Article extends AdminBase
 {
     public $tags;
     public $file_upload;
+    public $a = 1;
 
     public static function tableName()
     {
@@ -111,17 +112,17 @@ class Article extends AdminBase
     /**
      * @return [type] [description]
      */
-    public function afterSave($insert, $changedAttributes)
+    public function beforeSave($insert)
     {
-        parent::afterSave($insert, $changedAttributes);
+        parent::beforeSave($insert);
 
         $tags = new Tags();
         $tags->new_tags = $this->tags;
         $tags->article_id = $this->id;
         $tags->old_tags = $this->getTags();
         $tag_ids = $tags->dealTags();
+
         $this->tag_ids = implode(',', $tag_ids);
-        $this->save(false);
 
     }
 
