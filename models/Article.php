@@ -12,7 +12,6 @@ class Article extends AdminBase
 {
     public $tags;
     public $file_upload;
-    public $a = 1;
 
     public static function tableName()
     {
@@ -85,6 +84,7 @@ class Article extends AdminBase
             $this->createtime = time();
             $this->updatetime = time();
             if ($this->save(false)) {
+                $this->dealTags();
                 return true;
             }
             return false;
@@ -110,20 +110,37 @@ class Article extends AdminBase
     }
 
     /**
+     * 在文章save之后处理tags信息
      * @return [type] [description]
      */
-    public function beforeSave($insert)
+    public function dealTags()
     {
-        parent::beforeSave($insert);
         $tags = new Tags();
         $tags->new_tags = $this->tags;
         $tags->article_id = $this->id;
         $tags->old_tags = $this->getTags();
         $tag_ids = $tags->dealTags();
-
         $this->tag_ids = implode(',', $tag_ids);
-
+        $this->save();
     }
+
+
+
+    // /**
+    //  * @return [type] [description]
+    //  */
+    // public function beforeSave($insert)
+    // {
+    //     parent::beforeSave($insert);
+    //     $tags = new Tags();
+    //     $tags->new_tags = $this->tags;
+    //     $tags->article_id = $this->id;
+    //     $tags->old_tags = $this->getTags();
+    //     $tag_ids = $tags->dealTags();
+
+    //     $this->tag_ids = implode(',', $tag_ids);
+
+    // }
 
 
 
