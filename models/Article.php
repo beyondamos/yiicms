@@ -115,7 +115,6 @@ class Article extends AdminBase
     public function beforeSave($insert)
     {
         parent::beforeSave($insert);
-
         $tags = new Tags();
         $tags->new_tags = $this->tags;
         $tags->article_id = $this->id;
