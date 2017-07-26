@@ -50,7 +50,7 @@ class Tags extends AdminBase
     {
         $tag_ids = [];
         foreach ($tags as $tag) {
-            $tag_model = $this->find(['tag_name' => $tag])->select('id')->one();
+            $tag_model = Tags::find()->select(['id'])->where(['tag_name' => $tag])->one();
             $tag_ids[] = $tag_model->id;
         }
         return $tag_ids;

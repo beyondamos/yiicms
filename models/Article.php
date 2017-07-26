@@ -102,6 +102,7 @@ class Article extends AdminBase
         if ($this->load($data) && $this->validate()) {
             $this->updatetime = time();
             if ($this->save(false)) {
+                $this->dealTags();
                 return true;
             }
             return false;

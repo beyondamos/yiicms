@@ -2,7 +2,6 @@
 use yii\bootstrap\ActiveForm;
 use yii\helper\Html;
 use yii\helpers\Url;
-use \Yii;
 $labels = $model->attributeLabels();
 ?>
 <!DOCTYPE html>
