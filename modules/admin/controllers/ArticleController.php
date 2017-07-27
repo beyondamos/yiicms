@@ -6,6 +6,7 @@ use Yii;
 use app\models\Article;
 use app\models\Category;
 use yii\data\Pagination;
+use app\models\Tags;
 
 /**
  * 后台文章控制器
@@ -110,6 +111,36 @@ class ArticleController extends AdminBaseController
         }
 
     }
+
+    /**
+     * 删除文章 同时删除图片和处理Tag标记
+     * @return [type] [description]
+     */
+    public function actionDelete()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = Article::find()->where(['id' => $id])->one();
+
+        //处理标签
+        //获取该记录的标签列表
+        $tags_arr = $model->getTags();
+        $Tag = new Tags();
+        $Tag->del_tags = $tags_arr; //传入要处理的标签列表
+        $Tag->article_id = $id; //传入要处理的文章id
+        $Tag->delTagRecord();
+
+        //处理标题图片
+        if ($model->thumbnail) {
+            $model->deleteImage($model->thumbnail);
+        }
+
+        $model->delete();
+        Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
+        return $this->goBack();
+
+    }
+
+
 
 
     /**

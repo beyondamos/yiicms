@@ -9,7 +9,7 @@ class Tags extends AdminBase
     public $old_tags = null;    //旧的标签列表，原来文章数据表中的(若为新增文章，则空)
     public $article_id = null;  //正要编辑的文章id
     private $add_tags = null;    //需要新增的标签列表
-    private $del_tags = null;    //需要删除的标签列表
+    public $del_tags = null;    //需要删除的标签列表
 
 
     public static function tableName()
@@ -88,7 +88,7 @@ class Tags extends AdminBase
      * 删除标签记录
      * @return [type] [description]
      */
-    private function delTagRecord()
+    public function delTagRecord()
     {
         foreach ($this->del_tags as $tag) {
             $tag_model = $this->findOne(['tag_name' => $tag]);

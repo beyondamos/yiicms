@@ -54,12 +54,19 @@ class Article extends AdminBase
         ];
     }
 
-
+    /**
+     * 关联分类表 获取分类名称
+     * @return [type] [description]
+     */
     public function getCatename()
     {
         return $this->hasOne(Category::className(), ['id' => 'catid']);
     }
 
+    /**
+     * 获取标签名称列表
+     * @return array 标签名称列表
+     */
     public function getTags()
     {
         $tag_ids = $this->tag_ids;

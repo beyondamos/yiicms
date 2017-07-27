@@ -36,9 +36,9 @@ use yii\helpers\Url;
                     <td class="text-center"><?php echo $article['catename']['name'];?></td>
                     <td class="text-center"><?php echo date('Y-m-d H:i:s', $article['updatetime']);?></td>
                     <td class="text-center">
-                        <a class="btn btn-info" href="<{:U('edit', array('article_id' => $vo['article_id']))}>" role="button">编辑</a>
+                        <a class="btn btn-info" href="<?php echo Url::to(['article/edit', 'id' => $article['id']]);?>" role="button">编辑</a>
                         <a class="btn btn-warning" href="<?php echo Url::to(['article/examine', 'id' => $article['id']]);?>" role="button">审核</a>
-                        <a class="btn btn-danger" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">永久删除</a>
+                        <a class="btn btn-danger" href="<?php echo Url::to(['article/delete', 'id' => $article['id']]);?>" role="button">永久删除</a>
                     </td>
                 </tr>
             <?php endforeach;?>
