@@ -28,22 +28,24 @@ use yii\helpers\Url;
                 <th class="text-center">最后更新</th>
                 <th class="text-center">操作</th>
             </tr>
-            <volist name="article_info" id="vo">
+    
+            <?php foreach($articles as $article):?>
                 <tr>
-                    <td class="text-center"><{$vo.article_id}></td>
-                    <td><{$vo.title}></td>
-                    <td class="text-center"><{$vo.cate_name}></td>
-                    <td class="text-center"><{:date('Y-m-d H:i:s',$vo['newstime'])}></td>
+                    <td class="text-center"><?php echo $article['id'];?></td>
+                    <td><?php echo $article['title'];?></td>
+                    <td class="text-center"><?php echo $article['catename']['name'];?></td>
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s', $article['updatetime']);?></td>
                     <td class="text-center">
                         <a class="btn btn-info" href="<{:U('edit', array('article_id' => $vo['article_id']))}>" role="button">编辑</a>
-                        <a class="btn btn-warning" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">审核</a>
+                        <a class="btn btn-warning" href="<?php echo Url::to(['article/examine', 'id' => $article['id']]);?>" role="button">审核</a>
                         <a class="btn btn-danger" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">永久删除</a>
                     </td>
                 </tr>
-            </volist>
+            <?php endforeach;?>
+
         </table>
     </form>
 </div>
-<script src="admin/lib/jquery/jquery-1.11.3.js';?>"></script>
-<script src="'admin/lib/bootstrap/js/bootstrap.min.js';?>"></script>
+<script src="/admin/lib/jquery/jquery-1.11.3.js';?>"></script>
+<script src="/admin/lib/bootstrap/js/bootstrap.min.js';?>"></script>
 </html>

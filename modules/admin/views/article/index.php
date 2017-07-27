@@ -49,7 +49,7 @@ use yii\widgets\LinkPager;
         <td class="text-center"><?php echo date('Y-m-d H:i:s', $article['updatetime']);?></td>
         <td class="text-center">
             <a class="btn btn-info" href="<?php echo Url::to(['article/edit', 'id' => $article['id']]);?>" role="button">编辑</a>
-            <a class="btn btn-warning" href="<{:U('unCheck',array('article_id'=>$vo['article_id']))}>" role="button">回收站</a>
+            <a class="btn btn-warning" href="<?php echo Url::to(['article/examine', 'id' => $article['id']]);?>" role="button">草稿箱</a>
         </td>
     </tr>
     <?php endforeach;?>

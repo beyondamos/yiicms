@@ -19,18 +19,23 @@ class ArticleController extends AdminBaseController
      */
     public function actionIndex()
     {
-        $query = Article::find();
+        $query = Article::find()->where(['status' => 1]);
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 30]);
-        $articles = $query->offset($pagination->offset)->where(['status' => 1])->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
+        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
         return $this->render('index', ['articles' => $articles, 'pagination' => $pagination]);
     }
 
     /**
      * 回收站列表
      */
-    public function actionBin(){
-        return $this->render('bin');
+    public function actionDrafts(){
+        $query = Article::find()->where(['status' => 0]);
+        $count = $query->count();
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
+        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
+
+        return $this->render('drafts', ['articles' => $articles, 'pagination' => $pagination]);
     }
 
 
@@ -84,6 +89,26 @@ class ArticleController extends AdminBaseController
         return $this->render('edit',['model' => $model, 'category' => $categories]);
     }
 
+
+    /**
+     * [actionExamine description]
+     * @return [type] [description]
+     */
+    public function actionExamine()
+    {
+        $id = Yii::$app->request->get('id');
+        $model = Article::find()->where(['id' => $id])->one();
+        if ($model->status == 1) {
+            $model->status = 0;
+        } else {
+            $model->status = 1 ;
+        }
+
+        if ($model->save()) {
+            $this->goBack();
+        }
+
+    }
 
 
     /**
