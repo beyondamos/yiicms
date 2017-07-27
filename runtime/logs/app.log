@@ -30602,3 +30602,444 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1501135251.78
     'REQUEST_TIME' => 1501135251
 ]
+2017-07-27 14:16:05 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][error][yii\base\ErrorException:2048] exception 'yii\base\ErrorException' with message 'Declaration of app\models\Article::beforeSave() should be compatible with yii\db\BaseActiveRecord::beforeSave($insert)' in D:\wamp\www\yiicms\models\Article.php:12
+Stack trace:
+#0 D:\wamp\www\yiicms\models\Article.php(12): yii\base\ErrorHandler->handleError(2048, 'Declaration of ...', 'D:\\wamp\\www\\yii...', 12, Array)
+#1 D:\wamp\www\yiicms\vendor\yiisoft\yii2\BaseYii.php(288): include('D:\\wamp\\www\\yii...')
+#2 [internal function]: yii\BaseYii::autoload('app\\models\\Arti...')
+#3 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(42): spl_autoload_call('app\\models\\Arti...')
+#4 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#5 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add', Array)
+#8 D:\wamp\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/a...', Array)
+#9 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\wamp\www\yiicms\web\index.php(15): yii\base\Application->run()
+#11 {main}
+2017-07-27 14:16:05 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57941'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136165.453
+    'REQUEST_TIME' => 1501136165
+]
+2017-07-27 14:20:52 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\models\Article::getError()' in D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): yii\base\Component->__call('getError', Array)
+#1 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): app\models\Article->getError()
+#2 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#3 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add', Array)
+#6 D:\wamp\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/a...', Array)
+#7 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\yiicms\web\index.php(15): yii\base\Application->run()
+#9 {main}
+2017-07-27 14:20:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57971'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136452.393
+    'REQUEST_TIME' => 1501136452
+]
+2017-07-27 14:21:03 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\models\Article::errors()' in D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): yii\base\Component->__call('errors', Array)
+#1 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): app\models\Article->errors()
+#2 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#3 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add', Array)
+#6 D:\wamp\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/a...', Array)
+#7 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\yiicms\web\index.php(15): yii\base\Application->run()
+#9 {main}
+2017-07-27 14:21:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57973'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136463.648
+    'REQUEST_TIME' => 1501136463
+]
+2017-07-27 14:21:08 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\models\Article::error()' in D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): yii\base\Component->__call('error', Array)
+#1 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): app\models\Article->error()
+#2 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#3 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add', Array)
+#6 D:\wamp\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/a...', Array)
+#7 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\yiicms\web\index.php(15): yii\base\Application->run()
+#9 {main}
+2017-07-27 14:21:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57975'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136468.918
+    'REQUEST_TIME' => 1501136468
+]
+2017-07-27 14:21:16 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Article::error' in D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\yiicms\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('error')
+#1 D:\wamp\www\yiicms\modules\admin\controllers\ArticleController.php(53): yii\db\BaseActiveRecord->__get('error')
+#2 [internal function]: app\modules\admin\controllers\ArticleController->actionAdd()
+#3 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add', Array)
+#6 D:\wamp\www\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('admin/article/a...', Array)
+#7 D:\wamp\www\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\yiicms\web\index.php(15): yii\base\Application->run()
+#9 {main}
+2017-07-27 14:21:16 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][info][application] $_GET = [
+    'r' => 'admin/article/add'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57977'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Fadd'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Fadd'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136476.266
+    'REQUEST_TIME' => 1501136476
+]
+2017-07-27 14:23:50 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'return' (T_RETURN)' in D:\wamp\www\yiicms\models\Article.php:104
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-27 14:23:50 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][info][application] $_GET = [
+    'r' => 'admin/article/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Farticle%2Fadd'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '57988'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Findex'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501136630.532
+    'REQUEST_TIME' => 1501136630
+]
+2017-07-27 14:35:15 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ']'' in D:\wamp\www\yiicms\models\Article.php:30
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-27 14:35:15 [127.0.0.1][-][n4fol3doc58fo4f5hvsak8jc07][info][application] $_GET = [
+    'r' => 'admin/article/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4fol3doc58fo4f5hvsak8jc07'
+    '_csrf' => '3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3141.7 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/index.php?r=admin%2Findex%2Fleft'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4fol3doc58fo4f5hvsak8jc07; _csrf=3d80cfddf693c9e5c46ba7ae49f73abcf26147415466de31795c0cfb0e48f2d0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Fm-farQw5S8taLOu8xgSWnVfHk-rPUuu%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\svnServer\\server\\bin;D:\\PhoneGap\\adt\\sdk\\tools;D:\\PhoneGap\\adt\\sdk\\platform-tools;D:\\PhoneGap\\adt\\eclipse\\plugins\\org.apache.ant_1.8.3.v201301120609\\bin;D:\\PhoneGap\\java\\bin;D:\\PhoneGap\\java\\jre\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Python27;D:\\wamp\\bin\\mysql\\mysql5.6.17\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) PHP/5.5.12 Server at yiicms.xiaoming.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) PHP/5.5.12'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www/yiicms/web'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/yiicms/web/index.php'
+    'REMOTE_PORT' => '58157'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Farticle%2Findex'
+    'REQUEST_URI' => '/index.php?r=admin%2Farticle%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1501137315.438
+    'REQUEST_TIME' => 1501137315
+]

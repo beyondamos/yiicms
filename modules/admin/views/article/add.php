@@ -34,6 +34,9 @@ $labels = $model->attributeLabels();
         <?php endif;?>
 
         <?php $form = ActiveForm::begin([
+            'fieldConfig' => [
+                'template' => '{input}{error}',
+            ],
             'options' => [
                 'class' => 'form-horizontal col-md-8',
                 'method' => 'post',
@@ -57,7 +60,7 @@ $labels = $model->attributeLabels();
                 <label for="content" class="col-md-2 control-label"><?php echo $labels['property'];?></label>
                 <div class="col-md-10">
                     <label class="checkbox-inline">
-                      <input type="checkbox" id="Article-status" name="Article[status]"> 审核
+                      <input type="checkbox" id="Article-status" name="Article[status]" value="on"> 审核
                     </label>
                     <label class="checkbox-inline">
                       <input type="checkbox" id="inlineCheckbox2" value="2"> 头条

@@ -25,9 +25,8 @@ class Article extends AdminBase
             ['catid', 'integer', 'min' => 1, 'message' => '必须选择文章分类'],
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
-            ['status', 'integer'],
             ['thumbnail', 'safe'],
-            ['tags', 'safe']
+            [['tags', 'status'], 'safe']
         ];
     }
 
@@ -55,6 +54,7 @@ class Article extends AdminBase
         ];
     }
 
+
     public function getCatename()
     {
         return $this->hasOne(Category::className(), ['id' => 'catid']);
@@ -80,15 +80,21 @@ class Article extends AdminBase
     public function addArticle($data)
     {
         if ($this->load($data) && $this->validate()) {
-            
             $this->createtime = time();
             $this->updatetime = time();
+            if ($this->status == 'on') {
+                $this->status = 1;
+            } else {
+                $this->status = 0;
+            }
             if ($this->save(false)) {
+    
                 $this->dealTags();
                 return true;
             }
             return false;
         }
+
         return false;
     }
 
@@ -101,6 +107,11 @@ class Article extends AdminBase
     {
         if ($this->load($data) && $this->validate()) {
             $this->updatetime = time();
+            if ($this->status == 'on') {
+                $this->status = 1;
+            } else {
+                $this->status = 0;
+            }
             if ($this->save(false)) {
                 $this->dealTags();
                 return true;
@@ -124,24 +135,6 @@ class Article extends AdminBase
         $this->tag_ids = implode(',', $tag_ids);
         $this->save();
     }
-
-
-
-    // /**
-    //  * @return [type] [description]
-    //  */
-    // public function beforeSave($insert)
-    // {
-    //     parent::beforeSave($insert);
-    //     $tags = new Tags();
-    //     $tags->new_tags = $this->tags;
-    //     $tags->article_id = $this->id;
-    //     $tags->old_tags = $this->getTags();
-    //     $tag_ids = $tags->dealTags();
-
-    //     $this->tag_ids = implode(',', $tag_ids);
-
-    // }
 
 
 
