@@ -27,10 +27,10 @@ class ArticleController extends AdminBaseController
     }
 
     /**
-     * 未审核列表
+     * 回收站列表
      */
-    public function actionUnaudited(){
-        return $this->render('unaudited');
+    public function actionBin(){
+        return $this->render('bin');
     }
 
 

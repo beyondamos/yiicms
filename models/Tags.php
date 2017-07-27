@@ -146,6 +146,8 @@ class Tags extends AdminBase
             $tags = explode(',', $tags);
             $tags = array_filter($tags);
             return array_unique($tags);
+        } else {
+            return [];
         }
     }
 
