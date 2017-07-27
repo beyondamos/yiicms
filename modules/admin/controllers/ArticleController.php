@@ -91,7 +91,7 @@ class ArticleController extends AdminBaseController
 
 
     /**
-     * [actionExamine description]
+     * 审核文章，审核的进入草稿箱，草稿箱的进入审核
      * @return [type] [description]
      */
     public function actionExamine()
@@ -105,7 +105,8 @@ class ArticleController extends AdminBaseController
         }
 
         if ($model->save()) {
-            $this->goBack();
+            Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
+            return $this->goBack();
         }
 
     }
