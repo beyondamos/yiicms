@@ -31,13 +31,14 @@ class User extends AdminBase
             ['password2', 'required', 'message' => '重复密码不能为空'],
             ['password2', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致'],
             ['role_id', 'number', 'min' => 1, 'message' => '必须选择用户角色'],
+            ['nickname', 'string', 'min' => 1, 'max' => 15, 'message' => '昵称不能超过15个字符'],
         ];
     }
 
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios['add'] = ['username', 'email', 'password', 'password2', 'role_id'];
+        $scenarios['add'] = ['username', 'email', 'password', 'password2', 'role_id', 'nickname'];
         $scenarios['edit'] = ['username', 'email', 'role_id'];
         return $scenarios;
     }
@@ -149,6 +150,10 @@ class User extends AdminBase
         $this->scenario = 'add';
         if ($this->load($user_data) && $this->validate()) {
             $this->createtime = time();
+            //如果没有填写昵称,那么默认就是用户名
+            if (empty($this->nickname)) {
+                $this->nickname = $this->username;
+            } 
             $this->password_hash = Yii::$app->getSecurity()->generatePasswordHash($this->password);
             if ($this->save(false)) {
                 return true;
@@ -180,6 +185,7 @@ class User extends AdminBase
             'username' => '用户名',
             'password' => '密码',
             'password2' => '重复密码',
+            'nickname' => '昵称',
             'email' => '邮箱',
             'role_id' => '用户角色',
         ];
