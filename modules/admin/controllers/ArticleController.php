@@ -23,8 +23,15 @@ class ArticleController extends AdminBaseController
         $query = Article::find()->where(['status' => 1]);
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
-        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
-        return $this->render('index', ['articles' => $articles, 'pagination' => $pagination]);
+        $articles = $query->offset($pagination->offset)->limit($pagination->limit)
+                            ->with('catename')->orderBy('id desc')->all();
+        $Articles = [];
+        foreach ($articles as $article) {
+            $article->tags = implode(',', $article->getTags());
+            $Articles[] = $article;
+        }                    
+
+        return $this->render('index', ['articles' => $Articles, 'pagination' => $pagination]);
     }
 
     /**
@@ -34,9 +41,15 @@ class ArticleController extends AdminBaseController
         $query = Article::find()->where(['status' => 0]);
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
-        $articles = $query->offset($pagination->offset)->limit($pagination->limit)->with('catename')->orderBy('id desc')->asArray()->all();
+        $articles = $query->offset($pagination->offset)->limit($pagination->limit)
+                        ->with('catename')->orderBy('id desc')->all();
+        $Articles = [];
+        foreach ($articles as $article) {
+            $article->tags = implode(',', $article->getTags());
+            $Articles[] = $article;
+        }      
 
-        return $this->render('drafts', ['articles' => $articles, 'pagination' => $pagination]);
+        return $this->render('drafts', ['articles' => $Articles, 'pagination' => $pagination]);
     }
 
 

@@ -37,6 +37,7 @@ use yii\widgets\LinkPager;
         <th class="text-center">编号</th>
         <th class="text-center">标题</th>
         <th class="text-center">分类</th>
+        <th class="text-center">标签</th>
         <th class="text-center">最后更新</th>
         <th class="text-center">操作</th>
     </tr>
@@ -46,6 +47,7 @@ use yii\widgets\LinkPager;
         <td class="text-center"><?php echo $article['id'];?></td>
         <td><?php echo $article['title'];?></td>
         <td class="text-center"><?php echo $article['catename']['name'];?></td>
+        <td class="text-center"><?php echo $article['tags'];?></td>
         <td class="text-center"><?php echo date('Y-m-d H:i:s', $article['updatetime']);?></td>
         <td class="text-center">
             <a class="btn btn-info" href="<?php echo Url::to(['article/edit', 'id' => $article['id']]);?>" role="button">编辑</a>
