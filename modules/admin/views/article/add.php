@@ -73,7 +73,7 @@ $labels = $model->attributeLabels();
             <div class="form-group">
                 <label for="author" class="col-md-2 control-label"><?php echo $labels['author'];?></label>
                 <div class="col-md-2">
-                    <?php echo $form->field($model, 'author')->textInput()->label(false);?>
+                    <?php echo $form->field($model, 'author')->textInput(['value' => $author])->label(false);?>
                 </div>
             </div>
             <div class="form-group">

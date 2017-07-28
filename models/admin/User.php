@@ -52,6 +52,18 @@ class User extends AdminBase
 
 
     /**
+     * 获取用户的昵称
+     * @param  int $id 用户id
+     * @return string  用户昵称
+     */
+    public static function getNickname($id)
+    {
+       $user = self::find()->select(['nickname'])->where(['id' => $id])->one();
+       return $user->nickname;
+    }
+
+
+    /**
      * 根据主键id获得用户
      */
     public static function findIdentity($id){

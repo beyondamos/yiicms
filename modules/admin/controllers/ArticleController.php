@@ -7,6 +7,7 @@ use app\models\Article;
 use app\models\Category;
 use yii\data\Pagination;
 use app\models\Tags;
+use app\models\admin\User;
 
 /**
  * 后台文章控制器
@@ -71,7 +72,8 @@ class ArticleController extends AdminBaseController
 
         $category = new Category();
         $categories = $category->getSelectCategory();
-        return $this->render('add',['model' => $model, 'category' => $categories]);
+        // 传入作者的默认值
+        return $this->render('add',['model' => $model, 'category' => $categories, 'author' => User::getNickname($this->user_id)]);
         
     }
 
