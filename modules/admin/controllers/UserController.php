@@ -42,8 +42,10 @@ class UserController extends AdminBaseController
                 Yii::$app->session->setFlash('fail');
             }
         }
+        //获取角色信息
+        $role = Role::getRoleBaseInfo();
         //展示表单
-        return $this->renderPartial('add',['model' => $user_model]);
+        return $this->renderPartial('add',['model' => $user_model, 'role' => $role]);
     }
 
     /**

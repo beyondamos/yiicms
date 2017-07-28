@@ -63,11 +63,7 @@ $labels = $model->attributeLabels(); //标签属性
         <div class="form-group">
             <label for="role_id" class="col-md-2 control-label"><?=$labels['role_id'];?></label>
             <div class="col-md-2">
-                <?php echo $form->field($model, 'role_id')->dropdownList(['0' => '请选择角色', 
-                                                                           '1' => '超级管理员',
-                                                                           '2' => '数据分析员',
-                                                                           '3' => '普通用户'      
-                                                                        ])->label(false);?>
+                <?php echo $form->field($model, 'role_id')->dropdownList($role)->label(false);?>
             </div>
         </div>
         <div class="form-group">

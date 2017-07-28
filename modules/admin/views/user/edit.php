@@ -34,6 +34,12 @@ $labels = $model->attributeLabels(); //标签属性
             </div>
         </div>
         <div class="form-group">
+            <label for="nickname" class="col-md-2 control-label"><?=$labels['nickname'];?></label>
+            <div class="col-md-2">
+                <?php echo $form->field($model, 'nickname')->textInput()->label(false);?>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="email" class="col-md-2 control-label"><?=$labels['email'];?></label>
             <div class="col-md-2">
                 <?php echo $form->field($model, 'email')->textInput()->label(false);?>
