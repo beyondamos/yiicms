@@ -40,6 +40,7 @@ class User extends AdminBase
         $scenarios = parent::scenarios();
         $scenarios['add'] = ['username', 'email', 'password', 'password2', 'role_id', 'nickname'];
         $scenarios['edit'] = ['username', 'email', 'role_id', 'nickname'];
+        $scenarios['modify'] = ['username', 'email', 'nickname'];
         return $scenarios;
     }
 
@@ -163,6 +164,7 @@ class User extends AdminBase
         return false;
     }
 
+
     /**
      * 编辑用户信息
      * @param  array $user_data 用户信息
@@ -184,6 +186,28 @@ class User extends AdminBase
         }
         return false;
     }
+
+
+    public function modifyUser($user_data)
+    {
+        $this->scenario = 'modify';
+        if ($this->load($user_data) && $this->validate()) {
+            //如果没有填写昵称,那么默认就是用户名
+            if (empty($this->nickname)) {
+                $this->nickname = $this->username;
+            }
+
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+
+
+
 
     public function attributeLabels(){
         return [

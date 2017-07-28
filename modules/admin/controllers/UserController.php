@@ -70,6 +70,11 @@ class UserController extends AdminBaseController
         return $this->render('edit', ['model' => $model, 'role' => $role]);
     }
 
+
+    /**
+     * 用户删除
+     * @return [type] [description]
+     */
     public function actionDelete()
     {
         $id = Yii::$app->request->get('id');
@@ -87,6 +92,29 @@ class UserController extends AdminBaseController
             Yii::$app->session->setFlash('fail', '未知错误');
             return $this->redirect(['user/index', 'page' => $page]);
         }
+
+    }
+
+
+    /**
+     * 修改个人信息
+     * @return [type] [description]
+     */
+    public function actionModify()
+    {
+        $model = User::find()->where(['id' => $this->user_id])->one();
+        if (Yii::$app->request->isPost) {
+            if ($model->modifyUser(Yii::$app->request->post())) {
+                Yii::$app->session->setFlash('success', '修改个人信息成功');
+                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('fail', '修改个人信息失败');
+            }
+
+        }
+        //获取角色信息
+        $role = Role::getRoleBaseInfo();
+        return $this->render('modify', ['model' => $model, 'role' => $role]);
 
     }
 
