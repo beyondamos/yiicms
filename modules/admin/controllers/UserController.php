@@ -118,6 +118,18 @@ class UserController extends AdminBaseController
 
     }
 
-
+    public function actionPassword()
+    {
+        $model = User::findOne($this->user_id);
+        if (Yii::$app->request->isPost) {
+            if ($model->modifyPassword(Yii::$app->request->post())) {
+                Yii::$app->session->setFlash('success', '修改个人密码成功');
+                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('fail', '修改个人密码失败');
+            }
+        } 
+        return $this->render('password', ['model' => $model]);
+    }
 
 }

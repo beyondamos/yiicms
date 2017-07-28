@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -15,6 +18,7 @@
 		</div>
 		<p>登录者:  <strong><{$Think.session.username}></strong>   ，所属用户组:  <strong>超级管理员</strong></p>
 		<p>这是您第 <strong>2</strong> 次登录，上次登录时间： <strong>2017-04-04 08:35:05</strong> ，登录IP： <strong>127.0.0.1</strong></p>
+		<a class="btn btn-info" href="<?=Url::to(['user/password']);?>" role="button">修改密码</a>
 		<div class="page-header">
 			<h3>系统信息</h3>
 		</div>
@@ -26,7 +30,7 @@
 			<tr><td>上传文件</td><td>64M</td><td>程序编码</td><td>UTF-8</td></tr>
 		</table>
 	</div>
-	<script src="__LIB__/jquery/jquery-1.11.3.js"></script>
-	<script src="__LIB__/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+	<script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
