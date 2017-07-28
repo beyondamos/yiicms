@@ -6,7 +6,6 @@ use Yii;
 
 class IndexController extends HomeBaseController
 {
-    public $layout = false;
 
     public function actionIndex()
     {
