@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-07-25 11:31:44
+-- Generation Time: 2017-07-31 11:30:21
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -40,14 +40,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `createtime` int(11) NOT NULL COMMENT '创建时间',
   `updatetime` int(11) NOT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='文章表' AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `article`
---
-
-INSERT INTO `article` (`id`, `title`, `catid`, `thumbnail`, `keywords`, `tag_ids`, `abstract`, `text`, `author`, `status`, `createtime`, `updatetime`) VALUES
-(1, '测试信息', 1, '', '', '1,1,1', '', '123123213123', '你好', 1, 1500975015, 1500975015);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章表' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -62,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `auth` (
   `auth_route` varchar(50) NOT NULL COMMENT '权限路由',
   `auth_type` smallint(6) NOT NULL COMMENT '权限类型 1为在左侧显示，2不显示',
   PRIMARY KEY (`auth_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='权限表' AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='权限表' AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `auth`
@@ -96,17 +89,15 @@ CREATE TABLE IF NOT EXISTS `category` (
   `parent_id` smallint(5) unsigned NOT NULL COMMENT '上级分类id',
   `introduction` text NOT NULL COMMENT '分类描述',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='分类表' AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='分类表' AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `category`
 --
 
 INSERT INTO `category` (`id`, `name`, `parent_id`, `introduction`) VALUES
-(1, 'PHP', 0, 'PHP的知识和信息'),
-(3, 'Python', 0, ''),
-(4, 'HTML', 0, ''),
-(7, 'ThinkPHP', 1, '');
+(1, 'PHP', 0, ''),
+(2, 'Mysql', 0, '');
 
 -- --------------------------------------------------------
 
@@ -120,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   `role_desc` varchar(255) NOT NULL COMMENT '角色描述',
   `role_auth` text NOT NULL COMMENT '角色权限列表',
   PRIMARY KEY (`role_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `role`
@@ -141,16 +132,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `tag_name` char(10) NOT NULL COMMENT '标签名称',
   `article_ids` varchar(1024) NOT NULL COMMENT '文章id列表',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='文章标签表' AUTO_INCREMENT=4 ;
-
---
--- 转存表中的数据 `tags`
---
-
-INSERT INTO `tags` (`id`, `tag_name`, `article_ids`) VALUES
-(1, '吃', '1'),
-(2, '喝', '1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'),
-(3, '玩', '1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章标签表' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -163,19 +145,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(50) NOT NULL COMMENT '用户名',
   `password_hash` varchar(100) NOT NULL COMMENT '哈希后的密码',
   `email` varchar(100) NOT NULL COMMENT '邮箱',
+  `nickname` char(10) NOT NULL COMMENT '昵称',
   `role_id` tinyint(3) unsigned NOT NULL COMMENT '角色id',
   `createtime` int(11) NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`,`email`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='后台管理员表' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='后台管理员表' AUTO_INCREMENT=11 ;
 
 --
 -- 转存表中的数据 `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password_hash`, `email`, `role_id`, `createtime`) VALUES
-(1, 'chunming', '$2y$13$LRp86ZhZ0f1v/4tgx0yrOu1Yj3oML7gO7yryrwnfg6i4SzAd4.Pni', '328122186@qq.com', 1, 1498120185),
-(3, 'ceshi', '$2y$13$BgznGG9GqWwqpd9HOJomyuG3lc6m0VJtl0xiEPfXvrCQoOA.uIG4C', '1665453212@qq.com', 2, 1498122380);
+INSERT INTO `user` (`id`, `username`, `password_hash`, `email`, `nickname`, `role_id`, `createtime`) VALUES
+(1, 'chunming', '$2y$13$LRp86ZhZ0f1v/4tgx0yrOu1Yj3oML7gO7yryrwnfg6i4SzAd4.Pni', '328122186@qq.com', '', 1, 1498120185),
+(10, '测试用户', '$2y$13$klJsJsZve03FxIIV9sbo4.Q3pCScYEelqvEq/2feESUYjRcEgLv1a', '123489@qq.com', '测试用', 2, 1501211781);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
