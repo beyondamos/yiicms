@@ -40,9 +40,12 @@ class CategoryController extends AdminBaseController
     {
         $id = Yii::$app->request->get('id');
         $model = Category::find()->where('id = :id', [':id' => $id])->one();
+        // var_dump($model);
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             if ($model->editCategory($data)) {
+                var_dump($model);
+                exit;
                 Yii::$app->session->setFlash('success', '编辑分类成功');
                 return $this->redirect(['category/index']);
             }

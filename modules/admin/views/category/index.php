@@ -41,6 +41,7 @@ use yii\helpers\Url;
             <th class="text-center">访问量</th>
             <th class="text-center">操作</th>
         </tr>
+            
             <?php foreach($categories as $category):?>
             <tr>
                 <td class="text-center"><?php echo $category['id'];?></td>
@@ -53,6 +54,7 @@ use yii\helpers\Url;
                 </td>
             </tr>
             <?php endforeach;?>
+
     </table>
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>

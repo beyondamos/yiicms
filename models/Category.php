@@ -8,7 +8,8 @@ namespace app\models;
  * @property integer $parent_id 父级分类id
  * @property string $introduction 简介
  */
-class Category extends \app\models\AdminBase{
+class Category extends \app\models\AdminBase
+{
 
     public $failInfo = '';
 
@@ -23,17 +24,10 @@ class Category extends \app\models\AdminBase{
             ['name', 'unique', 'message' => '该分类名称已经存在'],
             ['parent_id', 'required', 'message' => '上级分类必须选择'],
             ['parent_id', 'integer', 'message' => '非法的上级分类'],
-            // ['parent_id', 'checkParentId'],
             ['introduction', 'safe'],
         ];
     }
 
-    public function checkParentId($attribute, $params)
-    {
-        var_dump($attribute);
-        var_dump($params);
-        exit();
-    }
 
     public function attributeLabels(){
         return [
@@ -98,7 +92,11 @@ class Category extends \app\models\AdminBase{
      */
     public function getSortCategory()
     {
-        return $this->_infiniteClass($this->find()->orderBy('id asc')->asArray()->all());
+        $result = $this->_infiniteClass($this->find()->orderBy('id asc')->asArray()->all());
+        if ($result) {
+            return $result;
+        }
+        return [];
     }
 
 
@@ -139,3 +137,4 @@ class Category extends \app\models\AdminBase{
 
 
 }
+
