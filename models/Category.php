@@ -36,6 +36,7 @@ class Category extends \app\models\AdminBase
             'introduction' => '分类简介',
         ];
     }
+    
 
     /**
      * 添加分类

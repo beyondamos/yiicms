@@ -1,241 +1,57 @@
+<?php
+use yii\helpers\Url;
+use yii\widgets\LinkPager;
+?>
     <!-- content部分start -->
     <div class="content">
         <div class="container">
             <div class="content-left fl">
                 <div class="location">
-                    您的位置: <a href="#">首页</a> » <span>新鲜干货</span>
+                    您的位置: <a href="/">首页</a> » <span><?=$category->name;?></span>
                 </div>
                 <div class="content-left-bottom">
-                    <h4 class="content-left-title">新鲜干货</h4>
+                    <h4 class="content-left-title"><?=$category->name;?></h4>
                     <ul class="latest-information-list clearfix">
+                    <?php foreach ($articles as $article):?>    
                         <li>
                             <div class="row">
                                 <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
                                     <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-1.jpg" alt=""></a>
+                                        <a href="<?=Url::to(['article/detail', 'id' => $article->id]);?>"><img src="<?=$article->thumbnail;?>" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
+                                    <h3><a href="<?=Url::to(['article/detail', 'id' => $article->id]);?>"><?=$article->title;?></a></h3>
+                                    <p><?=$article->abstract;?></p>
                                     <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
+                                        <!-- <span class="news-category"><a href="#">新鲜干货</a></span> -->
+                                        <span class="date"><?=date('Y-m-d', $article->updatetime);?></span>
+                                        <i>点击率: <span class="badge"><?=$article->hits;?></span></i></div>
                                     <div class="mark-1">
                                         <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
+                                    <?php foreach($article->tagLists as $tag):?>    
+                                        <a href="<?=Url::to(['tag/index', 'id' => $tag['id']]);?>"><?=$tag['tag_name'];?></a>
+                                    <?php endforeach;?>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-2.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-3.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-1.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-2.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-3.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-1.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-2.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4 col-xs-4 latest-information-l">
-                                    <div class="latest-information-pic">
-                                        <a href="#"><img src="/home/images/information-3.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
-                                    <h3><a href="#">听高阶产品经理讲项目延期的应对策略</a></h3>
-                                    <p><a href="#">无论是产品经理还是项目经理，最讨厌的一个词汇就是项目延期，虽然在项目排期的时候，已经给自己预留了一定的时间(至于预留多少时间</a></p>
-                                    <div>
-                                        <span class="news-category"><a href="#">新鲜干货</a></span>
-                                        <span class="date">2017-07-13</span>
-                                        <i>点击率: <span class="badge">14</span></i></div>
-                                    <div class="mark-1">
-                                        <span class="glyphicon glyphicon-tags"></span>标签:
-                                        <a href="#">PHP</a>
-                                        <a href="#">mysql</a>
-                                        <a href="#">LInux</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                    <?php endforeach;?>    
                     </ul>
+
                     <!-- 分页 -->
-                    <nav aria-label="Page navigation" class="page-list">
-                      <ul class="pagination pagination-lg">
-                        <li>
-                          <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                          </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                          <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
+<div class="page">
+<?php
+    echo LinkPager::widget([
+            'pagination' => $pagination,
+            'firstPageLabel' => '首页',
+            'prevPageLabel' => '上一页',
+            'nextPageLabel' => '下一页',
+            'lastPageLabel' => '末页',
+        ]);
+?>
+</div>
+
                 </div>
             </div>
             <div class="content-right fr hidden-xs hidden-sm">
