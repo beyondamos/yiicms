@@ -37,4 +37,12 @@ class LoginController extends Controller
     }
 
 
+    public function actionLogout()
+    {
+        $session = Yii::$app->session;
+        $session->remove('user_id');
+        return $this->redirect(['/admin/login/index']);
+    }
+
+
 }

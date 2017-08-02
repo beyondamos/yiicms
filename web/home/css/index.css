@@ -281,10 +281,12 @@ ul.banner-r li p {
 	display: block;
 	width: 100%;
 }
+
 /*分页*/
-.page-list {
+.page {
 	text-align: center;
 }
+
 /*热门文章排行*/
 .hot-article-rank,
 .everyone-look,

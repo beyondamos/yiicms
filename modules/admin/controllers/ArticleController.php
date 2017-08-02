@@ -46,11 +46,13 @@ class ArticleController extends AdminBaseController
                         ->with('catename')->orderBy('id desc')->all();
         $Articles = [];
         foreach ($articles as $article) {
+            
             $article->tags = implode(',', $article->getTags());
             $Articles[] = $article;
         }      
 
         return $this->render('drafts', ['articles' => $Articles, 'pagination' => $pagination]);
+
     }
 
 

@@ -25,11 +25,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="/home/images/black-logo.png" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="/home/images/black-logo.png" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="header-nav">
                     <ul class="nav navbar-nav nav-main">
-                        <li class="active"><a href="#">首页</a></li>
+                        <li class="active"><a href="/">首页</a></li>
                         <li><a href="#">干货</a></li>
                         <li><a href="#">设计</a></li>
                         <li><a href="#">运营</a></li>

@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -15,13 +18,14 @@
 				<a href="" class="navbar-brand">DayDayLearn</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="news_list.html" target="main-frame"><{$Think.session.username}></a></li>
-				<li><a href="<{:U('Login/logout')}>" target="_top">退出</a></li>
+				<li><a href="news_list.html" target="main-frame">欢迎回来，小名叫小明</a></li>
+				<li><a href="<?php echo Url::home();?>" target="_blank" >网站首页</a></li>
+				<li><a href="<?php echo Url::to(['login/logout']);?>" target="_top">退出</a></li>
 			</ul>
 		</div>
 	</nav>
 	<!-- /导航栏 -->
-	<script src="__LIB__/jquery/jquery-1.11.3.js"></script>
-	<script src="__LIB__/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+	<script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

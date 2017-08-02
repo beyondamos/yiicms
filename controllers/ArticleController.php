@@ -2,6 +2,8 @@
 namespace app\controllers;
 
 use app\controllers\HomeBaseController;
+use Yii;
+use app\models\Article;
 
 /**
  * Class ArticleController
@@ -18,7 +20,10 @@ class ArticleController extends HomeBaseController
 
     public function actionDetail()
     {
-        return $this->render('detail');
+        $id = Yii::$app->request->get('id');
+        $article = Article::find()->where(['id' => $id])->one();
+        $article->tagLists = $article->getTagsArray();
+        return $this->render('detail', ['article' => $article]);
     }
 
 

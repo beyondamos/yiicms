@@ -12,6 +12,7 @@ class Article extends AdminBase
 {
     public $tags;
     public $file_upload;
+    public $tagLists; //该篇文章的标签的数组
 
     public static function tableName()
     {
@@ -26,7 +27,7 @@ class Article extends AdminBase
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
             ['thumbnail', 'safe'],
-            [['tags', 'status'], 'safe']
+            [['tags', 'status', 'abstract'], 'safe']
         ];
     }
 
@@ -79,6 +80,16 @@ class Article extends AdminBase
         }
         return $tags;
     }
+
+
+    public function getTagsArray()
+    {
+        $tag_ids = $this->tag_ids;
+        $tag_ids = explode(',', $tag_ids);
+        $Tags = new Tags();
+        return $tags_arr = $Tags->find()->where(['id' => $tag_ids])->asArray()->all();
+    }
+
 
     /**
      * 添加文章

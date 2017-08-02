@@ -1,95 +1,85 @@
+<?php
+use yii\helpers\Url;
+?>    
     <!-- content部分start -->
     <div class="content">
         <div class="container">
             <div class="content-left fl news-main">
                 <div class="location">
-                    您的位置: <a href="#">首页</a> » <a href="#">新鲜干货</a> » <span> 正文</span>
+                    您的位置: <a href="/">首页</a> » <a href="<?=Url::to(['article/index', 'id' => $article->catename->id]);?>"><?=$article->catename->name;?></a> » <span> <?=$article->title;?></span>
                 </div>
                 <div class="content-left-bottom">
-                    <h1 class="content-left-title">从下岗女工到集团老总，从8平米的小店到市值120亿的上市公司，她只用了23年！</h1>
+                <h1 class="content-left-title"><?php?></h1>
                     <div class="article-meta">
-                        <span>2017-07-06</span>
-                        <span>作者: <i>小明</i></span>
-                        <span>点击率：<em>154444</em></span>
-                        <span>分类: <a href="#">新鲜干货</a></span>
+                        <span><?=date('Y-m-d', $article->updatetime);?></span>
+                        <span>作者: <i><?=$article->author;?></i></span>
+                        <span>点击率：<em><?=$article->hits;?></em></span>
+                        <span>分类: <a href="<?=Url::to(['article/index', 'id' => $article->catename->id]);?>"><?=$article->catename->name;?></a></span>
                     </div>
                     <div class="article-main">
-                        <p>明星代言APP，其实只是一个噱头，真正的制胜关键，是将APP的用户运营好，将用户转化为忠诚用户。</p>
-                        <p>明星代言商品能为商品带来不错的销量，近些年，更是有明星开始代言APP。明星效应能够给APP带来一定的用户，但是还要做好APP本身的产品开发和设计，才能够留住粉丝;不然可能出现的情况是，你的APP与该明星结束合作关系，明星也会卷着一波粉丝跑了，你的APP用户流失也大了!明星代言APP，更多只是为了拉新，怎样将他们的粉丝转化为我们APP真实的用户，这才是关键。</p>
-                        <p>纵观整个互联网，明星代言APP不在少数，但明星的代言是否就成了APP占领市场的关键?我们先来看看明星们分别代言了什么APP吧。</p>
-                        <p>一.两种代言方式</p>
-                        <p>虽然都是明星代言，但还是有本质区别，先来看看有哪些明星代言了APP，在代言方式上有什么不同。</p>
-                        <p>1.明星为APP作背书</p>
-                        <p>APP邀请明星为自己APP作背书，一些商业活动也会请代言的明星到现场。这种方式比较常见，比如金融理财产品、电商APP、O2O、直播APP、视频/拍照APP、生活服务类APP等等，他们都是利用明星代言来获得大量的流量。</p>
-                        <p>我比较有印象的是：一直播，去年去看电影，在播放之前的广告插播，经常出现宋仲基欧巴代言一直播的广告，形成一种洗脑的感觉，自然给人们留下很深刻的印象。</p>
-                        <p>还有看奔跑吧兄弟的大家们，都知道鹿晗代言了ofo，鹿晗粉丝那么多，对于ofo来说也能够圈住鹿晗的粉丝，给自己带来一波用户，更好地对抗摩拜。</p>
-                        <p>当然，不止上面两个，还有更多更多。</p>
-                        <img src="/home/images/article_1.jpg" alt="">
-                        <p>APP邀请明星为自己APP作背书，一些商业活动也会请代言的明星到现场。这种方式比较常见，比如金融理财产品、电商APP、O2O、直播APP、视频/拍照APP、生活服务类APP等等，他们都是利用明星代言来获得大量的流量。</p>
-                        <p>我比较有印象的是：一直播，去年去看电影，在播放之前的广告插播，经常出现宋仲基欧巴代言一直播的广告，形成一种洗脑的感觉，自然给人们留下很深刻的印象。</p>
-                        <p>还有看奔跑吧兄弟的大家们，都知道鹿晗代言了ofo，鹿晗粉丝那么多，对于ofo来说也能够圈住鹿晗的粉丝，给自己带来一波用户，更好地对抗摩拜。</p>
+                     <?php echo $article->text;?>
                     </div>
                     <div class="mark-1">
                         <span class="glyphicon glyphicon-tags"></span>标签:
-                        <a href="#">PHP</a>
-                        <a href="#">mysql</a>
-                        <a href="#">LInux</a>
+                        <?php foreach ($article->tagLists as $tag) :?>
+                        <a href="<?=Url::to(['tag/index', 'id' => $tag['id']]);?>"><?=$tag['tag_name'];?></a>
+                        <?php endforeach;?>
                     </div>
                 </div>
                 <div class="interest">
                     <div class="interest-title">您可能感兴趣的:</div>
-                        <ul class="interest-list clearfix">
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-1.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-2.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-3.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-4.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-5.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-2.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-3.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-4.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-5.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                            <li>
-                                <a class="interest-pic" href="#"><img src="/home/images/interest-1.jpg" alt=""></a>
-                                <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
-                                </a>
-                            </li>
-                        </ul>
+                    <ul class="interest-list clearfix">
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-1.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-2.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-3.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-4.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-5.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-2.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-3.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-4.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-5.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                        <li>
+                            <a class="interest-pic" href="#"><img src="/home/images/interest-1.jpg" alt=""></a>
+                            <a class="interest-p" href="#">丰田研发车载心脏监护仪 遇紧急情况可自动停车
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="interest">
                     <div class="interest-title">认真评论的人年薪百万……</div>

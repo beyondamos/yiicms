@@ -45,7 +45,7 @@ use yii\widgets\LinkPager;
 
     <tr>
         <td class="text-center"><?php echo $article['id'];?></td>
-        <td><?php echo $article['title'];?></td>
+        <td><a href="<?php echo Url::to(['/article/detail', 'id' => $article['id']]);?>" target="_blank"><?php echo $article['title'];?></a></td>
         <td class="text-center"><?php echo $article['catename']['name'];?></td>
         <td class="text-center"><?php echo $article['tags'];?></td>
         <td class="text-center"><?php echo date('Y-m-d H:i:s', $article['updatetime']);?></td>
