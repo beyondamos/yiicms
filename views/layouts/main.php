@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="/home/images/black-logo.png" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="/home/images/logo.png" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="header-nav">
                     <ul class="nav navbar-nav nav-main">
@@ -51,11 +51,7 @@
     </header>
     <!-- 导航头部end -->
 
-
-  
     <?php echo $content; ?>
-
-
 
     <!-- 返回顶部 start-->
     <div class="scroll-main">
