@@ -43,6 +43,7 @@ use yii\helpers\Url;
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-asterisk"></span> 系统管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="web_setup.html" target="main-frame">网站设置</a></li>
+					<li><a href="<?=Url::to(['nav/index']);?>" target="main-frame">导航设置</a></li>
 					<li><a href="basic_setup.html" target="main-frame">基本设置</a></li>
 				</ul>
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span> 数据管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>

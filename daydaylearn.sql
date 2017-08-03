@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-08-03 02:47:02
--- 服务器版本： 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: 2017-08-03 12:53:28
+-- 服务器版本： 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `daydaylearn`
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- 表的结构 `article`
 --
 
-CREATE TABLE IF NOT EXISTS `article` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `article` (
+  `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(256) NOT NULL COMMENT '文章标题',
   `catid` smallint(11) NOT NULL DEFAULT '0' COMMENT '分类id',
   `thumbnail` varchar(255) NOT NULL DEFAULT '' COMMENT '文章题图缩略图',
@@ -36,12 +36,11 @@ CREATE TABLE IF NOT EXISTS `article` (
   `abstract` varchar(255) NOT NULL DEFAULT '' COMMENT '内容简介、摘要',
   `text` text NOT NULL COMMENT '正文内容',
   `author` varchar(20) NOT NULL DEFAULT '' COMMENT '作者',
-  `hits` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '点击量',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '点击量',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '文章状态',
   `createtime` int(11) NOT NULL COMMENT '创建时间',
-  `updatetime` int(11) NOT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='文章表' AUTO_INCREMENT=3 ;
+  `updatetime` int(11) NOT NULL COMMENT '更新时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章表';
 
 --
 -- 转存表中的数据 `article`
@@ -57,14 +56,13 @@ INSERT INTO `article` (`id`, `title`, `catid`, `thumbnail`, `keywords`, `tag_ids
 -- 表的结构 `auth`
 --
 
-CREATE TABLE IF NOT EXISTS `auth` (
-  `auth_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '权限id',
+CREATE TABLE `auth` (
+  `auth_id` smallint(5) UNSIGNED NOT NULL COMMENT '权限id',
   `auth_name` varchar(20) NOT NULL COMMENT '权限名称',
-  `parent_id` smallint(5) unsigned NOT NULL COMMENT '父级id',
+  `parent_id` smallint(5) UNSIGNED NOT NULL COMMENT '父级id',
   `auth_route` varchar(50) NOT NULL COMMENT '权限路由',
-  `auth_type` smallint(6) NOT NULL COMMENT '权限类型 1为在左侧显示，2不显示',
-  PRIMARY KEY (`auth_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='权限表' AUTO_INCREMENT=15 ;
+  `auth_type` smallint(6) NOT NULL COMMENT '权限类型 1为在左侧显示，2不显示'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限表';
 
 --
 -- 转存表中的数据 `auth`
@@ -92,13 +90,12 @@ INSERT INTO `auth` (`auth_id`, `auth_name`, `parent_id`, `auth_route`, `auth_typ
 -- 表的结构 `category`
 --
 
-CREATE TABLE IF NOT EXISTS `category` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类id',
+CREATE TABLE `category` (
+  `id` smallint(5) UNSIGNED NOT NULL COMMENT '分类id',
   `name` varchar(20) NOT NULL COMMENT '分类名称',
-  `parent_id` smallint(5) unsigned NOT NULL COMMENT '上级分类id',
-  `introduction` text NOT NULL COMMENT '分类描述',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='分类表' AUTO_INCREMENT=7 ;
+  `parent_id` smallint(5) UNSIGNED NOT NULL COMMENT '上级分类id',
+  `introduction` text NOT NULL COMMENT '分类描述'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分类表';
 
 --
 -- 转存表中的数据 `category`
@@ -115,16 +112,29 @@ INSERT INTO `category` (`id`, `name`, `parent_id`, `introduction`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `nav`
+--
+
+CREATE TABLE `nav` (
+  `id` smallint(5) UNSIGNED NOT NULL COMMENT '导航id',
+  `nav_name` varchar(32) NOT NULL DEFAULT '' COMMENT '导航名称',
+  `parent_id` smallint(6) NOT NULL DEFAULT '0' COMMENT '父级导航id',
+  `position` tinyint(4) NOT NULL DEFAULT '0' COMMENT '导航位置，1为顶部，2为底部',
+  `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '导航状态，是否显示，1为显示，0为不显示'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='导航表';
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `role`
 --
 
-CREATE TABLE IF NOT EXISTS `role` (
-  `role_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色id',
+CREATE TABLE `role` (
+  `role_id` smallint(5) UNSIGNED NOT NULL COMMENT '角色id',
   `role_name` varchar(20) NOT NULL COMMENT '角色名称',
   `role_desc` varchar(255) NOT NULL COMMENT '角色描述',
-  `role_auth` text NOT NULL COMMENT '角色权限列表',
-  PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=3 ;
+  `role_auth` text NOT NULL COMMENT '角色权限列表'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色表';
 
 --
 -- 转存表中的数据 `role`
@@ -140,12 +150,11 @@ INSERT INTO `role` (`role_id`, `role_name`, `role_desc`, `role_auth`) VALUES
 -- 表的结构 `tags`
 --
 
-CREATE TABLE IF NOT EXISTS `tags` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签id',
+CREATE TABLE `tags` (
+  `id` int(10) UNSIGNED NOT NULL COMMENT '标签id',
   `tag_name` char(10) NOT NULL COMMENT '标签名称',
-  `article_ids` varchar(1024) NOT NULL COMMENT '文章id列表',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='文章标签表' AUTO_INCREMENT=4 ;
+  `article_ids` varchar(1024) NOT NULL COMMENT '文章id列表'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文章标签表';
 
 --
 -- 转存表中的数据 `tags`
@@ -162,17 +171,15 @@ INSERT INTO `tags` (`id`, `tag_name`, `article_ids`) VALUES
 -- 表的结构 `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL COMMENT '用户名',
   `password_hash` varchar(100) NOT NULL COMMENT '哈希后的密码',
   `email` varchar(100) NOT NULL COMMENT '邮箱',
   `nickname` char(10) NOT NULL COMMENT '昵称',
-  `role_id` tinyint(3) unsigned NOT NULL COMMENT '角色id',
-  `createtime` int(11) NOT NULL COMMENT '添加时间',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`,`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='后台管理员表' AUTO_INCREMENT=11 ;
+  `role_id` tinyint(3) UNSIGNED NOT NULL COMMENT '角色id',
+  `createtime` int(11) NOT NULL COMMENT '添加时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='后台管理员表';
 
 --
 -- 转存表中的数据 `user`
@@ -182,6 +189,92 @@ INSERT INTO `user` (`id`, `username`, `password_hash`, `email`, `nickname`, `rol
 (1, 'chunming', '$2y$13$LRp86ZhZ0f1v/4tgx0yrOu1Yj3oML7gO7yryrwnfg6i4SzAd4.Pni', '328122186@qq.com', '小名叫小明', 1, 1498120185),
 (10, '测试用户', '$2y$13$klJsJsZve03FxIIV9sbo4.Q3pCScYEelqvEq/2feESUYjRcEgLv1a', '123489@qq.com', '测试用', 2, 1501211781);
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `article`
+--
+ALTER TABLE `article`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `auth`
+--
+ALTER TABLE `auth`
+  ADD PRIMARY KEY (`auth_id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nav`
+--
+ALTER TABLE `nav`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`role_id`);
+
+--
+-- Indexes for table `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`,`email`);
+
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `article`
+--
+ALTER TABLE `article`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- 使用表AUTO_INCREMENT `auth`
+--
+ALTER TABLE `auth`
+  MODIFY `auth_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '权限id', AUTO_INCREMENT=15;
+--
+-- 使用表AUTO_INCREMENT `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '分类id', AUTO_INCREMENT=7;
+--
+-- 使用表AUTO_INCREMENT `nav`
+--
+ALTER TABLE `nav`
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '导航id';
+--
+-- 使用表AUTO_INCREMENT `role`
+--
+ALTER TABLE `role`
+  MODIFY `role_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '角色id', AUTO_INCREMENT=3;
+--
+-- 使用表AUTO_INCREMENT `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '标签id', AUTO_INCREMENT=4;
+--
+-- 使用表AUTO_INCREMENT `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
