@@ -45,16 +45,22 @@ $labels = $model->attributeLabels();
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="nav-position" class="col-md-1 control-label"><?php echo $labels['position'];?></label>
-				<div class="col-md-2">
-				<?php echo $form->field($model, 'position')->dropDownList([1 => '顶部导航', 2 => '底部导航'])->label(false);?>
-				</div>
-			</div>
-			<div class="form-group">
 				<label for="nav-nav_url" class="col-md-1 control-label"><?php echo $labels['nav_url'];?></label>
 				<div class="col-md-4">
 				<?php echo $form->field($model, 'nav_url')->textInput(['class' => 'form-control'])->label(false);?>
+				</div>
 			</div>
+			<div class="form-group">
+				<label for="nav-is_blank" class="col-md-1 control-label"><?php echo $labels['is_blank'];?></label>
+				<div class="col-md-1">
+				<?php echo $form->field($model, 'is_blank')->dropDownList([ 0 => '否', 1 => '是'])->label(false);?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nav-status" class="col-md-1 control-label"><?php echo $labels['status'];?></label>
+				<div class="col-md-1">
+				<?php echo $form->field($model, 'status')->dropDownList([ 1 => '生效', 0 => '禁用'])->label(false);?>	
+				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-md-offset-1 col-md-2">

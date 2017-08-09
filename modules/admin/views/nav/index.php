@@ -36,18 +36,16 @@ use yii\widgets\LinkPager;
     <tr>
         <th class="text-center">编号</th>
         <th class="text-center">导航名称</th>
-        <th class="text-center">导航位置</th>
-        <th class="text-center">导航级别</th>
         <th class="text-center">URL</th>
+        <th class="text-center">导航级别</th>
         <th class="text-center">状态</th>
         <th class="text-center">操作</th>
     </tr>
     <?php foreach($navs as $nav):?>
-
     <tr>
         <td class="text-center"><?php echo $nav['id'];?></td>
         <td><a href="<?php echo Url::to(['/article/detail', 'id' => $nav['id']]);?>" target="_blank"><?php echo $nav['title'];?></a></td>
-        <td class="text-center"><?php echo $nav['catename']['name'];?></td>
+       
         <td class="text-center"><?php echo $nav['tags'];?></td>
         <td class="text-center"><?php echo date('Y-m-d H:i:s', $nav['updatetime']);?></td>
         <td class="text-center">
@@ -57,15 +55,6 @@ use yii\widgets\LinkPager;
     </tr>
     <?php endforeach;?>
 </table>
-<?php
-  // echo LinkPager::widget([
-  //           'pagination' => $pagination,
-  //           'firstPageLabel' => '首页',
-  //           'prevPageLabel' => '上一页',
-  //           'nextPageLabel' => '下一页',
-  //           'lastPageLabel' => '末页',
-  //   ]);
-?>
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
