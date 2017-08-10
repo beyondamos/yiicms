@@ -52,7 +52,7 @@ use yii\widgets\LinkPager;
         <td class="text-center"><?php echo $nav['status'] == 0 ? '禁用' : '生效';?></td>
         <td class="text-center">
             <a class="btn btn-info" href="<?php echo Url::to(['nav/edit', 'id' => $nav['id']]);?>" role="button">编辑</a>
-            <a class="btn btn-danger" href="<?php echo Url::to(['nav/examine', 'id' => $nav['id']]);?>" role="button">删除</a>
+            <a class="btn btn-danger" href="<?php echo Url::to(['nav/delete', 'id' => $nav['id']]);?>" role="button">删除</a>
         </td>
     </tr>
     <?php endforeach;?>

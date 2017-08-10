@@ -61,6 +61,28 @@ class Nav extends AdminBase
 
 
     /**
+     * 删除导航
+     * 如果该导航下存在子级，则不能删除
+     * @return bool 
+     */
+    public function delNav()
+    {
+        $nav = Nav::find()->where(['parent_id' => $this->id ])->one();
+        if ($nav) {
+            return false;
+        }
+        if ($this->delete()) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+
+
+    /**
      * 判断当前实例的新选择的parent_id 是否是原来的子级或子孙级
      * @return [type] [description]
      */
@@ -84,6 +106,10 @@ class Nav extends AdminBase
         }
         return true;
     }
+
+
+
+
 
 
 

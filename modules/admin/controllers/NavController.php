@@ -65,5 +65,25 @@ class NavController extends AdminBaseController
     }
 
 
+    /**
+     * 删除导航
+     * @return [type] [description]
+     */
+    public function actionDelete()
+    {
+        $id = Yii::$app->request->get('id');
+        $nav = Nav::find()->where(['id' => $id])->one();
+        if ($nav->delNav()) {
+            Yii::$app->session->setFlash('success', '删除导航信息成功');
+        } else {
+            Yii::$app->session->setFlash('fail', '该导航下存在子级，不能删除');
+        }
+
+        return $this->redirect(['nav/index']);
+
+    }
+
+
+
 
 }
