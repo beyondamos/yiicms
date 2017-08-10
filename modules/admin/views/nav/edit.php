@@ -9,7 +9,7 @@ $labels = $model->attributeLabels();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>分类编辑</title>
+	<title>导航编辑</title>
 	<link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="/admin/css/main.css">
 </head>
@@ -17,10 +17,10 @@ $labels = $model->attributeLabels();
 	<div class="container-fluid">
 		<ol class="breadcrumb">
 			<li><a href="#">首页</a></li>
-			<li>信息中心</li>
-			<li class="active">分类添加</li>
+			<li>系统管理</li>
+			<li class="active">导航编辑</li>
 		</ol>
-		<a class="btn btn-primary" href="<?=Url::to(['category/index']);?>" role="button"></span> 返回</a>
+		<a class="btn btn-primary" href="<?=Url::to(['nav/index']);?>" role="button"></span> 返回</a>
 	    <?php if(Yii::$app->session->hasFlash('fail')):?>
 	    <div class="alert alert-danger alert-dismissible" role="alert">
 	      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -28,31 +28,42 @@ $labels = $model->attributeLabels();
 	    </div>
 	    <?php endif;?>
 		<?php $form = ActiveForm::begin(['method' => 'post', 
-										'action' => Url::to(['category/edit']), 
 										'options' => ['class' => 'form-horizontal', 
-													  'enctype' => 'multipart/form-data'
 													]
 										]);?>
 			<div class="form-group">
-				<label for="category-name" class="col-md-1 control-label"><?php echo $labels['name'];?></label>
+				<label for="nav-nav_name" class="col-md-1 control-label"><?php echo $labels['nav_name'];?></label>
 				<div class="col-md-3">
-				<?php echo $form->field($model, 'name')->textInput(['class' => 'form-control', 'placeholder'=> '请输入分类名称'])->label(false);?>
+				<?php echo $form->field($model, 'nav_name')->textInput(['class' => 'form-control', 'placeholder' => '请输入导航名称'])->label(false);?>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="category-parent_id" class="col-md-1 control-label"><?php echo $labels['parent_id'];?></label>
+				<label for="nav-parent_id" class="col-md-1 control-label"><?php echo $labels['parent_id'];?></label>
 				<div class="col-md-3">
-				<?php echo $form->field($model, 'parent_id')->dropDownList($category)->label(false);?>	
+				<?php echo $form->field($model, 'parent_id')->dropDownList($navs)->label(false);?>	
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="category-introduction" class="col-md-1 control-label"><?php echo $labels['introduction'];?></label>
+				<label for="nav-nav_url" class="col-md-1 control-label"><?php echo $labels['nav_url'];?></label>
 				<div class="col-md-4">
-				<?php echo $form->field($model, 'introduction')->textarea(['class' => 'form-control', 'rows' => 4])->label(false);?>
+				<?php echo $form->field($model, 'nav_url')->textInput(['class' => 'form-control'])->label(false);?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nav-is_blank" class="col-md-1 control-label"><?php echo $labels['is_blank'];?></label>
+				<div class="col-md-1">
+				<?php echo $form->field($model, 'is_blank')->dropDownList([ 0 => '否', 1 => '是'])->label(false);?>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nav-status" class="col-md-1 control-label"><?php echo $labels['status'];?></label>
+				<div class="col-md-1">
+				<?php echo $form->field($model, 'status')->dropDownList([ 1 => '生效', 0 => '禁用'])->label(false);?>	
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-md-offset-1 col-md-2">
+					<?php echo $form->field($model, 'id')->hiddenInput()->label(false);?>
 					<input class="btn btn-info" type="submit" value="提交" >
 					<input class="btn btn-danger" type="reset" value="重置">
 				</div>

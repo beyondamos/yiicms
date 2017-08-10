@@ -18,7 +18,10 @@ class NavController extends AdminBaseController
 	 */
 	public function actionIndex()
 	{
-		return $this->render('index', ['navs' => []]);
+        $model = new Nav();
+        $navs = $model->getSortNavs();
+
+		return $this->render('index', ['navs' => $navs]);
 	}
 
 
@@ -38,8 +41,29 @@ class NavController extends AdminBaseController
             Yii::$app->session->setFlash('fail', '添加导航信息失败');
         }
 
-        return $this->render('add', ['model' => $model, 'navs' => []]);
+        return $this->render('add', ['model' => $model, 'navs' => $model->getSelectNavs() ]);
     }
+
+
+    /**
+     * 导航编辑
+     * @return [type] [description]
+     */
+    public function actionEdit()
+    {
+        $id = Yii::$app->request->get('id');
+        $nav = Nav::find()->where('id = :id', ['id' => $id])->one();
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+            if ($nav->editNav($data)) {
+                Yii::$app->session->setFlash('success', '编辑导航信息成功');
+                return $this->redirect(['nav/index']);
+            }
+            Yii::$app->session->setFlash('fail', '编辑导航信息失败');
+        }
+        return $this->render('edit', ['model' => $nav, 'navs' => $nav->getSelectNavs()]);
+    }
+
 
 
 }

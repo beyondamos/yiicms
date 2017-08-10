@@ -28,7 +28,6 @@ $labels = $model->attributeLabels();
 	    </div>
 	    <?php endif;?>
 		<?php $form = ActiveForm::begin(['method' => 'post', 
-										'action' => Url::to(['category/edit']), 
 										'options' => ['class' => 'form-horizontal', 
 													  'enctype' => 'multipart/form-data'
 													]

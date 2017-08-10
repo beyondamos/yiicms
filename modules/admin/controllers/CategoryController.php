@@ -44,8 +44,6 @@ class CategoryController extends AdminBaseController
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             if ($model->editCategory($data)) {
-                var_dump($model);
-                exit;
                 Yii::$app->session->setFlash('success', '编辑分类成功');
                 return $this->redirect(['category/index']);
             }

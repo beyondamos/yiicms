@@ -110,7 +110,7 @@ class Category extends \app\models\AdminBase
         $data = $this->getSortCategory();
         $result[0] = '顶级分类';
         foreach ($data as $val) {
-            $result[$val['id']] = str_repeat('----',$val['level']).$val['name'];
+            $result[$val['id']] = str_repeat('----', $val['level']).$val['name'];
         }
         return $result;
     }

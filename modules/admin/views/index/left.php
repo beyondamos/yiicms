@@ -35,10 +35,6 @@ use yii\helpers\Url;
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal"></span> 系统统计&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="">信息管理</a></li>
-					<li><a href="">信息管理</a></li>
-					<li><a href="">信息管理</a></li>
-					<li><a href="">信息管理</a></li>
-					<li><a href="">信息管理</a></li>
 				</ul>
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-asterisk"></span> 系统管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
