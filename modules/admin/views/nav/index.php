@@ -37,6 +37,7 @@ use yii\widgets\LinkPager;
         <th class="text-center">编号</th>
         <th class="text-center">导航名称</th>
         <th class="text-center">URL</th>
+        <th class="text-center">排序</th>
         <th class="text-center">导航级别</th>
         <th class="text-center">打开方式</th>
         <th class="text-center">状态</th>
@@ -47,6 +48,7 @@ use yii\widgets\LinkPager;
         <td class="text-center"><?php echo $nav['id'];?></td>
         <td><a href="<?php echo $nav['nav_url'];?>" target="_blank"><?php echo str_repeat('----', $nav['level']*2).$nav['nav_name'];?></a></td>
         <td class="text-center"> <a href="<?php echo $nav['nav_url'];?>" target="_blank"> <?php echo $nav['nav_url'];?></a></td>
+        <td class="text-center"><?php echo $nav['sort'];?></td>
         <td class="text-center"><?php echo ($nav['level']+1).'级导航';?></td>
         <td class="text-center"><?php echo $nav['is_blank'] == 0 ? '本页面打开' : '新窗口打开';?></td>
         <td class="text-center"><?php echo $nav['status'] == 0 ? '禁用' : '生效';?></td>

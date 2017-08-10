@@ -20,6 +20,7 @@ class Nav extends AdminBase
             ['parent_id', 'integer', 'min' => 0],
             ['nav_url', 'required', 'message' => '导航地址不能为空'],
             ['nav_url', 'url', 'message' => '无效的导航地址'],
+            ['sort', 'integer', 'min' => 1, 'max' => 100, 'message' => '排序数字必须为0-100的整数'],
             [['is_blank', 'status'], 'in', 'range' => [0,1]],
         ];
     }
@@ -32,7 +33,8 @@ class Nav extends AdminBase
             'parent_id' => '上级导航',
             'is_blank' => '是否新窗口打开',
             'nav_url' => '导航地址',
-            'status' => '导航状态'
+            'status' => '导航状态',
+            'sort' => '排序'
         ];
     }
 
@@ -96,7 +98,7 @@ class Nav extends AdminBase
 
         //判断上级导航是否为子孙级
         //先获取旧属性parnet_id 下的子级或子孙级列表
-        $result = $this->_infiniteClass($this->find()->orderBy('id asc')->asArray()->all(), $this->id);
+        $result = $this->_infiniteClass($this->find()->orderBy('sort asc')->asArray()->all(), $this->id);
         if (!$result) $result = [];
         foreach ($result as $val) {
             if ($val['id'] == $this->parent_id) {
@@ -119,7 +121,7 @@ class Nav extends AdminBase
      */
     public function getSortNavs()
     {
-        $result = $this->_infiniteClass($this->find()->orderBy('id asc')->asArray()->all());
+        $result = $this->_infiniteClass($this->find()->orderBy('sort asc')->asArray()->all());
         if ($result) {
             return $result;
         }

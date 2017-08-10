@@ -51,6 +51,12 @@ $labels = $model->attributeLabels();
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="nav-sort" class="col-md-1 control-label"><?php echo $labels['sort'];?></label>
+				<div class="col-md-1">
+				<?php echo $form->field($model, 'sort')->textInput(['class' => 'form-control', 'value' => 50])->label(false);?>
+				</div>
+			</div>
+			<div class="form-group">
 				<label for="nav-is_blank" class="col-md-1 control-label"><?php echo $labels['is_blank'];?></label>
 				<div class="col-md-1">
 				<?php echo $form->field($model, 'is_blank')->dropDownList([ 0 => '否', 1 => '是'])->label(false);?>
