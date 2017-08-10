@@ -61,6 +61,11 @@ class Category extends \app\models\AdminBase
     public function editCategory($data)
     {
         if ($this->load($data) && $this->validate()) {
+            //判断下选择上级分类的时候，不能选择自身或者自身下子级分类
+            if (!$this->judgeParentId()) {
+                return false;
+            }
+
             if ($this->save(false)) {
                 return true;
             }
@@ -68,6 +73,33 @@ class Category extends \app\models\AdminBase
         }
         return false;
     }
+
+
+    /**
+     * 在选择上级分类时，判断是否选择正确
+     * 不能选择自身，也不能选择子级
+     * @return bool
+     */
+    private function judgeParentId()
+    {
+        //判断是否选择自身
+        if ($this->id == $this->parent_id) {
+            $this->addError('parent_id', '上级分类不能选择自身');
+            return false;
+        }
+
+        $categories = $this->_infiniteClass(self::find()->asArray()->all(), $this->id);
+        if (!$categories) return true;
+        foreach ($categories as $val) {
+            if ($val['parent_id'] == $this->id) {
+                $this->addError('parent_id', '上级分类不能选择自身的子级');
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
     /**
      * 删除分类  存在子类不能删除
