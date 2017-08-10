@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2017 �?08 �?10 �?06:27
+-- 生成日期: 2017 �?08 �?10 �?09:23
 -- 服务器版本: 5.5.53
 -- PHP 版本: 5.6.27
 
@@ -55,7 +55,7 @@ INSERT INTO `article` (`id`, `title`, `catid`, `thumbnail`, `keywords`, `tag_ids
 (5, 'PHP完善的分页类', 1, '', '', '', '', '<h1 style="text-align:center;">\r\n	PHP完善的分页类\r\n</h1>', '小名叫小明', 0, 1, 1502177072, 1502177072),
 (6, 'PHP文件上传类', 1, '', '', '', '', '<h1 style="text-align:center;">\r\n	PHP文件上传类\r\n</h1>', '小名叫小明', 0, 1, 1502177103, 1502177103),
 (7, 'Mysql优化指南', 2, '', '', '', '', '<h1 style="text-align:center;">\r\n	Mysql优化指南\r\n</h1>', '小名叫小明', 0, 1, 1502177140, 1502177140),
-(8, 'Sublime Text 3 插件推荐1', 6, '', '', '1,2', '', '<h1 style="text-align:center;">\r\n	Sublime Text 3 插件推荐\r\n</h1>', '小名叫小明', 0, 1, 1502177179, 1502265529);
+(8, 'Sublime Text 3 插件推荐', 6, '', '', '1,2', '', '<h1 style="text-align:center;">\r\n	Sublime Text 3 插件推荐\r\n</h1>', '小名叫小明', 0, 1, 1502177179, 1502353134);
 
 -- --------------------------------------------------------
 
@@ -129,6 +129,7 @@ CREATE TABLE IF NOT EXISTS `nav` (
   `nav_name` varchar(32) NOT NULL DEFAULT '' COMMENT '导航名称',
   `parent_id` smallint(6) NOT NULL DEFAULT '0' COMMENT '父级导航id',
   `nav_url` varchar(256) NOT NULL COMMENT '导航地址URL',
+  `sort` tinyint(4) NOT NULL DEFAULT '50' COMMENT '导航排序',
   `is_blank` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否新窗口，1为新窗口，0为本页面',
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '导航状态，是否显示，1为显示，0为不显示',
   PRIMARY KEY (`id`)
@@ -138,10 +139,10 @@ CREATE TABLE IF NOT EXISTS `nav` (
 -- 转存表中的数据 `nav`
 --
 
-INSERT INTO `nav` (`id`, `nav_name`, `parent_id`, `nav_url`, `is_blank`, `status`) VALUES
-(1, '首页', 0, 'http://www.daydaylearn.cn', 0, 1),
-(2, 'PHP', 0, 'http://www.daydaylearn.cn/php.html', 0, 1),
-(3, 'Yii', 2, 'http://www.daydaylearn.cm/php/yii.html', 0, 1);
+INSERT INTO `nav` (`id`, `nav_name`, `parent_id`, `nav_url`, `sort`, `is_blank`, `status`) VALUES
+(1, '首页', 0, 'http://www.baidu.com', 50, 0, 1),
+(2, 'PHP', 0, 'http://www.baidu.com', 50, 0, 1),
+(3, 'YII', 2, 'http://www.baidu.com', 40, 0, 1);
 
 -- --------------------------------------------------------
 
