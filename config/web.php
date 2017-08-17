@@ -16,6 +16,12 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Admin',
             'defaultRoute' => 'index',  //修改默认控制器名称为index
+            // 'components' => [
+            //     'urlManager' => [
+            //         'enablePrettyUrl' => false, //是否启用美化URL
+            //     ],
+            // ],
+
         ],
     ],
     'components' => [
@@ -51,14 +57,17 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
 
-        /*
+        
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'enablePrettyUrl' => true, //是否启用美化URL
+            'suffix' => '.html',    //URL后缀
+            'showScriptName' => false,  //是否显示脚本名字 index.php
             'rules' => [
-            ],
+                '<controller:\w+>/<id:\d+>' => '<controller>/detail',
+                '<controller:\w+>/<action>/<id:\d+>' => '<controller>/<action>',
+            ],  //包含URL匹配规则的列表
         ],
-        */
+        
     ],
 
     'params' => $params,

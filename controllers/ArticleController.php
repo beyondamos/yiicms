@@ -46,4 +46,20 @@ class ArticleController extends HomeBaseController
     }
 
 
+
+    /**
+     * 增加点击率
+     * @param int $id 被访问的文章id
+     * 1小时内访问算1个访问
+     */
+    private function addHits($id)
+    {
+        
+    }
+
+
+
+
+
+
 }
