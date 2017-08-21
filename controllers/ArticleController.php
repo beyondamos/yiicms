@@ -40,6 +40,9 @@ class ArticleController extends HomeBaseController
     public function actionDetail()
     {
         $id = Yii::$app->request->get('id');
+        //增加点击率
+        $this->addHits($id);
+
         $article = Article::find()->where(['id' => $id])->one();
         $article->tagLists = $article->getTagsArray();
         return $this->render('detail', ['article' => $article]);
@@ -54,7 +57,42 @@ class ArticleController extends HomeBaseController
      */
     private function addHits($id)
     {
-        
+        $time = time();
+        //先获取cookies
+        $cookies = Yii::$app->request->cookies;
+        $hits = $cookies->getValue('hits', '');
+        //判断是否有点击率的cookie
+        if ($hits) {
+            //存在cookie则处理过期的点击记录
+            $hits_arr = unserialize($hits);
+            foreach ($hits_arr as $key => $value) {
+                if (($time-$value) > 3600) {
+                    unset($hits_arr[$key]);
+                }
+            }
+        } else {
+            $hits_arr = [];
+        }
+
+        //如果cookies中不存在该id 或者 不存在cookie
+        //重新保存cookies，并且数据库hits+1
+        if (!array_key_exists($id, $hits_arr)) {
+            $hits_arr[$id] = $time;
+            $hits = serialize($hits_arr);
+            $cookies = Yii::$app->response->cookies;
+            $cookies->add(new \yii\web\Cookie([
+                    'name' => 'hits',
+                    'value' => $hits,
+                    'expire' => time()+3600
+                ]));
+            $article = Article::find()->where('id = :id', [':id' => $id])->one();
+            $article->hits = $article->hits+1;
+            $article->save();
+        }
+
+
+
+
     }
 
 

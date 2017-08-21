@@ -44096,3 +44096,2066 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1502960244.6056
     'REQUEST_TIME' => 1502960244
 ]
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][info][application] $_COOKIE = [
+    '_csrf' => '2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8iWOq1KOuT9kveZgCdYbYuLGYT_f47bs\";}'
+    'PHPSESSID' => 'geav91bd1ld3ebrgr1l4ubl7n7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1756'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'REMOTE_PORT' => '54935'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228iWOq1KOuT9kveZgCdYbYuLGYT_f47bs%22%3B%7D; PHPSESSID=geav91bd1ld3ebrgr1l4ubl7n7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503278468.4486
+    'REQUEST_TIME' => 1503278468
+]
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][info][application] $_COOKIE = [
+    '_csrf' => '2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8iWOq1KOuT9kveZgCdYbYuLGYT_f47bs\";}'
+    'PHPSESSID' => 'geav91bd1ld3ebrgr1l4ubl7n7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1820'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__LIB__/jquery/jquery-1.11.3.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__LIB__/jquery/jquery-1.11.3.js'
+    'REMOTE_PORT' => '54934'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228iWOq1KOuT9kveZgCdYbYuLGYT_f47bs%22%3B%7D; PHPSESSID=geav91bd1ld3ebrgr1l4ubl7n7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503278468.4486
+    'REQUEST_TIME' => 1503278468
+]
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 09:21:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][info][application] $_COOKIE = [
+    '_csrf' => '2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8iWOq1KOuT9kveZgCdYbYuLGYT_f47bs\";}'
+    'PHPSESSID' => 'geav91bd1ld3ebrgr1l4ubl7n7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1820'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'REMOTE_PORT' => '54934'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228iWOq1KOuT9kveZgCdYbYuLGYT_f47bs%22%3B%7D; PHPSESSID=geav91bd1ld3ebrgr1l4ubl7n7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503278468.5686
+    'REQUEST_TIME' => 1503278468
+]
+2017-08-21 09:21:09 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 09:21:09 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][info][application] $_COOKIE = [
+    '_csrf' => '2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8iWOq1KOuT9kveZgCdYbYuLGYT_f47bs\";}'
+    'PHPSESSID' => 'geav91bd1ld3ebrgr1l4ubl7n7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1820'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__JS__/left.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__JS__/left.js'
+    'REMOTE_PORT' => '54932'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228iWOq1KOuT9kveZgCdYbYuLGYT_f47bs%22%3B%7D; PHPSESSID=geav91bd1ld3ebrgr1l4ubl7n7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503278469.4506
+    'REQUEST_TIME' => 1503278469
+]
+2017-08-21 10:54:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: hits_arr' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:77
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\controllers\ArticleController.php(77): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\phpStudy\\WWW...', 77, Array)
+#1 D:\phpStudy\WWW\yiicms\controllers\ArticleController.php(44): app\controllers\ArticleController->addHits('9')
+#2 [internal function]: app\controllers\ArticleController->actionDetail()
+#3 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('detail', Array)
+#6 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('article/detail', Array)
+#7 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#9 {main}
+2017-08-21 10:54:08 [127.0.0.1][-][geav91bd1ld3ebrgr1l4ubl7n7][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '_csrf' => '2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8iWOq1KOuT9kveZgCdYbYuLGYT_f47bs\";}'
+    'PHPSESSID' => 'geav91bd1ld3ebrgr1l4ubl7n7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1860'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/9.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/9.html'
+    'REMOTE_PORT' => '62117'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=2de68738526b383654d14777affd2303c92f192950c732e26491bf2b1907ee12a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228iWOq1KOuT9kveZgCdYbYuLGYT_f47bs%22%3B%7D; PHPSESSID=geav91bd1ld3ebrgr1l4ubl7n7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/index.html'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503284048.4566
+    'REQUEST_TIME' => 1503284048
+]
+2017-08-21 11:18:19 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:18:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/9.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/9.html'
+    'REMOTE_PORT' => '63309'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285499.6256
+    'REQUEST_TIME' => 1503285499
+]
+2017-08-21 11:18:56 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:18:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '2'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/9.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/9.html'
+    'REMOTE_PORT' => '62466'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285536.5416
+    'REQUEST_TIME' => 1503285536
+]
+2017-08-21 11:19:03 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '4'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62472'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285543.6916
+    'REQUEST_TIME' => 1503285543
+]
+2017-08-21 11:19:25 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '5'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62489'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=5'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285565.0866
+    'REQUEST_TIME' => 1503285565
+]
+2017-08-21 11:19:25 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '6'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62490'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=6'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285565.5466
+    'REQUEST_TIME' => 1503285565
+]
+2017-08-21 11:19:25 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '7'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62491'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285565.8276
+    'REQUEST_TIME' => 1503285565
+]
+2017-08-21 11:19:26 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '8'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62492'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285566.1326
+    'REQUEST_TIME' => 1503285566
+]
+2017-08-21 11:19:26 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_COOKIE = [
+    '__guid' => '216122526.2106098527565989000.1502414143140.4714'
+    'monitor_count' => '9'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62493'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '__guid=216122526.2106098527565989000.1502414143140.4714; monitor_count=9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285566.3856
+    'REQUEST_TIME' => 1503285566
+]
+2017-08-21 11:19:40 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '8'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/8.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/8.html'
+    'REMOTE_PORT' => '62772'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, */*'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285580.2246
+    'REQUEST_TIME' => 1503285580
+]
+2017-08-21 11:19:50 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Yii\web\Cookie' not found' in D:\phpStudy\WWW\yiicms\controllers\ArticleController.php:83
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-21 11:19:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1856'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/article/9.html'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/article/9.html'
+    'REMOTE_PORT' => '62846'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503285590.4376
+    'REQUEST_TIME' => 1503285590
+]
+2017-08-21 14:22:14 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:22:14 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    'hits' => 'd06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503285648;}\";}'
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1832'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__LIB__/jquery/jquery-1.11.3.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__LIB__/jquery/jquery-1.11.3.js'
+    'REMOTE_PORT' => '60488'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'hits=d06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503285648%3B%7D%22%3B%7D; _csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503296534.6196
+    'REQUEST_TIME' => 1503296534
+]
+2017-08-21 14:22:15 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:22:15 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    'hits' => 'd06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503285648;}\";}'
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1832'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__LIB__/bootstrap/js/bootstrap.min.js'
+    'REMOTE_PORT' => '60459'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'hits=d06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503285648%3B%7D%22%3B%7D; _csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503296535.6206
+    'REQUEST_TIME' => 1503296535
+]
+2017-08-21 14:22:15 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:22:15 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    'hits' => 'd06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503285648;}\";}'
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1740'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/index/__JS__/left.js'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/index/__JS__/left.js'
+    'REMOTE_PORT' => '60490'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'hits=d06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503285648%3B%7D%22%3B%7D; _csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/index/left.html'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503296535.6256
+    'REQUEST_TIME' => 1503296535
+]
+2017-08-21 14:22:34 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:22:34 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    'hits' => 'd06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503285648;}\";}'
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1740'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '60520'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'hits=d06081952b6dfe9b46b07715f7f72405bfbd64128f20cef4f108ca651e0162f6a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503285648%3B%7D%22%3B%7D; _csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503296554.0686
+    'REQUEST_TIME' => 1503296554
+]
+2017-08-21 14:30:11 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:30:11 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '61776'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297011.4306
+    'REQUEST_TIME' => 1503297011
+]
+2017-08-21 14:30:45 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:30:45 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '61819'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297045.8256
+    'REQUEST_TIME' => 1503297045
+]
+2017-08-21 14:32:20 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:32:20 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '62017'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297140.1316
+    'REQUEST_TIME' => 1503297140
+]
+2017-08-21 14:33:29 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:33:29 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '62213'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297209.3486
+    'REQUEST_TIME' => 1503297209
+]
+2017-08-21 14:34:34 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:34:34 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '62732'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297274.4366
+    'REQUEST_TIME' => 1503297274
+]
+2017-08-21 14:34:51 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:34:51 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '62780'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297291.5176
+    'REQUEST_TIME' => 1503297291
+]
+2017-08-21 14:35:30 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:35:30 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1908'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '62882'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297330.2676
+    'REQUEST_TIME' => 1503297330
+]
+2017-08-21 14:38:59 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:38:59 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '63213'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297539.1196
+    'REQUEST_TIME' => 1503297539
+]
+2017-08-21 14:40:09 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:40:09 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '63305'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297609.3846
+    'REQUEST_TIME' => 1503297609
+]
+2017-08-21 14:40:29 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:40:29 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '63389'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297629.8906
+    'REQUEST_TIME' => 1503297629
+]
+2017-08-21 14:40:59 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:40:59 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '63427'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297659.5936
+    'REQUEST_TIME' => 1503297659
+]
+2017-08-21 14:42:58 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:42:58 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '64025'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297778.7346
+    'REQUEST_TIME' => 1503297778
+]
+2017-08-21 14:43:38 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:43:38 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '64057'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297818.5996
+    'REQUEST_TIME' => 1503297818
+]
+2017-08-21 14:44:08 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:44:08 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '64064'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297848.0466
+    'REQUEST_TIME' => 1503297848
+]
+2017-08-21 14:44:45 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpStudy\WWW\yiicms\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yiicms\web\index.php(16): yii\base\Application->run()
+#3 {main}
+2017-08-21 14:44:45 [127.0.0.1][-][spijlvpsr1aqcsh4rt04ahbu23][info][application] $_COOKIE = [
+    '_csrf' => '13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU\";}'
+    'PHPSESSID' => 'spijlvpsr1aqcsh4rt04ahbu23'
+    'hits' => '4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a:2:{i:0;s:4:\"hits\";i:1;s:23:\"a:1:{i:9;i:1503297002;}\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\Administrator\\AppData\\Local\\GitHubDesktop\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php/php-5.6.27-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '1884'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/admin/article/'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/admin/article/'
+    'REMOTE_PORT' => '64144'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yiicms/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/yiicms/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'yiicms.xiaoming.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => '_csrf=13e4f1ea1fb4ad893a75de553b1c8088d2e3b14fcb73df853cad90d42973ad56a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h0d-LzC2fnT7FuJQ8Be8lYJwotk-aSaU%22%3B%7D; PHPSESSID=spijlvpsr1aqcsh4rt04ahbu23; hits=4f6cc114db7667ca98e9be3e19658ec9e5bf08db30ff3c58ed3acb322b0f9b12a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22hits%22%3Bi%3A1%3Bs%3A23%3A%22a%3A1%3A%7Bi%3A9%3Bi%3A1503297002%3B%7D%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://yiicms.xiaoming.com/admin/article/edit.html?id=9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'ShockwaveFlash/26.0.0.151'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'yiicms.xiaoming.com'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503297885.7446
+    'REQUEST_TIME' => 1503297885
+]
