@@ -29,15 +29,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="header-nav">
                     <ul class="nav navbar-nav nav-main">
-                        <li class="active"><a href="/">首页</a></li>
-                        <li><a href="#">干货</a></li>
-                        <li><a href="#">设计</a></li>
-                        <li><a href="#">运营</a></li>
-                        <li><a href="#">职场</a></li>
-                        <li><a href="#">电商</a></li>
-                        <li><a href="#">有趣</a></li>
-                        <li><a href="#">报告</a></li>
-                        <li><a href="#">导航</a></li>
+                    <?php foreach ($this->params['navs'] as $nav):?>
+                        <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="<?=$nav['nav_url']?>" <?php echo $nav['is_blank'] == '1'? 'target="_blank"' : '' ;?>><?=$nav['nav_name']?></a></li>
+                    <?php endforeach;?>    
                     </ul>
                     <form class="navbar-form navbar-right hidden-xs hidden-sm hidden-md">
                         <div class="form-group">
