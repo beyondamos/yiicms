@@ -21,7 +21,11 @@ class ArticleController extends HomeBaseController
      * @return [type] [description]
      */
     public function actionIndex(){
-        $id = Yii::$app->request->get('id');
+        $id = (int)Yii::$app->request->get('id');
+
+        //大家都在看(栏目热门文章)
+        $this->showCategoryHotArticles($id);
+
         $category = Category::find()->where(['id' => $id])->one();
         $query = Article::find()->where(['status' => 1, 'catid' => $id]);
         $count = $query->count();
@@ -44,8 +48,16 @@ class ArticleController extends HomeBaseController
         $this->addHits($id);
 
         $article = Article::find()->where(['id' => $id])->one();
+
+        //大家都在看(栏目热门文章)
+        $this->showCategoryHotArticles($article->catid);
+
+        //您可能感兴趣（获取与该文章相同标签的点记录较高的文章）
+        $interestedArticles = $article->getInterestedArticles();
+    
         $article->tagLists = $article->getTagsArray();
-        return $this->render('detail', ['article' => $article]);
+
+        return $this->render('detail', ['article' => $article, 'interestedArticles' => $interestedArticles]);
     }
 
 
@@ -96,6 +108,17 @@ class ArticleController extends HomeBaseController
     }
 
 
+    /**
+     * 获取某栏目下最热的6篇文章
+     * @param  int $id 栏目id
+     * @return array     文章数组
+     */
+    private function showCategoryHotArticles($id)
+    {
+        $articles = Article::find()->where(['catid' => $id])->orderBy('hits desc')->limit(6)->all();
+        $view = Yii::$app->view;
+        $view->params['categoryHotArticles'] = $articles;
+    }
 
 
 

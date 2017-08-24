@@ -11,6 +11,7 @@ class IndexController extends HomeBaseController
 
     public function actionIndex()
     {
+
         //最新资讯
         $query = Article::find()->where(['status' => 1]);
         $count = $query->count();

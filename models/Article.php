@@ -238,4 +238,33 @@ class Article extends AdminBase
     }
 
 
+
+    public function getInterestedArticles()
+    {
+        $tag_ids = $this->tag_ids;
+        $ids = explode(',', $tag_ids);
+        if (count($ids) == 0 ) {
+            return [];
+        }
+
+        //将多个标签下的文章id合并
+        $Tag = Tags::find()->where(['id' => $ids])->all();
+        $article_ids = [];
+        foreach ($Tag as $tag) {
+            $article_ids = array_merge($article_ids, explode(',', $tag->article_ids));
+        }
+
+        //去掉重复的文章id
+        $article_ids = array_unique($article_ids);
+        //去掉自身的id
+        foreach ($article_ids as $key => $val) {
+            if ($val == $this->id) {
+                unset($article_ids[$key]);
+            }
+        }
+
+        return $this->find()->where(['id' => $article_ids])->orderBy('hits desc')->limit(10)->all();
+    }
+
+
 }

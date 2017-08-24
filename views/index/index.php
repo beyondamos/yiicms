@@ -100,25 +100,11 @@ use yii\widgets\LinkPager;
         <div class="content-right-pic">
             <a href="#"><img src="/home/images/pig_1.png" alt=""></a>
         </div>
+
         <!-- 热门文章排行start -->
-        <div class="hot-article-rank">
-            <h4 class="content-right-title">热门文章排行</h4>
-            <ol class="article-list">
-                <li><a href="#">一篇小学生作文《我的爸爸在华为》，看哭无数人！</a></li>
-                <li><a href="#">你的不自律，正在慢慢毁掉你</a></li>
-                <li><a href="#">为什么越来越多的人，朋友圈仅三天可见</a></li>
-                <li><a href="#">共享单车被偷光了！90%已找不到了</a></li>
-                <li><a href="#">为什么永远不要打探别人工资？</a></li>
-                <li><a href="#">Hr不会告诉你：80后正在面临的危机——被90后干掉</a></li>
-                <li><a href="#">一篇小学生作文《我的爸爸在华为》，看哭无数人！</a></li>
-                <li><a href="#">你的不自律，正在慢慢毁掉你</a></li>
-                <li><a href="#">为什么越来越多的人，朋友圈仅三天可见</a></li>
-                <li><a href="#">共享单车被偷光了！90%已找不到了</a></li>
-                <li><a href="#">为什么永远不要打探别人工资？</a></li>
-                <li><a href="#">Hr不会告诉你：80后正在面临的危机——被90后干掉</a></li>
-            </ol>
-        </div>
+            <?php echo $this->render('/public/hotArticles');?>
         <!-- 热门文章排行end -->
+
         <!-- 大家都在看start -->
         <div class="everyone-look">
             <h4 class="content-right-title">大家都在看</h4>  
@@ -151,26 +137,7 @@ use yii\widgets\LinkPager;
         </div>
         <!-- 大家都在看end -->
         <!-- 热门话题start -->
-        <div class="hot-topic">
-            <h4 class="content-right-title">热门话题</h4>   
-            <ul class="hot-topic-list">
-                <li><a href="#">互联网</a></li>
-                <li><a href="#">中国</a></li>
-                <li><a href="#">产品</a></li>
-                <li><a href="#">app</a></li>
-                <li><a href="#">微信</a></li>
-                <li><a href="#">IP</a></li>
-                <li><a href="#">996</a></li>
-                <li><a href="#">BAT</a></li>
-                <li><a href="#">90后</a></li>
-                <li><a href="#">运营</a></li>
-                <li><a href="#">上市</a></li>
-                <li><a href="#">创业</a></li>
-                <li><a href="#">用户</a></li>
-                <li><a href="#">CEO</a></li>
-                <li><a href="#">营销</a></li>
-            </ul>
-        </div>
+        <?php echo $this->render('/public/hotTags');?>
         <!-- 热门话题end -->
     </div>
 </div>

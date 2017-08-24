@@ -71,14 +71,16 @@ class Tags extends AdminBase
                 $article_ids = explode(',', $tag_model->article_ids);
                 $article_ids[] = $this->article_id;
                 $tag_model->article_ids = implode(',', $article_ids);
-                $tag_model->save();
+                
             } else {
                 //不存在就添加tag记录
                 $tag_model = new Tags();
                 $tag_model->tag_name = $tag;
                 $tag_model->article_ids = $this->article_id;
-                $tag_model->save();
+                
             }
+            $tag_model->count = count(explode(',', $tag_model->article_ids));
+            $tag_model->save();
         }
 
     }
@@ -103,6 +105,7 @@ class Tags extends AdminBase
             if (count($article_ids) > 0) {
                 $article_ids = implode(',', $article_ids);
                 $tag_model->article_ids = $article_ids;
+                $tag_model->count = count(explode(',', $tag_model->article_ids));
                 $tag_model->save(false);
             } else {
                 $tag_model->delete();
