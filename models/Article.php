@@ -27,14 +27,14 @@ class Article extends AdminBase
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
             ['thumbnail', 'safe'],
-            [['tags', 'status', 'abstract'], 'safe']
+            [['tags', 'status', 'abstract', 'recommend'], 'safe']
         ];
     }
 
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios['add'] = ['title', 'catid', 'text', 'author', 'status'];
+        $scenarios['add'] = ['title', 'catid', 'text', 'author', 'status', 'recommend'];
         return $scenarios;
     }
 
@@ -105,6 +105,13 @@ class Article extends AdminBase
             } else {
                 $this->status = 0;
             }
+
+            if ($this->recommend == 'on') {
+                $this->recommend = 1;
+            } else {
+                $this->recommend = 0;
+            }
+
             if ($this->save(false)) {
     
                 $this->dealTags();
@@ -130,6 +137,12 @@ class Article extends AdminBase
             } else {
                 $this->status = 0;
             }
+            if ($this->recommend == 'on') {
+                $this->recommend = 1;
+            } else {
+                $this->recommend = 0;
+            }
+
             if ($this->save(false)) {
                 $this->dealTags();
                 return true;

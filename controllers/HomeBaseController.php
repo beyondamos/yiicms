@@ -70,5 +70,20 @@ class HomeBaseController extends Controller
 	}
 
 
+	/**
+	 * 展示推荐文章（不适用于文章列表和文章详情页面）
+     * @param  int $catid 栏目catid
+	 */
+	public function showRecommendArticles($catid = 0)
+	{
+		$where = ['recommend' => 1];
+		if ($catid != 0) {
+			$where['catid'] = $catid;
+		}
+		$articles = Article::find()->where($where)->orderBy('updatetime desc')->limit(10)->all();
+		$view = Yii::$app->view;
+		$view->params['recommendArticles'] = $articles;
+	}
+
 }
 

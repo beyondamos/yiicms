@@ -22,6 +22,9 @@ class IndexController extends HomeBaseController
             $article->tagLists = $article->getTagsArray();
         }
         
+        //置顶推荐
+        $this->showRecommendArticles();
+
         return $this->render('index', ['articles' => $articles, 'pagination' => $pagination]);
     }
 

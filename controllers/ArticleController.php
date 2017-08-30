@@ -25,6 +25,8 @@ class ArticleController extends HomeBaseController
 
         //大家都在看(栏目热门文章)
         $this->showCategoryHotArticles($id);
+        //置顶推荐
+        $this->showRecommendArticles($id);
 
         $category = Category::find()->where(['id' => $id])->one();
         $query = Article::find()->where(['status' => 1, 'catid' => $id]);
@@ -51,6 +53,8 @@ class ArticleController extends HomeBaseController
 
         //大家都在看(栏目热门文章)
         $this->showCategoryHotArticles($article->catid);
+        //置顶推荐
+        $this->showRecommendArticles($article->catid);
 
         //您可能感兴趣（获取与该文章相同标签的点记录较高的文章）
         $interestedArticles = $article->getInterestedArticles();

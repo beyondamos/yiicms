@@ -7,10 +7,10 @@ use yii\widgets\LinkPager;
         <div class="container">
             <div class="content-left fl">
                 <div class="location">
-                    您的位置: <a href="/">首页</a> » <span>标签</span>» <span><?=$tag->tag_name;?></span>
+                    您的位置: <a href="/">首页</a> » <span><?php echo '"'.$keyword.'"的搜索结果';?></span>
                 </div>
                 <div class="content-left-bottom">
-                    <h4 class="content-left-title"><?=$tag->tag_name;?></h4>
+                    <h4 class="content-left-title"><?php echo '"'.$keyword.'"的搜索结果';?></h4>
                     <ul class="latest-information-list clearfix">
                     <?php foreach ($articles as $article):?>    
                         <li>
@@ -61,39 +61,8 @@ use yii\widgets\LinkPager;
                 <!-- 热门文章排行start -->
                     <?php echo $this->render('/public/hotArticles');?>
                 <!-- 热门文章排行end -->
-                <!-- 大家都在看start -->
-                <div class="everyone-look">
-                    <h4 class="content-right-title">大家都在看</h4>  
-                    <ul class="look-list">
-                        <li>
-                            <a href="#"><img src="/home/images/look_1.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_2.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_3.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_4.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_5.png" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_6.png" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 大家都在看end -->
                 <!-- 置顶推荐start -->
-                <?php echo $this->render('/public/recommendArticles');?>
+                    <?php echo $this->render('/public/recommendArticles');?>
                 <!-- 置顶推荐end -->
                 <!-- 热门话题start -->
                     <?php echo $this->render('/public/hotTags');?>

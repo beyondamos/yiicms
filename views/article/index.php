@@ -65,35 +65,7 @@ use yii\widgets\LinkPager;
                     <?php echo $this->render('/public/categoryHotArticles');?>
                 <!-- 大家都在看end -->
                 <!-- 置顶推荐start -->
-                <div class="recoment">
-                    <h4 class="content-right-title">置顶推荐</h4>
-                    <ul class="recoment-list clearfix">
-                        <li>
-                            <a class="recoment-pic" href="#"><img src="/home/images/recoment-1.jpg" alt=""></a>
-                            <a class="recoment-title" href="#">没有明星代言，小公司该如何推广自己</a>
-                        </li>
-                        <li>
-                            <a class="recoment-pic" href=""><img src="/home/images/recoment-2.jpg" alt=""></a>
-                            <a class="recoment-title" href="#">从下岗女工到集团老总，从8平米的小店到市值120亿的上市公司，她只用了23年</a>
-                        </li>
-                        <li>
-                            <a class="recoment-pic" href=""><img src="/home/images/recoment-3.jpg" alt=""></a>
-                            <a class="recoment-title" href="#">没有明星代言，小公司该如何推广自己</a>
-                        </li>
-                        <li>
-                            <a class="recoment-pic" href=""><img src="/home/images/recoment-4.jpg" alt=""></a>
-                            <a class="recoment-title" href="#">从下岗女工到集团老总，从8平米的小店到市值120亿的上市公司，她只用了23年</a>
-                        </li>
-                        <li>
-                            <a class="recoment-pic" href=""><img src="/home/images/recoment-5.jpg" alt=""></a>
-                            <a class="recoment-title" href="#">没有明星代言，小公司该如何推广自己</a>
-                        </li>
-                        <li>
-                            <a class="recoment-pic" href=""><img src="/home/images/recoment-6.png" alt=""></a>
-                            <a class="recoment-title" href="#">从下岗女工到集团老总，从8平米的小店到市值120亿的上市公司，她只用了23年</a>
-                        </li>
-                    </ul>
-                </div>
+                    <?php echo $this->render('/public/recommendArticles');?>
                 <!-- 置顶推荐end -->
                 <!-- 热门话题start -->
                     <?php echo $this->render('/public/hotTags');?>

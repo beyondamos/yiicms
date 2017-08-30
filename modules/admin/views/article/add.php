@@ -66,7 +66,7 @@ $labels = $model->attributeLabels();
                       <input type="checkbox" id="inlineCheckbox2" value="2"> 头条
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3"> 推荐
+                      <input type="checkbox" id="Article-recommend" name="Article[recommend]" value="on"> 推荐
                     </label>
                 </div>
             </div>

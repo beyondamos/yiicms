@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +38,9 @@
                         <li><a href="<?=$nav['nav_url']?>" <?php echo $nav['is_blank'] == '1'? 'target="_blank"' : '' ;?>><?=$nav['nav_name']?></a></li>
                     <?php endforeach;?>    
                     </ul>
-                    <form class="navbar-form navbar-right hidden-xs hidden-sm hidden-md">
+                    <form class="navbar-form navbar-right hidden-xs hidden-sm hidden-md" action="<?=Url::to(['search/index']);?>" method="post">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="请输入关键词">
+                          <input type="text" class="form-control" name="keyword" placeholder="请输入关键词">
                         </div>
                         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                   </form>

@@ -44,6 +44,7 @@ class TagController extends HomeBaseController
 	{
 		parent::beforeAction($action);
 		$this->showHotArticles();
+		$this->showRecommendArticles();
 		return true;
 	}
 
