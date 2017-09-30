@@ -71,7 +71,6 @@ class ArticleController extends AdminBaseController
                 Yii::$app->session->setFlash('fail', '添加文章失败');
             }
         }
-
         $category = new Category();
         $categories = $category->getSelectCategory();
         // 传入作者的默认值
