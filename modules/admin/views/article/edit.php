@@ -13,7 +13,7 @@ $labels = $model->attributeLabels();
     <title>文章添加</title>
     <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/plugs/uploadify/uploadify.css" />
+    <link rel="stylesheet" type="text/css" href="/plugs/webuploader/webuploader.css">
     <script charset="utf-8" src="/plugs/kindeditor/kindeditor-all-min.js"></script>
     <script charset="utf-8" src="/plugs/kindeditor/lang/zh-CN.js"></script>
 </head>
@@ -88,12 +88,21 @@ $labels = $model->attributeLabels();
                     <p class="help-block">多个标签用 "," 半角逗号隔开</p>
                 </div>
             </div>
+            <!-- 图片 -->
             <div class="form-group">
                 <label for="titleimg" class="col-md-2 control-label"><?php echo $labels['thumbnail'];?></label>
                 <div class="col-md-3">
-                    <?php echo $form->field($model, 'file_upload')->label(false);?>
-                    <img id="thumbnail" src="<?php echo $model->thumbnail;?>" width="300px" height="200px">
-                    <?php echo $form->field($model, 'thumbnail')->hiddenInput()->label(false);?>
+                    <div id="uploader-demo">
+                        <div id="filePicker">选择图片</div>
+                        <?php
+                            //如果存在标题图片则展示
+                            if (!empty($model->thumbnail)) :
+                        ?>
+                        <img id="thumbnail" src="<?php echo $model->thumbnail;?>" width="240px" height="150px">
+                        <?php endif;?>
+
+                        <?php echo $form->field($model, 'thumbnail')->hiddenInput()->label(false);?>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -118,8 +127,8 @@ $labels = $model->attributeLabels();
     </div>
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
-<script src="/plugs/uploadify//jquery.uploadify.min.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/plugs/webuploader/webuploader.js"></script>
 <script>
     KindEditor.ready(function(K) {
         var options = {
@@ -132,23 +141,39 @@ $labels = $model->attributeLabels();
         window.editor = K.create('#article-text', options);
     });
 
-    $(function(){
-        <?php $timestamp = time();?>
-        $('#article-file_upload').uploadify({
-            'formData' : {
-                '_csrf' : '<?php echo Yii::$app->request->csrfToken;?>',
-                'timestamp' : '<?php echo $timestamp;?>',
-                'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
-            },
-            'swf'      : '/plugs/uploadify/uploadify.swf',
-            'uploader' : '<?php echo Url::to(['article/uploadimage']);?>',
-            'onUploadSuccess' : function(file, data, response) {
-                $("#thumbnail").attr('src', data);
-                $("#thumbnail").show();
-                $("#article-thumbnail").val(data);
-            }
-        });
+    // 初始化Web Uploader
+    var uploader = WebUploader.create({
+        // 选完文件后，是否自动上传。
+        auto: true,
+        //上传图片是否压缩
+        compress: false,
+        //重名文件继续添加
+        duplicate: true,
+        // swf文件路径
+        swf: '/plugs/webuploader/Uploader.swf',
+        // 文件接收服务端。
+        server: '<?=Url::to(['tools/ajax-upload-img']);?>',
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#filePicker',
     });
+
+    // 文件上传成功，给item添加成功class, 用样式标记上传成功。  
+    uploader.on( 'uploadSuccess', function( file , response) {  
+        if (response.status == 0) {
+            var error = '<p id="img-error" style="color:#a94442">'+ response.info +'</p>';
+            $('#filePicker').append(error);
+        } else if (response.status == 1) {
+            $('#img-error').remove();
+            var img = $('#thumbnail');
+            if (img) {
+                img.remove();
+            }
+            img = '<img id="thumbnail" src="'+ response.info +'" width="240px" height="150px">';
+            $('#filePicker').append(img);
+            $('#article-thumbnail').attr('value', response.info);
+        }
+    });  
 
 </script>
 

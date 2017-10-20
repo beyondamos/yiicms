@@ -14,7 +14,7 @@ use yii\helpers\Url;
 	<div class="container-fluid">
 		<div class="row">
 			<!-- 菜单 -->
-			<div class="col-md-1 ">
+			<div class="col-md-1">
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file"></span> 信息中心&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="<?=Url::to(['article/index']);?>" target="main-frame">文章管理</a></li>
@@ -53,8 +53,8 @@ use yii\helpers\Url;
 			<!-- /菜单 -->
 		</div>
 	</div>
-	<script src="__LIB__/jquery/jquery-1.11.3.js"></script>
-	<script src="__LIB__/bootstrap/js/bootstrap.min.js"></script>
-	<script src="__JS__/left.js"></script>
+	<script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
+	<script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/admin/js/left.js"></script>
 </body>
 </html>

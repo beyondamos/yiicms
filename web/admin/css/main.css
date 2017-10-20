@@ -4,3 +4,7 @@
 .table th, .table td { 
   vertical-align: middle;
 }
+
+.error {
+    color: '#a94442';
+}
