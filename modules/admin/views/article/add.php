@@ -14,8 +14,6 @@ $labels = $model->attributeLabels();
     <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/css/main.css">
     <link rel="stylesheet" type="text/css" href="/plugs/webuploader/webuploader.css">
-    <script charset="utf-8" src="/plugs/kindeditor/kindeditor-all-min.js"></script>
-    <script charset="utf-8" src="/plugs/kindeditor/lang/zh-CN.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -109,7 +107,9 @@ $labels = $model->attributeLabels();
             <div class="form-group">
                 <label for="content" class="col-md-2 control-label"><?php echo $labels['text'];?></label>
                 <div class="col-md-10">
-                    <?php echo $form->field($model, 'text')->textArea()->label(false); ?>
+                    <!-- 加载编辑器的容器 -->
+                    <script id="container" name="Article[text]" type="text/plain">
+                    </script>
                 </div>
             </div>
             <div class="form-group">
@@ -124,18 +124,17 @@ $labels = $model->attributeLabels();
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/plugs/webuploader/webuploader.js"></script>
-<script>
-    KindEditor.ready(function(K) {
-        var options = {
-            height : '500px',
-            uploadJson : '/plugs/kindeditor/php/upload_json.php',
-            fileManagerJson : '/plugs/kindeditor/php/file_manager_json.php',
-            allowFileManager : true,
-            allowImageUpload : true
-        };
-        window.editor = K.create('#article-text', options);
+<!-- 配置文件 -->
+<script type="text/javascript" src="/plugs/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/plugs/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container', {
+        initialFrameHeight : 500,
     });
-
+</script>
+<script>
     // 初始化Web Uploader
     var uploader = WebUploader.create({
         // 选完文件后，是否自动上传。
