@@ -16,6 +16,11 @@ use yii\bootstrap\ActiveForm;
       <script src="/home/lib/html5shiv/html5shiv.min.js"></script>
       <script src="/home/lib/respond/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="/plugs/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+    <link rel="stylesheet" href="/plugs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 </head>
 <body>
     <!-- 导航头部start -->

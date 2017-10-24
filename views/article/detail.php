@@ -1,8 +1,5 @@
 <?php
 use yii\helpers\Url;
-
-// $this->registerJsFile("/plugs/kindeditor/plugins/code/prettify.js");
-// $this->registerCssFile("/plugs/kindeditor/plugins/code/prettify.css");
 ?>    
     <!-- content部分start -->
     <div class="content">
