@@ -16,6 +16,7 @@ class User extends AdminBase
     public $password;   //用户密码
     public $password2;   //重复密码
     public $oldpassword; //原密码
+    public $verifyCode; //验证码
 
 
     public function rules(){
@@ -34,6 +35,7 @@ class User extends AdminBase
             ['role_id', 'number', 'min' => 1, 'message' => '必须选择用户角色'],
             ['nickname', 'string', 'min' => 1, 'max' => 15, 'message' => '昵称不能超过15个字符'],
             ['oldpassword', 'required', 'message' => '原密码不能为空'],
+            
         ];
     }
 
@@ -139,22 +141,7 @@ class User extends AdminBase
     }
 
 
-    public function login($data)
-    {
-        $username = trim($data['User']['username']);
-        $password = trim($data['User']['password']);
-        //验证用户名是否存在
-        $user = $this->findOne(['username' => $username]);
-        if (!$user) {
-            return false;
-        }
-        //验证密码是否正确
-        $security = new Security();
-        if (!$security->validatePassword($password, $user->password_hash)) {
-            return false;
-        }
-        return $user->id;
-    }
+
 
 
     /**

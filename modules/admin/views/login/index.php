@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +32,7 @@ use yii\bootstrap\ActiveForm;
                 <tr>
                     <td><label for="username">用户名：</label></td>
                     <td>
-                        <?php echo $form->field($model, 'username')->textInput()->label(false);?>
+                        <?php echo $form->field($model, 'username', ['template' => '{input}{error}'])->textInput()->label(false);?>
                     </td>
                 </tr>
                 <tr>
@@ -43,8 +44,22 @@ use yii\bootstrap\ActiveForm;
                 <tr>
                     <td><label for="verificationCode">验证码：</label></td>
                     <td>
-                        <input class="form-control verification-code" type="text" id="verificationCode">
-                        <img src="" alt="">
+                        <!-- <input class="form-control verification-code" type="text" id="verificationCode"> -->
+                        <?php echo $form->field($model, 'verifyCode')->widget(Captcha::classname(),[
+                            'name' => 'verfiyCode',
+                            'captchaAction' => 'login/captcha', 
+                            'imageOptions' => [
+                                'id'=>'captchaimg', 
+                                'title'=>'换一个', 
+                                'alt'=>'换一个', 
+                                'style'=>'cursor:pointer;margin-left:25px;'
+                                ],
+                             'options' => [
+                                'class' => 'form-control verification-code',
+                                'type' => 'text',
+                                ],   
+                            'template'=>'{input}{image}'         
+                        ])->label(false);?>
                     </td>
                 </tr>
                 <tr>
@@ -62,11 +77,16 @@ use yii\bootstrap\ActiveForm;
     <script src="/admin/js/main.js"></script>
     <script>
         $(document).ready(function (){
-         function resize() {
+            function resize() {
                 var windowHeight = $(window).height();
                 $(".login-box").css("height",windowHeight);
             }
-             $(window).on("resize",resize).trigger("resize"); 
+            $(window).on("resize",resize).trigger("resize"); 
+            // $("#captchaimg").click(function(){
+            //     var src = $(this).attr('src');
+            //     $(this).attr('src', src + Math.random());
+            // });
+
         });   
 
     </script>
