@@ -142,21 +142,9 @@ $labels = $model->attributeLabels();
         initialFrameHeight : 500,
         maximumWords : 50000,
     });
-
     
 </script>
 <script>
-    KindEditor.ready(function(K) {
-        var options = {
-            height : '500px',
-            uploadJson : '/plugs/kindeditor/php/upload_json.php',
-            fileManagerJson : '/plugs/kindeditor/php/file_manager_json.php',
-            allowFileManager : true,
-            allowImageUpload : true
-        };
-        window.editor = K.create('#article-text', options);
-    });
-
     // 初始化Web Uploader
     var uploader = WebUploader.create({
         // 选完文件后，是否自动上传。

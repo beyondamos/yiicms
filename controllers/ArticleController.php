@@ -119,7 +119,7 @@ class ArticleController extends HomeBaseController
      */
     private function showCategoryHotArticles($id)
     {
-        $articles = Article::find()->where(['catid' => $id])->orderBy('hits desc')->limit(6)->all();
+        $articles = Article::find()->where(['status' => 1,'catid' => $id])->orderBy('hits desc')->limit(6)->all();
         $view = Yii::$app->view;
         $view->params['categoryHotArticles'] = $articles;
     }

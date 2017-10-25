@@ -76,7 +76,7 @@ class HomeBaseController extends Controller
 	 */
 	public function showRecommendArticles($catid = 0)
 	{
-		$where = ['recommend' => 1];
+		$where = ['recommend' => 1, 'status' => 1];
 		if ($catid != 0) {
 			$where['catid'] = $catid;
 		}
