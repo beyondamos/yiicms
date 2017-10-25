@@ -140,6 +140,7 @@ $labels = $model->attributeLabels();
 <script type="text/javascript">
     var ue = UE.getEditor('container', {
         initialFrameHeight : 500,
+        maximumWords : 50000,
     });
 
     
