@@ -27,14 +27,14 @@ class Article extends AdminBase
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
             ['thumbnail', 'safe'],
-            [['tags', 'status', 'abstract', 'recommend'], 'safe']
+            [['tags', 'status', 'abstract', 'recommend', 'top', 'carousel'], 'safe']
         ];
     }
 
     public function scenarios()
     {
         $scenarios = parent::scenarios();
-        $scenarios['add'] = ['title', 'catid', 'text', 'author', 'status', 'recommend'];
+        $scenarios['add'] = ['title', 'catid', 'text', 'author', 'status', 'recommend','top' ,'carousel'];
         return $scenarios;
     }
 
@@ -100,18 +100,6 @@ class Article extends AdminBase
         if ($this->load($data) && $this->validate()) {
             $this->createtime = time();
             $this->updatetime = time();
-            if ($this->status == 'on') {
-                $this->status = 1;
-            } else {
-                $this->status = 0;
-            }
-
-            if ($this->recommend == 'on') {
-                $this->recommend = 1;
-            } else {
-                $this->recommend = 0;
-            }
-
             if ($this->save(false)) {
     
                 $this->dealTags();
@@ -132,17 +120,6 @@ class Article extends AdminBase
     {
         if ($this->load($data) && $this->validate()) {
             $this->updatetime = time();
-            if ($this->status == 'on') {
-                $this->status = 1;
-            } else {
-                $this->status = 0;
-            }
-            if ($this->recommend == 'on') {
-                $this->recommend = 1;
-            } else {
-                $this->recommend = 0;
-            }
-
             if ($this->save(false)) {
                 $this->dealTags();
                 return true;

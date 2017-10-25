@@ -64,6 +64,7 @@ class ArticleController extends AdminBaseController
         $model = new Article();
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
+            $data = $this->dealCheckbox($data);
             if ($model->addArticle($data)) {
                 Yii::$app->session->setFlash('success', '添加文章成功');
                 return $this->redirect(['article/index']);
@@ -89,6 +90,7 @@ class ArticleController extends AdminBaseController
         $oldImage = $model->thumbnail;  //文章原来的旧图  用来和新图做比较，判断是否上传了新图片
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
+            $data = $this->dealCheckbox($data);
             $newImage = $data['Article']['thumbnail'];
             if ($model->editArticle($data)) {
                 Yii::$app->session->setFlash('success', '编辑文章成功');
@@ -178,6 +180,37 @@ class ArticleController extends AdminBaseController
     }
 
 
+    /**
+     * 处理checkbox的值   审核 头条 首页轮播 推荐
+     * @param  array $data post提交的值
+     * @return array $data  处理后的数据
+     */
+    private function dealCheckbox($data)
+    {
+        if (array_key_exists('status', $data['Article']) && $data['Article']['status'] == 'on') {
+            $data['Article']['status'] = 1;
+        } else {
+            $data['Article']['status'] = 0;
+        }
 
+        if (array_key_exists('top', $data['Article']) && $data['Article']['top'] == 'on') {
+            $data['Article']['top'] = 1;
+        } else {
+            $data['Article']['top'] = 0;
+        }
+
+        if (array_key_exists('carousel', $data['Article']) && $data['Article']['carousel'] == 'on') {
+            $data['Article']['carousel'] = 1;
+        } else {
+            $data['Article']['carousel'] = 0;
+        }
+
+        if (array_key_exists('recommend', $data['Article']) && $data['Article']['recommend'] == 'on') {
+            $data['Article']['recommend'] = 1;
+        } else {
+            $data['Article']['recommend'] = 0;
+        }
+        return $data;
+    }
 
 }

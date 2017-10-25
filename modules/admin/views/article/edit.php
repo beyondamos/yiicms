@@ -55,13 +55,16 @@ $labels = $model->attributeLabels();
                 <label for="content" class="col-md-2 control-label"><?php echo $labels['property'];?></label>
                 <div class="col-md-10">
                     <label class="checkbox-inline">
-                      <input type="checkbox" id="Article-status" name="Article[status]" value="on" <?php echo $model->status ? 'checked' : '';?> > 审核
+                      <input type="checkbox" id="Article-status" name="Article[status]"  <?php echo $model->status ? 'checked' : '';?> > 审核
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2"> 头条
+                      <input type="checkbox" id="Article-top" name="Article[top]"  <?php echo $model->top ? 'checked' : '';?> > 头条
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="Article[recommend]" value="on" <?php echo $model->recommend ? 'checked': '' ;?> > 推荐
+                      <input type="checkbox" id="Article-carousel" name="Article[carousel]"  <?php echo $model->carousel ? 'checked' : '';?> > 首页轮播
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="Article-recommend" name="Article[recommend]"  <?php echo $model->recommend ? 'checked': '' ;?> > 栏目推荐
                     </label>
                 </div>
             </div>
