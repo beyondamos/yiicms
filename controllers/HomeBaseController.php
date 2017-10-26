@@ -5,6 +5,7 @@ use app\models\Nav;
 use Yii;
 use app\models\Article;
 use app\models\Tags;
+use app\models\admin\Accesslog;
 
 /**
  * @package app\controllers
@@ -29,6 +30,8 @@ class HomeBaseController extends Controller
 
 		//热门话题
 		$this->showHotTags();
+
+		$this->countVisit();
 	}
 
 
@@ -84,6 +87,28 @@ class HomeBaseController extends Controller
 		$view = Yii::$app->view;
 		$view->params['recommendArticles'] = $articles;
 	}
+
+
+	/**
+	 * 统计访问
+	 * @return [type] [description]
+	 */
+	public function countVisit()
+	{
+		$request = Yii::$app->request;
+		$ip = $request->userip;
+		$shield_ips = array('127.0.0.1');
+		if ( !in_array($ip, $shield_ips) ) {
+			$accesslog = new Accesslog();
+			$accesslog->ip = ip2long($ip);
+	        $accesslog->url = $request->url;
+	        $accesslog->referrer = $request->referrer;
+	        $accesslog->visittime = time();
+	        $accesslog->save();
+		}
+
+	}
+
 
 }
 

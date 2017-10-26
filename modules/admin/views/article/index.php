@@ -68,4 +68,5 @@ use yii\widgets\LinkPager;
 </div>
 <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
 <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>

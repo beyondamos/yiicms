@@ -101,13 +101,11 @@ class Article extends AdminBase
             $this->createtime = time();
             $this->updatetime = time();
             if ($this->save(false)) {
-    
                 $this->dealTags();
                 return true;
             }
             return false;
         }
-
         return false;
     }
 

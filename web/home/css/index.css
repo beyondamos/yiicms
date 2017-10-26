@@ -525,12 +525,14 @@ h4.content-right-title {
 .interest-list {
 	width: 100%;
 	padding: 15px;
+
 }
 .interest-list li {
 	width: 18%;
 	float: left;
 	margin-right: 2%;
 	padding: 10px 0;
+	height: 150px;
 }
 .interest-list li .interest-pic{
 	width: 100%;
