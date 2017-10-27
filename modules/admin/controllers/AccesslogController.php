@@ -24,7 +24,9 @@ class AccesslogController extends AdminBaseController
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
         $logs = $query->offset($pagination->offset)->limit($pagination->limit)->orderBy('id desc')
                 ->asArray()->all();
-        return $this->render('index', ['logs' => $logs, 'pagination' => $pagination]);
+        $accesslog = new Accesslog;
+        $lineInfo = $accesslog->getLineInfo();
+        return $this->render('index', ['logs' => $logs, 'lineInfo' => $lineInfo, 'pagination' => $pagination]);
     }
 
 

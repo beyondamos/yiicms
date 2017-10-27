@@ -2,6 +2,7 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,7 @@ use yii\bootstrap\ActiveForm;
     </script>
 </head>
 <body>
+<?php $this->beginBody() ?>
     <!-- 导航头部start -->
     <header>
         <div class="container">
@@ -68,5 +70,7 @@ use yii\bootstrap\ActiveForm;
     <script src="/home/lib/jquery/jquery-1.11.3.js"></script>
     <script src="/home/lib/bootstrap/js/bootstrap.js"></script>
     <script src="/home/js/main.js"></script>
+    <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>

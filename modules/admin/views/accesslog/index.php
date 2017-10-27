@@ -11,6 +11,7 @@ use yii\widgets\LinkPager;
 <title>访问日志</title>
 <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="/admin/css/main.css">
+
 </head>
 <body>
 <div class="container-fluid">
@@ -19,6 +20,8 @@ use yii\widgets\LinkPager;
     <li><a href="#">系统统计</a></li>
     <li class="active">访问记录</li>
   </ol>
+  <div id="main" style="width: 1200px;height:500px;"></div>
+
   <table class="table table-bordered table-striped table-condensed table-hover">
     <tr>
       <th class="text-center">编号</th>
@@ -53,5 +56,34 @@ use yii\widgets\LinkPager;
   </div>
   <script src="/admin/lib/jquery/jquery-1.11.3.js"></script>
   <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/plugs/echarts/echarts.min.js"></script>
+  
+      <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '访问流量统计(<?php echo $lineInfo['month']?>月)'
+            },
+            tooltip: {},
+            legend: {
+                data:['访问量']
+            },
+            xAxis: {
+                data: [<?php echo $lineInfo['xAxis_data'];?>]
+            },
+            yAxis: {},
+            series: [{
+                name: '访问量',
+                type: 'line',
+                data: [<?php echo $lineInfo['series_data'];?>]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
 </body>
 </html>

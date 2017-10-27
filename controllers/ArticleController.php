@@ -16,6 +16,22 @@ use app\models\Category;
 class ArticleController extends HomeBaseController
 {
 
+    public function behaviors()
+    {
+        return [
+            'pageCache' => [
+                'class' => 'yii\filters\PageCache',
+                'only' => ['detail'],
+                'duration' => 3600,
+                'variations' => [
+                    Yii::$app->request->get('id')
+                ]
+            ],
+        ];
+    }
+
+
+
     /**
      * 文章栏目列表页
      * @return [type] [description]

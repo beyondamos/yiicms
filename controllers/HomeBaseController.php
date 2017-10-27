@@ -54,7 +54,7 @@ class HomeBaseController extends Controller
 	public function showHotArticles()
 	{
 		$model = new Article();
-		$articles = $model->find()->orderBy('hits desc')->limit(10)->all();
+		$articles = $model->find()->where(['status' => 1])->orderBy('hits desc')->limit(10)->all();
 
 		$view = Yii::$app->view;
 		$view->params['hotArticles'] = $articles;
@@ -98,14 +98,19 @@ class HomeBaseController extends Controller
 		$request = Yii::$app->request;
 		$ip = $request->userip;
 		$shield_ips = array('127.0.0.1');
+		// $shield_ips = array();
 		if ( !in_array($ip, $shield_ips) ) {
 			$accesslog = new Accesslog();
 			$accesslog->ip = ip2long($ip);
 	        $accesslog->url = $request->url;
 	        $accesslog->referrer = $request->referrer;
-	        $accesslog->visittime = time();
+	        $time = time();
+	        $accesslog->visittime = $time;
+	        $accesslog->year = date('Y', $time);
+	        $accesslog->month = date('m', $time);
+	        $accesslog->day = date('d', $time);
 	        $accesslog->save();
-		}
+		} 
 
 	}
 

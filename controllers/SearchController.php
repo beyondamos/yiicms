@@ -29,7 +29,7 @@ class SearchController extends HomeBaseController
 		//推荐信息
 		$this->showRecommendArticles();
 
-		$query = Article::find()->where(['like', 'title', $keyword]);
+		$query = Article::find()->where(['like', 'title', $keyword])->andWhere(['status' => 1]);
 		$count = $query->count();
 		$pagination = new Pagination(['pageSize' => 20, 'totalCount' => $count]);
 		$articles = $query->offset($pagination->offset)->limit($pagination->limit)->all();
