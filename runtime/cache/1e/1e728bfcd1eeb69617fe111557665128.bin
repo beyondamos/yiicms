@@ -1,0 +1,287 @@
+a:2:{i:0;a:9:{s:12:"cacheVersion";i:1;s:9:"cacheData";N;s:7:"content";s:22900:"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,
+    minimum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DayDayLearn</title>
+    <link rel="stylesheet" href="/home/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/home/css/index.css">
+    <!--[if lt IE 9]>
+      <script src="/home/lib/html5shiv/html5shiv.min.js"></script>
+      <script src="/home/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/plugs/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+    <link rel="stylesheet" href="/plugs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</head>
+<body>
+    <!-- 导航头部start -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-main">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/home/images/logo.png" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="header-nav">
+                    <ul class="nav navbar-nav nav-main">
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com" >首页</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/1.html" >PHP</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/2.html" >Mysql</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/3.html" >Linux</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/4.html" >Html</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/5.html" >网络工具</a></li>
+                        
+                    </ul>
+                    <form class="navbar-form navbar-right hidden-xs hidden-sm hidden-md" action="/search/index.html" method="post">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="keyword" placeholder="请输入关键词">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                  </form>
+                </div>
+            </nav>  
+        </div>
+    </header>
+    <!-- 导航头部end -->
+
+        
+    <!-- content部分start -->
+    <div class="content">
+        <div class="container">
+            <div class="content-left fl news-main">
+                <div class="location">
+                    您的位置: <a href="/">首页</a> » <a href="/article/index/1.html">PHP</a> » <span> Yii2.0表单--创建视图</span>
+                </div>
+                <div class="content-left-bottom">
+                <h1 class="content-left-title"><?php?></h1>
+                    <div class="article-meta">
+                        <span>2017-10-25</span>
+                        <span>作者: <i>小名叫小明</i></span>
+                        <span>点击率：<em>9</em></span>
+                        <span>分类: <a href="/article/index/1.html">PHP</a></span>
+                    </div>
+                    <div class="article-main">
+                     <h1 style="text-align:center;">&nbsp; &nbsp;
+	Yii2.0表单--创建视图</h1><p>&nbsp; &nbsp;
+	1、首先在视图文件头部调用表单类和HTML工具类</p><pre class="brush:php;toolbar:false">use&nbsp;yii\helper\Html;
+use&nbsp;yii\widgets\ActiveForm;</pre><p>&nbsp; &nbsp;
+	2、表单头部和尾部</p><p>&nbsp; &nbsp;
+	表单头部</p><pre class="brush:php;toolbar:false">&lt;?php
+$form&nbsp;=&nbsp;ActiveForm::begin([&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;action&#39;&nbsp;=&gt;&nbsp;[&#39;log/login&#39;],&nbsp;//提交地址(*可省略*)&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;method&#39;=&gt;&#39;post&#39;,&nbsp;&nbsp;&nbsp;&nbsp;//提交方法(*可省略默认POST*)&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;login-form&#39;,&nbsp;//设置ID属性&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;options&#39;&nbsp;=&gt;&nbsp;[&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;class&#39;&nbsp;=&gt;&nbsp;&#39;form-horizontal&#39;,&nbsp;//设置class属性&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;enctype&#39;&nbsp;=&gt;&nbsp;&#39;multipart/form-data&#39;&nbsp;//文件上传时添加该编码&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;fieldConfig&#39;&nbsp;=&gt;&nbsp;[&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;template&#39;&nbsp;=&gt;&nbsp;&#39;&lt;div&nbsp;class=&quot;form-group&quot;&gt;&lt;center&gt;&lt;label&nbsp;class=&quot;col-md-2&nbsp;control-label&quot;&nbsp;for=&quot;type-name-field&quot;&gt;{label}&lt;/label&gt;&lt;/center&gt;&lt;div&nbsp;class=&quot;col-md-8&nbsp;controls&quot;&gt;{input}{error}&lt;/div&gt;&lt;/div&gt;&#39;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;],&nbsp;&nbsp;//设置模板的样式&nbsp;&nbsp;
+]);&nbsp;
+?&gt;</pre><p>表单尾部</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;ActiveForm::end();&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	3、文本框:textInput()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;username&#39;)-&gt;textInput([&#39;maxlength&#39;&nbsp;=&gt;&nbsp;20])-&gt;label(false);&nbsp;?&gt;
+//field()的第3个参数可以传入数组来配置模板属性&nbsp;[&#39;template&#39;&nbsp;=&gt;&nbsp;&#39;&#39;]
+//textInput()中传入数组，可以配置各种信息。
+//比如可以设置验证长度&nbsp;maxlength,&nbsp;这样就不用在model中设置了。
+//还可以设置&nbsp;style等参数
+//如果不使用它的label可以连贯操作中写上&nbsp;label(false),&nbsp;然后可以自己写。</pre><p>&nbsp; &nbsp;
+	4、密码框:passwordInput()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;password&#39;)-&gt;passwordInput([&#39;maxlength&#39;&nbsp;=&gt;&nbsp;20])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	5、单选框:radio(),radioList()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;sex&#39;)-&gt;radioList([&#39;1&#39;=&gt;&#39;男&#39;,&#39;0&#39;=&gt;&#39;女&#39;])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	6、下拉框:dropDownList()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;edu&#39;)-&gt;dropDownList([&#39;1&#39;=&gt;&#39;大学&#39;,&#39;2&#39;=&gt;&#39;高中&#39;,&#39;3&#39;=&gt;&#39;初中&#39;],&nbsp;[&#39;prompt&#39;=&gt;&#39;请选择&#39;,&#39;style&#39;=&gt;&#39;width:120px&#39;])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	7、复选框:checkbox(),checkboxList()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;hobby&#39;)-&gt;checkboxList([&#39;0&#39;=&gt;&#39;篮球&#39;,&#39;1&#39;=&gt;&#39;足球&#39;,&#39;2&#39;=&gt;&#39;羽毛球&#39;,&#39;3&#39;=&gt;&#39;乒乓球&#39;])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	8、隐藏域:hiddenInput()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;userid&#39;)-&gt;hiddenInput([&#39;value&#39;=&gt;3])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	9、文本域:textarea([&#39;rows&#39;=&gt;3])</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;info&#39;)-&gt;textarea([&#39;rows&#39;=&gt;3])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	10、文件上传:fileInput()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;$form-&gt;field($model,&nbsp;&#39;file&#39;)-&gt;fileInput()&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	11、提交按钮:submitButton()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;Html::submitButton(&#39;提交&#39;,&nbsp;[&#39;class&#39;=&gt;&#39;btn&nbsp;btn-primary&#39;,&#39;name&#39;&nbsp;=&gt;&#39;submit-button&#39;])&nbsp;?&gt;</pre><p>&nbsp; &nbsp;
+	12、重置按钮:resetButtun()</p><pre class="brush:php;toolbar:false">&lt;?php&nbsp;echo&nbsp;Html::resetButton(&#39;重置&#39;,&nbsp;[&#39;class&#39;=&gt;&#39;btn&nbsp;btn-primary&#39;,&#39;name&#39;&nbsp;=&gt;&#39;submit-button&#39;])&nbsp;?</pre><p><br/></p>                    </div>
+                    <div class="mark-1">
+                        <span class="glyphicon glyphicon-tags"></span>标签:
+                                                <a href="/tag/index/3.html">yii</a>
+                                            </div>
+                </div>
+                <div class="interest">
+                    <div class="interest-title">您可能感兴趣的:</div>
+                    <ul class="interest-list clearfix">
+                                                <li>
+                            <a class="interest-pic" href="/article/9.html"><img src="/uploads/pictures/201709/20170913153643_11197.png" alt=""></a>
+                            <a class="interest-p" href="/article/9.html">Yii2.0 Sessions 和 Cookies 的基本使用方法                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/2.html"><img src="/uploads/pictures/201709/20170913160557_27737.png" alt=""></a>
+                            <a class="interest-p" href="/article/2.html">Yii2.0表单--表单验证                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/10.html"><img src="/uploads/pictures/201709/20170913153456_96912.png" alt=""></a>
+                            <a class="interest-p" href="/article/10.html">Yii2.0 控制器的一些注意事项                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/3.html"><img src="/uploads/pictures/201709/20170913160617_81784.png" alt=""></a>
+                            <a class="interest-p" href="/article/3.html">Yii2.0视图详解                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/4.html"><img src="/uploads/pictures/201709/20170913160405_71685.png" alt=""></a>
+                            <a class="interest-p" href="/article/4.html">Yii2.0 URL美化                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/15.html"><img src="/uploads/pictures/201709/20170913153440_75700.png" alt=""></a>
+                            <a class="interest-p" href="/article/15.html">Yii2.0表单--创建操作                            </a>
+                        </li>
+                                                <li>
+                            <a class="interest-pic" href="/article/13.html"><img src="" alt=""></a>
+                            <a class="interest-p" href="/article/13.html">Yii2.0 缓存的使用方法介绍                            </a>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="interest">
+                    <div class="interest-title">认真评论的人年薪百万……</div>
+                    <div class="comment-main">
+                        
+                        <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="13" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cythKvhHP'; 
+var conf = 'prod_6253583ff72170e40bfc58b0122d26f6'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right fr hidden-xs hidden-sm">
+                <div class="content-right-pic">
+                    <a href="#"><img src="/home/images/pig_1.png" alt=""></a>
+                </div>
+
+                <!-- 热门文章排行start -->
+                            <div class="hot-article-rank">
+            <h4 class="content-right-title">热门文章排行</h4>
+            <ol class="article-list">
+                                    <li><a href="/article/9.html">Yii2.0 Sessions 和 Cookies 的基本使用方法</a></li>
+                                    <li><a href="/article/18.html">Vim常用命令的使用方法</a></li>
+                                    <li><a href="/article/2.html">Yii2.0表单--表单验证</a></li>
+                                    <li><a href="/article/8.html">Sublime Text 3 安装插件</a></li>
+                                    <li><a href="/article/10.html">Yii2.0 控制器的一些注意事项</a></li>
+                                    <li><a href="/article/1.html">Sublime Text 3 快捷键总结</a></li>
+                                    <li><a href="/article/6.html">PHP文件上传类</a></li>
+                                    <li><a href="/article/16.html">Yii2.0表单--创建视图</a></li>
+                                    <li><a href="/article/17.html">ThinkPHP出现"No input file specified."错误的解决办法</a></li>
+                                    <li><a href="/article/4.html">Yii2.0 URL美化</a></li>
+                            </ol>
+        </div>                <!-- 热门文章排行end -->
+                <!-- 大家都在看start -->
+                                    <div class="everyone-look">
+                    <h4 class="content-right-title">大家都在看</h4>  
+                    <ul class="look-list">
+                                            <li>
+                            <a href="/article/9.html"><img src="/uploads/pictures/201709/20170913153643_11197.png" alt="Yii2.0 Sessions 和 Cookies 的基本使用方法"></a>
+                            <p><a href="/article/9.html">Yii2.0 Sessions 和 Cookies 的基本使用方法</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/2.html"><img src="/uploads/pictures/201709/20170913160557_27737.png" alt="Yii2.0表单--表单验证"></a>
+                            <p><a href="/article/2.html">Yii2.0表单--表单验证</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/10.html"><img src="/uploads/pictures/201709/20170913153456_96912.png" alt="Yii2.0 控制器的一些注意事项"></a>
+                            <p><a href="/article/10.html">Yii2.0 控制器的一些注意事项</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/16.html"><img src="/uploads/pictures/201709/20170913153420_33963.png" alt="Yii2.0表单--创建视图"></a>
+                            <p><a href="/article/16.html">Yii2.0表单--创建视图</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/6.html"><img src="/uploads/pictures/201709/20170913160023_16185.png" alt="PHP文件上传类"></a>
+                            <p><a href="/article/6.html">PHP文件上传类</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/17.html"><img src="/uploads/pictures/201709/20170913153145_69331.png" alt="ThinkPHP出现"No input file specified."错误的解决办法"></a>
+                            <p><a href="/article/17.html">ThinkPHP出现"No input file specified."错误的解决办法</a></p>
+                        </li>
+                                        </ul>
+                </div>                <!-- 大家都在看end -->
+                <!-- 置顶推荐start -->
+                                    <div class="recoment">
+                    <h4 class="content-right-title">置顶推荐</h4>
+                    <ul class="recoment-list clearfix">
+                                            <li>
+                            <a class="recoment-pic" href="/article/9.html"><img src="/uploads/pictures/201709/20170913153643_11197.png" alt="Yii2.0 Sessions 和 Cookies 的基本使用方法"></a>
+                            <a class="recoment-title" href="/article/9.html">Yii2.0 Sessions 和 Cookies 的基本使用方法</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/6.html"><img src="/uploads/pictures/201709/20170913160023_16185.png" alt="PHP文件上传类"></a>
+                            <a class="recoment-title" href="/article/6.html">PHP文件上传类</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/16.html"><img src="/uploads/pictures/201709/20170913153420_33963.png" alt="Yii2.0表单--创建视图"></a>
+                            <a class="recoment-title" href="/article/16.html">Yii2.0表单--创建视图</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/15.html"><img src="/uploads/pictures/201709/20170913153440_75700.png" alt="Yii2.0表单--创建操作"></a>
+                            <a class="recoment-title" href="/article/15.html">Yii2.0表单--创建操作</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/10.html"><img src="/uploads/pictures/201709/20170913153456_96912.png" alt="Yii2.0 控制器的一些注意事项"></a>
+                            <a class="recoment-title" href="/article/10.html">Yii2.0 控制器的一些注意事项</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/4.html"><img src="/uploads/pictures/201709/20170913160405_71685.png" alt="Yii2.0 URL美化"></a>
+                            <a class="recoment-title" href="/article/4.html">Yii2.0 URL美化</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/2.html"><img src="/uploads/pictures/201709/20170913160557_27737.png" alt="Yii2.0表单--表单验证"></a>
+                            <a class="recoment-title" href="/article/2.html">Yii2.0表单--表单验证</a>
+                        </li>
+                                            <li>
+                            <a class="recoment-pic" href="/article/17.html"><img src="/uploads/pictures/201709/20170913153145_69331.png" alt="ThinkPHP出现"No input file specified."错误的解决办法"></a>
+                            <a class="recoment-title" href="/article/17.html">ThinkPHP出现"No input file specified."错误的解决办法</a>
+                        </li>
+                        
+                    </ul>
+                </div>                <!-- 置顶推荐end -->
+                <!-- 热门话题start -->
+                            <div class="hot-topic">
+            <h4 class="content-right-title">热门话题</h4>   
+            <ul class="hot-topic-list">
+                                    <li><a href="/tag/index/3.html">yii</a></li>
+                                    <li><a href="/tag/index/1.html">sublime</a></li>
+                                    <li><a href="/tag/index/2.html">编辑器</a></li>
+                                    <li><a href="/tag/index/4.html">thinkphp</a></li>
+                                    <li><a href="/tag/index/5.html">vim</a></li>
+                                    <li><a href="/tag/index/6.html">mysql</a></li>
+                            </ul>
+        </div>                <!-- 热门话题end -->
+            </div>
+        </div>
+    </div>      
+
+    <!-- 返回顶部 start-->
+    <div class="scroll-main">
+        <div class="scroll-top"><a href="javascript:goTop();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <div class="scroll-left">
+            去顶部
+        </div>
+    </div>
+    <!-- 返回顶部 end-->
+    <script src="/home/lib/jquery/jquery-1.11.3.js"></script>
+    <script src="/home/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="/home/js/main.js"></script>
+    </body>
+</html>
+";s:19:"dynamicPlaceholders";N;s:6:"format";s:4:"html";s:7:"version";s:3:"1.1";s:10:"statusCode";i:200;s:10:"statusText";s:2:"OK";s:7:"headers";a:1:{s:12:"content-type";a:1:{i:0;s:24:"text/html; charset=UTF-8";}}}i:1;N;}

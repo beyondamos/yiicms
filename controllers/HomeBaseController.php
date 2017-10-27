@@ -103,7 +103,7 @@ class HomeBaseController extends Controller
 			$accesslog = new Accesslog();
 			$accesslog->ip = ip2long($ip);
 	        $accesslog->url = $request->url;
-	        $accesslog->referrer = $request->referrer;
+	        $accesslog->referrer = $request->referrer ? $request->referrer : '';
 	        $time = time();
 	        $accesslog->visittime = $time;
 	        $accesslog->year = date('Y', $time);

@@ -1,0 +1,219 @@
+a:2:{i:0;a:9:{s:12:"cacheVersion";i:1;s:9:"cacheData";N;s:7:"content";s:26689:"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,
+    minimum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DayDayLearn</title>
+    <link rel="stylesheet" href="/home/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/home/css/index.css">
+    <!--[if lt IE 9]>
+      <script src="/home/lib/html5shiv/html5shiv.min.js"></script>
+      <script src="/home/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/plugs/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+    <link rel="stylesheet" href="/plugs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</head>
+<body>
+    <!-- 导航头部start -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-main">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/home/images/logo.png" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="header-nav">
+                    <ul class="nav navbar-nav nav-main">
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com" >首页</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/1.html" >PHP</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/2.html" >Mysql</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/3.html" >Linux</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/4.html" >Html</a></li>
+                                            <!-- <li class="active"><a href="/">首页</a></li> -->
+                        <li><a href="http://yiicms.xiaoming.com/article/index/5.html" >网络工具</a></li>
+                        
+                    </ul>
+                    <form class="navbar-form navbar-right hidden-xs hidden-sm hidden-md" action="/search/index.html" method="post">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="keyword" placeholder="请输入关键词">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                  </form>
+                </div>
+            </nav>  
+        </div>
+    </header>
+    <!-- 导航头部end -->
+
+        
+    <!-- content部分start -->
+    <div class="content">
+        <div class="container">
+            <div class="content-left fl news-main">
+                <div class="location">
+                    您的位置: <a href="/">首页</a> » <a href="/article/index/3.html">Linux</a> » <span> Vim常用命令的使用方法</span>
+                </div>
+                <div class="content-left-bottom">
+                <h1 class="content-left-title"><?php?></h1>
+                    <div class="article-meta">
+                        <span>2017-10-26</span>
+                        <span>作者: <i>小名叫小明</i></span>
+                        <span>点击率：<em>13</em></span>
+                        <span>分类: <a href="/article/index/3.html">Linux</a></span>
+                    </div>
+                    <div class="article-main">
+                     <h1 style="text-align:center;">&nbsp; &nbsp;
+	Vim常用命令的使用方法</h1><p>&nbsp; &nbsp; Vim是一个类似于Vi的著名的功能强大、高度可定制的文本编辑器，在Vi的基础上改进和增加了很多特性。<br/>
+ &nbsp;&nbsp; &nbsp; Vim普遍被推崇为类Vi编辑器中最好的一个，事实上真正的劲敌来自Emacs的不同变体。1999 年Emacs被选为Linuxworld文本编辑分类的优胜者，Vim屈居第二。但在2000年2月Vim赢得了Slashdot Beanie的最佳开放源代码文本编辑器大奖，又将Emacs推至二线，总的来看，Vim和Emacs在文本编辑方面都是非常优秀的。</p><p>&nbsp; &nbsp;
+	一、打开文件</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim &nbsp;filename &nbsp; &nbsp;//打开或新建文件，并将光标置于第一行首<br/>
+ &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim &nbsp;+n &nbsp;filename &nbsp; &nbsp;//打开文件，并将光标置于第n行首<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim &nbsp;+ &nbsp;filename &nbsp; &nbsp;//打开文件，并将光标置于最后一行首<br/>
+ &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim &nbsp;+/pattern &nbsp;filename &nbsp; &nbsp; //打开文件，并将光标置于第一个与 pattern 匹配处<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim &nbsp;-r &nbsp;filename &nbsp; &nbsp;//在上次使用 vi 编辑时发生系统崩溃，恢复 filename</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 0, 0);">默认处于编辑模式。</span><br/></p><p>&nbsp; &nbsp;
+	二、关闭文件</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (一)、尾行模式下关闭文件：</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1、:q&nbsp; &nbsp; 退出</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2、:wq&nbsp; &nbsp; 保存并退出 相当于 :x</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 3、:q!&nbsp; &nbsp; 不保存并退出</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 4、:w&nbsp; &nbsp; 保存</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 5、:w!&nbsp; &nbsp; 强行保存</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (二)、编辑模式下退出：</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; ZZ&nbsp; &nbsp; 保存并退出</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp;&nbsp;</p><p>&nbsp; &nbsp;
+	三、Vim的三种模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;Vim 编辑器一共有3种模式：命命模式（默认），尾行模式，编辑模式（输入模式）。3种模式彼此需要切换。</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (一)、命令模式=》编辑模式：</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp; 1、 a&nbsp; &nbsp; 在光标后进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2、 i&nbsp; &nbsp; 在光标前进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 3、 A&nbsp; &nbsp; 在当前行尾进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 4、 I&nbsp; &nbsp; 在当前行首进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 5、 o&nbsp; &nbsp; 在当前行之下新开一行进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 6、 O&nbsp; &nbsp; 在当前行之上新开一行进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 7、 s&nbsp; &nbsp; 删除光标所对应的字符进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 8、 ns&nbsp; &nbsp; 删除n个字符后进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 9、 S&nbsp; &nbsp; 删除光标所在行进入编辑模式</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 10、 nS&nbsp; &nbsp; 删除n行后进入编辑模式&nbsp; &nbsp;&nbsp;&nbsp;</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (二)、编辑模式=》命令模式：</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Esc</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (三)、命令模式=》尾行模式：</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; :</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; (四)、尾行模式=》命令模式：</p><p>&nbsp; &nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Esc</p><p>&nbsp; &nbsp;
+	&nbsp; &nbsp; <span style="color:#E53333;">编辑模式和尾行模式之间不能直接切换。</span></p><p><span style="color:#E53333;"><br/></span></p><p><span style="color:#000000;"> 四、命令模式下的操作</span></p><p><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;（一）、移动光标<br/></span></p><p><span style="color:#000000;"></span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、j　　光标向下移动一行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、k　　光标向上移动一行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、h　　光标向左移动一个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、l　　光标向右移动一个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、ctrl + b　　//光标向上移动一屏，向后翻页</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、ctrl + f　　//光标向下移动一屏，向前翻页</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、ctrl + d&nbsp;&nbsp;&nbsp;&nbsp;//光标向下移动半屏<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8、ctrl + u&nbsp;&nbsp;&nbsp;&nbsp;//光标向上移动半屏<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、$　　//光标移动至行尾</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8、^&nbsp;&nbsp;&nbsp;&nbsp;//光标移动到行首的第一个非空白字符<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8、0（数字）　　//光标移动至行首</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9、gg　　//光标移动至文档开始处</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10、G　　//光标移动至文档尾部</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11、nG　　//光标移动到第 n 行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12、w　　//移动到下个单词的首字母</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13、b　　//移动到本单词或者上个单词的首字母</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14、e　　//移动到本单词或者下个单词的尾字母</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15、{　　//光标移动到段落首部</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16、}　　//光标移动到段落尾部</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17、L　　//光标移动到当前屏幕尾部（不会走到下一屏）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18、H　　//光标移动到当前屏幕首部</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19、M　　//光标移动至当前屏幕中间行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20、space　　//光标向前移动一个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21、Backspace　　//光标向后移动一个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22、n+　　//光标下移 n 行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23、n-　　//光标上移 n 行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24、n$　　//光标移动至第 n 行尾</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25、nw&nbsp;&nbsp;&nbsp;&nbsp;//光标移动 n 个单词<br/></p><p><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;（二）、文本内容的删除<br/></span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、x　　//删除光标所在位置的一个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、nx　　//删除光标所在位置起 n个字符</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、dx　　//从当前字符删除到下个单词前，包括空格</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、ndx　　//从当前字符（单词）起，删除n个单词，包括最后一个空格后面的空格</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、dd　　//删除当前行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、ndd　　//删除当前行起向下 n 行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、J　　//删除光标所在行与下一行之间的空格，把光标行和下一行接在一起</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通用删除：d+光标移动距离</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8、d$　　//删除光标到行尾的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9、d0　　//删除光标到行首的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10、d}　　//删除从光标到段落尾部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11、d{　　//删除从光标到段落首部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12、dL　　//删除当前行至屏幕尾部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13、dH　　//删除当前行至屏幕首部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14、dG　　//删除当前行至文档尾部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15、d1G　　//删除当前行至文档首部的内容</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16、dnG　　//删除当前行至文档的第 n 行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（三）、文本内容的复制与粘贴<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、yy　　复制当前行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、nyy　　复制从当前行开始向下的n行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、y+光标移动的距离，可以进行灵活复制 （可以参考删除命令）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、p　　在光标之后粘贴（如果复制内容为整行内容，则在光标所在行的下一行进行粘贴，如果为非整行内容，则在光标所在字符后进行粘贴）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、P(大写)　　在光标之前粘贴（如果复制内容为整行内容，则在光标所在行的上一行进行粘贴，如果为非整行内容，则在光标所在字符前进行粘贴）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（四）、其他命令模式下的操作<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、 u　　//撤销编辑操作</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 nu&nbsp;&nbsp;&nbsp;&nbsp;//撤销最近n次编辑操作<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 ctrl + r&nbsp;&nbsp;&nbsp;&nbsp;//撤销最近一次撤销操作<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 r+字符　　//对光标当前单个字符进行替换</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 R　　//替换当前字符及其后的字符，直至按 ESC 键</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、 .　　//重复执行上个命令</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、c &nbsp;&nbsp;&nbsp;&nbsp;//用法同d命令，先删除内容，再转换为编辑模式</p><p>五、尾行模式下的操作</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（一）、文件的保存与退出<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、：w　　//保存</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、：w &nbsp;filename　　//另存为到 filename 文件</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、：wq　　//保存退出</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、：q　　//退出</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、：wq!　　//强制保存退出</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、：q!　　//不保存强制退出</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、：x　　//保存并退出 ，应该和 wq! 功能一样</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（二）、查找与替换<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、 &nbsp;/search　　正向查找字符串 search，按 n 键查找下一个，按 N 键查找上一个</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 &nbsp;?search　　反向查找字符串 search</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 &nbsp;s /search/replace　　替换当前行首次出现的 search</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、 &nbsp;s /search/replace/g　　把当前光标所在行中的 search 替换成 replace，并把文档中其余的 search 高亮显示</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、 &nbsp;%s /search/replace　　把文档中所有的 search 替换成 replace</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、 &nbsp;m,n s /search/replace/g　　把文档中从第m行到第n行中的 search 替换成 replace ，将把文档中其余的 search 高亮显示</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（三）、尾行模式下的文本编辑（复制、删除）<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、 n1,n2 co n3　　//将 n1 行到 n2 行的内容复制到 n3 行下</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 n1,n2 m n3　　//将 n1 行到 n2 行的内容移动至 n3 行下</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 n1,n2 d　　//将 n1 行到 n2 行之间的内容删除</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（四）、移动光标</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、 . &nbsp; 表示当前行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 $ &nbsp; 最后一行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 n &nbsp; 第#行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、 +n &nbsp;向下的#行</p><p>&nbsp;&nbsp;&nbsp;&nbsp;（五）、其他尾行模式下的操作<br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、 &nbsp;：set nu/number　　//给文件每行内容设置编号</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、 &nbsp;：set &nbsp;nonu/nonumber　　//取消设置编号</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、 &nbsp;：n　　光标跳转到第 n 行位置</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、&nbsp; &nbsp; :set ic &nbsp;显示区分字符大小写</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、&nbsp; &nbsp; :set noic 忽略字符大小写</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、&nbsp; &nbsp; :set ai &nbsp;//自动缩进</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、 &nbsp; :set noai &nbsp;//取消自动缩进</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 8、&nbsp; &nbsp; :set hlsearch &nbsp;//查找到的文本高亮显示</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9、&nbsp; &nbsp; :set nohlsearch &nbsp;//取消查找到的文本高亮显示</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10、&nbsp; &nbsp; :syntax on &nbsp;//语法高亮</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11、 &nbsp; :syntax off &nbsp;//取消语法高亮</p><p>六、编辑模式下的操作</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、ctrl+u　　//删除编辑模式下输入的文本内容</p>                    </div>
+                    <div class="mark-1">
+                        <span class="glyphicon glyphicon-tags"></span>标签:
+                                                <a href="/tag/index/5.html">vim</a>
+                                            </div>
+                </div>
+                <div class="interest">
+                    <div class="interest-title">您可能感兴趣的:</div>
+                    <ul class="interest-list clearfix">
+                                            </ul>
+                </div>
+                <div class="interest">
+                    <div class="interest-title">认真评论的人年薪百万……</div>
+                    <div class="comment-main">
+                        
+                        <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="18" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cythKvhHP'; 
+var conf = 'prod_6253583ff72170e40bfc58b0122d26f6'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right fr hidden-xs hidden-sm">
+                <div class="content-right-pic">
+                    <a href="#"><img src="/home/images/pig_1.png" alt=""></a>
+                </div>
+
+                <!-- 热门文章排行start -->
+                            <div class="hot-article-rank">
+            <h4 class="content-right-title">热门文章排行</h4>
+            <ol class="article-list">
+                                    <li><a href="/article/9.html">Yii2.0 Sessions 和 Cookies 的基本使用方法</a></li>
+                                    <li><a href="/article/18.html">Vim常用命令的使用方法</a></li>
+                                    <li><a href="/article/2.html">Yii2.0表单--表单验证</a></li>
+                                    <li><a href="/article/8.html">Sublime Text 3 安装插件</a></li>
+                                    <li><a href="/article/10.html">Yii2.0 控制器的一些注意事项</a></li>
+                                    <li><a href="/article/1.html">Sublime Text 3 快捷键总结</a></li>
+                                    <li><a href="/article/6.html">PHP文件上传类</a></li>
+                                    <li><a href="/article/16.html">Yii2.0表单--创建视图</a></li>
+                                    <li><a href="/article/17.html">ThinkPHP出现"No input file specified."错误的解决办法</a></li>
+                                    <li><a href="/article/4.html">Yii2.0 URL美化</a></li>
+                            </ol>
+        </div>                <!-- 热门文章排行end -->
+                <!-- 大家都在看start -->
+                                    <div class="everyone-look">
+                    <h4 class="content-right-title">大家都在看</h4>  
+                    <ul class="look-list">
+                                            <li>
+                            <a href="/article/18.html"><img src="/uploads/pictures/201710/59f0567f455fb.jpg" alt="Vim常用命令的使用方法"></a>
+                            <p><a href="/article/18.html">Vim常用命令的使用方法</a></p>
+                        </li>
+                                            <li>
+                            <a href="/article/11.html"><img src="/uploads/pictures/201710/59f056ccbfeeb.png" alt="Centos 压缩、解压和打包命令"></a>
+                            <p><a href="/article/11.html">Centos 压缩、解压和打包命令</a></p>
+                        </li>
+                                        </ul>
+                </div>                <!-- 大家都在看end -->
+                <!-- 置顶推荐start -->
+                                    <div class="recoment">
+                    <h4 class="content-right-title">置顶推荐</h4>
+                    <ul class="recoment-list clearfix">
+                                            <li>
+                            <a class="recoment-pic" href="/article/18.html"><img src="/uploads/pictures/201710/59f0567f455fb.jpg" alt="Vim常用命令的使用方法"></a>
+                            <a class="recoment-title" href="/article/18.html">Vim常用命令的使用方法</a>
+                        </li>
+                        
+                    </ul>
+                </div>                <!-- 置顶推荐end -->
+                <!-- 热门话题start -->
+                            <div class="hot-topic">
+            <h4 class="content-right-title">热门话题</h4>   
+            <ul class="hot-topic-list">
+                                    <li><a href="/tag/index/3.html">yii</a></li>
+                                    <li><a href="/tag/index/1.html">sublime</a></li>
+                                    <li><a href="/tag/index/2.html">编辑器</a></li>
+                                    <li><a href="/tag/index/4.html">thinkphp</a></li>
+                                    <li><a href="/tag/index/5.html">vim</a></li>
+                                    <li><a href="/tag/index/6.html">mysql</a></li>
+                            </ul>
+        </div>                <!-- 热门话题end -->
+            </div>
+        </div>
+    </div>      
+
+    <!-- 返回顶部 start-->
+    <div class="scroll-main">
+        <div class="scroll-top"><a href="javascript:goTop();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <div class="scroll-left">
+            去顶部
+        </div>
+    </div>
+    <!-- 返回顶部 end-->
+    <script src="/home/lib/jquery/jquery-1.11.3.js"></script>
+    <script src="/home/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="/home/js/main.js"></script>
+    </body>
+</html>
+";s:19:"dynamicPlaceholders";N;s:6:"format";s:4:"html";s:7:"version";s:3:"1.1";s:10:"statusCode";i:200;s:10:"statusText";s:2:"OK";s:7:"headers";a:1:{s:12:"content-type";a:1:{i:0;s:24:"text/html; charset=UTF-8";}}}i:1;N;}
