@@ -11,7 +11,7 @@ use yii\helpers\Url;
                     您的位置: <a href="/">首页</a> » <a href="<?=Url::to(['article/index', 'id' => $article->catename->id]);?>"><?=$article->catename->name;?></a> » <span> <?=$article->title;?></span>
                 </div>
                 <div class="content-left-bottom">
-                <h1 class="content-left-title"><?php?></h1>
+                <h1 class="content-left-title"><?=$article->title;?></h1>
                     <div class="article-meta">
                         <span><?=date('Y-m-d', $article->updatetime);?></span>
                         <span>作者: <i><?=$article->author;?></i></span>

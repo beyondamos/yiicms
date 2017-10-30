@@ -16,19 +16,7 @@ use app\models\Category;
 class ArticleController extends HomeBaseController
 {
 
-    public function behaviors()
-    {
-        return [
-            'pageCache' => [
-                'class' => 'yii\filters\PageCache',
-                'only' => ['detail'],
-                'duration' => 3600,
-                'variations' => [
-                    Yii::$app->request->get('id')
-                ]
-            ],
-        ];
-    }
+
 
 
 

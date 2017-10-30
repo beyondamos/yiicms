@@ -251,7 +251,7 @@ class Article extends AdminBase
             }
         }
 
-        return $this->find()->where(['id' => $article_ids])->orderBy('hits desc')->limit(10)->all();
+        return $this->find()->where(['id' => $article_ids, 'status' => 1])->orderBy('hits desc')->limit(10)->all();
     }
 
 

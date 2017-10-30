@@ -66,12 +66,12 @@ use yii\widgets\LinkPager;
                             <div class="col-sm-8 col-md-8 col-xs-8 latest-information-r">
                                 <h3><a href="<?=Url::to(['article/detail', 'id' => $article->id]);?>"><?=$article->title;?></a></h3>
                                 <p><?=$article->abstract;?></p>
-                                <div>
+                                <div class="hidden-xs">
                                     <span class="news-category"><a href="<?=Url::to(['article/index', 'id' => $article->catename->id]);?>"><?=$article->catename->name;?></a></span>
                                     <span class="date"><?=date('Y-m-d', $article->updatetime);?></span>
                                     <i>访问量: <span class="badge"><?=$article->hits;?></span></i>
                                 </div>
-                                <div class="mark-1">
+                                <div class="mark-1 hidden-xs">
                                     <span class="glyphicon glyphicon-tags"></span>标签:
                                     <?php foreach ($article->tagLists as $tag):?>
                                         <a href="<?=Url::to(['tag/index', 'id' => $tag['id']]);?>"><?=$tag['tag_name'];?></a>

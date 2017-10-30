@@ -134,7 +134,7 @@ ul.banner-r li h3 a {
 	color: #333;
 	font-family: "microsoft yahei";
 	text-decoration: none;
-	font-weight: 700;
+	/*font-weight: 700;*/
 }
 ul.banner-r li h3 a:hover {
 	color: #D9534F;
@@ -200,9 +200,9 @@ ul.banner-r li p {
 }
 .latest-information-r h3 a {
 	font-family: "microsoft yahei";
-	font-size: 20px;
+	font-size: 18px;	
 	color: #333;
-	font-weight: 700;
+	font-weight: 600;
 	transition: all ease 0.5s;
 }
 .latest-information-r h3 a:hover {
@@ -213,11 +213,10 @@ ul.banner-r li p {
 	text-indent: 2em;
 	line-height: 25px;
 	padding: 8px 0 5px 0;
-}
-.latest-information-r p a {
 	color: #999;
 	font-family: "microsoft yahei";
 }
+
 .latest-information-r .news-category {
 	padding: 3px 12px;
 	background-color: #5BC0DE;
@@ -557,7 +556,8 @@ h4.content-right-title {
 
 /*认真评论的人年薪百万……*/
 .comment-main {
-	height: 220px;
+	/*height: 220px;*/
+	padding: 10px 20px;
 }
 /*返回顶部 start*/
 .scroll-main {
