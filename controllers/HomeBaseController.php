@@ -30,8 +30,6 @@ class HomeBaseController extends Controller
 
 		//热门话题
 		$this->showHotTags();
-
-		$this->countVisit();
 	}
 
 
@@ -88,31 +86,6 @@ class HomeBaseController extends Controller
 		$view->params['recommendArticles'] = $articles;
 	}
 
-
-	/**
-	 * 统计访问
-	 * @return [type] [description]
-	 */
-	public function countVisit()
-	{
-		$request = Yii::$app->request;
-		$ip = $request->userip;
-		$shield_ips = array('127.0.0.1');
-		// $shield_ips = array();
-		if ( !in_array($ip, $shield_ips) ) {
-			$accesslog = new Accesslog();
-			$accesslog->ip = ip2long($ip);
-	        $accesslog->url = $request->url;
-	        $accesslog->referrer = $request->referrer ? $request->referrer : '';
-	        $time = time();
-	        $accesslog->visittime = $time;
-	        $accesslog->year = date('Y', $time);
-	        $accesslog->month = date('m', $time);
-	        $accesslog->day = date('d', $time);
-	        $accesslog->save();
-		} 
-
-	}
 
 
 }
