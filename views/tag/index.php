@@ -62,35 +62,15 @@ use yii\widgets\LinkPager;
                     <?php echo $this->render('/public/hotArticles');?>
                 <!-- 热门文章排行end -->
                 <!-- 大家都在看start -->
-                <div class="everyone-look">
+<!--                 <div class="everyone-look">
                     <h4 class="content-right-title">大家都在看</h4>  
                     <ul class="look-list">
                         <li>
                             <a href="#"><img src="/home/images/look_1.jpg" alt=""></a>
                             <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
                         </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_2.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_3.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_4.jpg" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_5.png" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/home/images/look_6.png" alt=""></a>
-                            <p><a href="#">医生、翻译、间谍将首先失业，中产阶层正在被掏空，99%的人面怎样实现“智能转型”？</a></p>
-                        </li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- 大家都在看end -->
                 <!-- 置顶推荐start -->
                 <?php echo $this->render('/public/recommendArticles');?>
