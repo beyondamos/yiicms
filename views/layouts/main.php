@@ -22,6 +22,15 @@ use yii\bootstrap\ActiveForm;
     <script type="text/javascript">
         SyntaxHighlighter.all();
     </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?6663ebf0553f5d151c4aa6abd0d8b4e9";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <?php $this->beginBody() ?>
