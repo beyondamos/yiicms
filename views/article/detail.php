@@ -1,7 +1,6 @@
 <?php
 use yii\helpers\Url;
-// Html::jsFile('@web/plugs/ueditor/third-party/SyntaxHighlighter/shCore.js');
-// Html::cssFile('@web/plugs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css');
+$this->params['title'] = $article->title;
 ?>    
     <!-- content部分start -->
     <div class="content">

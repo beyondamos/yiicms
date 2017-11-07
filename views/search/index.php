@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+$this->params['title'] = '搜索结果';
 ?>
     <!-- content部分start -->
     <div class="content">

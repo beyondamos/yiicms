@@ -85,6 +85,7 @@ class ArticleController extends AdminBaseController
      */
     public function actionEdit()
     {
+
         $id = Yii::$app->request->get('id');
         $model = Article::find()->where('id = :id', [':id' => $id])->one();
         $oldImage = $model->thumbnail;  //文章原来的旧图  用来和新图做比较，判断是否上传了新图片
@@ -97,11 +98,11 @@ class ArticleController extends AdminBaseController
                 if ($oldImage != $newImage) {
                     $model->deleteImage($oldImage);
                 }
-                return $this->redirect(['article/index']);
+                return $this->goBack();
             }
             Yii::$app->session->setFlash('fail', '编辑文章失败');
         }
-
+        Yii::$app->user->setReturnUrl(Yii::$app->request->referrer);
         $model->tags = implode(',', $model->getTags()); //展示文章的标签列表
         $category = new Category();
         $categories = $category->getSelectCategory();

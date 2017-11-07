@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+$this->params['title'] = $tag->tag_name;
 ?>
     <!-- content部分start -->
     <div class="content">

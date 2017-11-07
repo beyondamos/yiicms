@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
     minimum-scale=1.0">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DayDayLearn</title>
+    <title><?=$this->params['title'];?></title>
     <link rel="stylesheet" href="/home/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/home/css/index.css">
     <!--[if lt IE 9]>
