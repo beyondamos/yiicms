@@ -50,11 +50,15 @@ class ArticleController extends HomeBaseController
     public function actionDetail()
     {
         $id = Yii::$app->request->get('id');
+        $article = Article::find()->where(['id' => $id])->one();
+        if (!$article) {
+            return $this->goHome();
+        }
+
         //增加点击率
         $this->addHits($id);
 
-        $article = Article::find()->where(['id' => $id])->one();
-
+    
         //大家都在看(栏目热门文章)
         $this->showCategoryHotArticles($article->catid);
         //置顶推荐
