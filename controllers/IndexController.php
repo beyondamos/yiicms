@@ -12,9 +12,9 @@ class IndexController extends HomeBaseController
     public function actionIndex()
     {   
         //轮播图信息
-        $carousels = Article::find()->select(['id','title','thumbnail'])->where(['status' => 1, 'carousel' => 1])->limit(3)->orderBy('createtime desc')->asArray()->all();
+        $carousels = Article::find()->select(['id','title','thumbnail'])->where(['status' => 1, 'carousel' => 1])->limit(3)->orderBy('updatetime desc')->asArray()->all();
         //头条信息
-        $tops = Article::find()->select(['id','title', 'abstract'])->where(['status' => 1, 'top' => 1])->limit(3)->orderBy('createtime desc')->asArray()->all();
+        $tops = Article::find()->select(['id','title', 'abstract'])->where(['status' => 1, 'top' => 1])->limit(3)->orderBy('updatetime desc')->asArray()->all();
 
 
         //最新资讯
@@ -22,7 +22,7 @@ class IndexController extends HomeBaseController
         $count = $query->count();
         $pagination = new Pagination(['pageSize' => 10, 'totalCount' => $count]);
         $articles = $query->limit($pagination->limit)->offset($pagination->offset)
-                        ->with('catename')->orderBy('id desc')->all();
+                        ->with('catename')->orderBy('updatetime desc')->all();
         foreach ($articles as $article) {
             $article->tagLists = $article->getTagsArray();
         }
