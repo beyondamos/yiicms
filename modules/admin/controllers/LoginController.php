@@ -76,6 +76,11 @@ class LoginController extends Controller
     public function login($model)
     {
         $user = User::findone(['username' => $model->username]);
+        $request = Yii::$app->request;
+        $user->lastlogintime = time();
+        $user->lastloginip = ip2long( $request->getUserIP() );
+        $user->logintimes = $user->logintimes + 1;
+        $user->save(false);
         $session = Yii::$app->session;
         $session->set('user_id', $user->id);
         return $this->redirect(['index/index']);
