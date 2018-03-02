@@ -26,7 +26,9 @@ class AccesslogController extends AdminBaseController
                 ->asArray()->all();
         $accesslog = new Accesslog;
         $lineInfo = $accesslog->getLineInfo();
-        return $this->render('index', ['logs' => $logs, 'lineInfo' => $lineInfo, 'pagination' => $pagination]);
+        return $this->render('index', ['logs' => $logs, 
+                                    'lineInfo' => $lineInfo, 
+                                    'pagination' => $pagination]);
     }
 
 

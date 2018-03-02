@@ -79,30 +79,6 @@ use yii\bootstrap\ActiveForm;
     <script src="/home/lib/jquery/jquery-1.11.3.js"></script>
     <script src="/home/lib/bootstrap/js/bootstrap.js"></script>
     <script src="/home/js/main.js"></script>
-    <script type="text/javascript">
-        $().ready(function(){
-            <?php
-                $userip = \Yii::$app->request->userip;
-                $url = \Yii::$app->request->url;
-                $referrer = \Yii::$app->request->referrer ? \Yii::$app->request->referrer : '';
-                $time = time();
-                $visittime = $time;
-                $year = date('Y', $time);
-                $month = date('m', $time);
-                $day = date('d', $time);
-            ?>
-
-            $.get('<?=Url::to(['flow/count'])?>', {
-                'userip': '<?=$userip?>', 
-                'url': '<?=$url?>',
-                'visittime': '<?=$visittime?>',
-                'year': '<?=$year?>',
-                'month': '<?=$month?>',
-                'day': '<?=$day?>',
-                'referrer': '<?=$referrer?>',
-            });
-        });
-    </script>
     <?php $this->endBody() ?>
 </body>
 </html>

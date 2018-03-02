@@ -23,7 +23,7 @@ class ArticleController extends AdminBaseController
     {
         $query = Article::find()->where(['status' => 1]);
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 25]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 20]);
         $articles = $query->offset($pagination->offset)->limit($pagination->limit)
                             ->with('catename')->orderBy('id desc')->all();
         $Articles = [];

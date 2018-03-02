@@ -22,17 +22,29 @@ class Accesslog extends AdminBase
     public function getLineInfo()
     {
         $time = time();
-        $begin_year = date('Y', $time);
-        $begin_month = date('m', $time);
-        $data = $this->find()->select(['id','day','count(id) as count' ])->where('year = :year and month= :month', [':year' => $begin_year, ':month' => $begin_month])->groupBy('day')->orderBy('day asc')->asArray()->all();
-        $lineinfo = [];
-        foreach ($data as $value) {
-            $lineinfo[$value['day']] = $value['count'];
+        $todaytime = strtotime(date('Y-m-d', $time));  //今日凌晨的时间
+        $start_time = $todaytime-3600*24*20;
+        $start_year = date('Y', $start_time);
+        $start_month = date('m', $start_time);
+        $start_day = date('d', $start_time);
+
+
+        $data = $this->find()
+                ->select(['month', 'day' ,'count(*) as count'])
+                ->where(['>=', 'visittime', $start_time])
+                ->orderBy('year asc, month asc, day asc')
+                ->groupBy('day')
+                ->asArray()
+                ->all();
+
+        foreach ($data as $key => $val) {
+            $xAxis_data[] = $val['month'].'.'.$val['day'];
+            $series_data[] = $val['count'];
         }
-        $xAxis_data = implode(',', array_keys($lineinfo));
-        $series_data = implode(',', $lineinfo);
+
+        $xAxis_data = implode(',', $xAxis_data);
+        $series_data = implode(',', $series_data);
         return [
-            'month' => $begin_month,
             'xAxis_data' => $xAxis_data,
             'series_data' => $series_data,
         ];

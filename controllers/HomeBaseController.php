@@ -22,6 +22,9 @@ class HomeBaseController extends Controller
 	 */
 	public function init() 
 	{
+		//统计流量
+		$this->flow();
+
 		//导航
 		$this->showNavs();
 
@@ -86,6 +89,27 @@ class HomeBaseController extends Controller
 		$view->params['recommendArticles'] = $articles;
 	}
 
+
+	/**
+	 * 统计流量
+	 * @return [type] [description]
+	 */
+	private function flow() {
+		$request = Yii::$app->request;
+		$time = time();
+        $ip = $request->getUserIp();
+        $accesslog = new Accesslog();
+        $accesslog->ip = ip2long($ip);
+        $accesslog->url = $request->getUrl();
+        $accesslog->visittime = $time;
+        $accesslog->referrer = $request->getReferrer();
+        $accesslog->useragent = $request->getUserAgent();
+        $accesslog->year = date('Y', $time);
+        $accesslog->month = date('m', $time);
+        $accesslog->day = date('d', $time);
+        $accesslog->save(false);
+        
+	}
 
 
 }

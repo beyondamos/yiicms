@@ -65,7 +65,7 @@ use yii\widgets\LinkPager;
         // 指定图表的配置项和数据
         var option = {
             title: {
-                text: '访问流量统计(<?php echo $lineInfo['month']?>月)'
+                text: '访问流量统计(最近20天)'
             },
             tooltip: {},
             legend: {
