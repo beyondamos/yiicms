@@ -28,6 +28,7 @@ class Article extends AdminBase
             ['text', 'required', 'message' => '正文不能为空'],
             ['author', 'required', 'message' => '作者不能为空'],
             ['thumbnail', 'safe'],
+            ['keywords', 'safe'],
             [['tags', 'status', 'abstract', 'recommend', 'top', 'carousel'], 'safe']
         ];
     }
