@@ -12,9 +12,9 @@ class IndexController extends HomeBaseController
     public function actionIndex()
     {   
         //轮播图信息
-        $carousels = Article::find()->select(['id','title','thumbnail'])->where(['status' => 1, 'carousel' => 1])->limit(3)->orderBy('updatetime desc')->asArray()->all();
+        $carousels = Article::find()->select(['id','title','thumbnail'])->where(['status' => 1, 'carousel' => 1])->limit(3)->orderBy('createtime desc')->asArray()->all();
         //头条信息
-        $tops = Article::find()->select(['id','title', 'abstract'])->where(['status' => 1, 'top' => 1])->limit(3)->orderBy('updatetime desc')->asArray()->all();
+        $tops = Article::find()->select(['id','title', 'abstract'])->where(['status' => 1, 'top' => 1])->limit(3)->orderBy('createtime desc')->asArray()->all();
 
 
         //最新资讯
