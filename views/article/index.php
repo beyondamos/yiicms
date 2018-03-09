@@ -1,7 +1,9 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
-$this->params['title'] = $category->name;
+$this->params['title'] = $category->webTitle;
+$this->params['keywords'] = $category->keywords;
+$this->params['description'] = $category->introduction;
 ?>
     <!-- content部分start -->
     <div class="content">

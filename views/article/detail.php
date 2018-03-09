@@ -1,6 +1,8 @@
 <?php
 use yii\helpers\Url;
-$this->params['title'] = $article->title;
+$this->params['title'] = $article->webTitle;
+$this->params['keywords'] = $article->keywords;
+$this->params['description'] = $article->abstract;
 ?>    
 <!-- content部分start -->
 <div class="content">

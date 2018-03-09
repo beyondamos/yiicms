@@ -12,6 +12,7 @@ class Category extends \app\models\AdminBase
 {
 
     public $failInfo = '';
+    public $webTitle = '';
 
     public static function tableName(){
         return 'category';

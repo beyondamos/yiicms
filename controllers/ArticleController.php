@@ -30,6 +30,11 @@ class ArticleController extends HomeBaseController
         $this->showRecommendArticles($id);
 
         $category = Category::find()->where(['id' => $id])->one();
+        //处理分类信息，标题、关键字、描述
+        $category->webTitle = $category->name.'——PHP个人技术博客Daydaylearn';
+        $category->keywords = $category->keywords . '——PHP个人技术博客Daydaylearn';
+        $category->introduction = $category->introduction;
+
         $query = Article::find()->where(['status' => 1, 'catid' => $id]);
         $count = $query->count();
         $pagination = new Pagination(['pageSize' => 10, 'totalCount' => $count]);
@@ -52,6 +57,11 @@ class ArticleController extends HomeBaseController
             return $this->goHome();
         }
 
+        //处理文章信息
+        $article->webTitle = $article->title.'——PHP个人技术博客Daydaylearn';
+        $article->keywords = $article->keywords.',PHP技术博客';
+ 
+        $article->abstract = !empty($article->abstract) ? $article->abstract : generateDescription($article->text);
         //增加点击率
         $this->addHits($id);
     

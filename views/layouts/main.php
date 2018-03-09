@@ -11,6 +11,8 @@ use yii\bootstrap\ActiveForm;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?=$this->params['title'];?></title>
+    <meta name="keywords" content="<?=$this->params['keywords'];?>" />
+    <meta name="description" content="<?=$this->params['description'];?>" />
     <link rel="stylesheet" href="/home/lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/home/css/index.css">
     <!--[if lt IE 9]>

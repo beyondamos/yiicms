@@ -1,7 +1,9 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
-$this->params['title'] = 'DayDayLearn';
+$this->params['title'] = 'Daydaylearn——专注于分享PHP，MySQL，HTML及相关技术的个人博客';
+$this->params['keywords'] = '个人PHP博客,PHP编程,Yii2框架,MySQL技术,前端Html,Laravel框架,Linux服务器';
+$this->params['description'] = '小名叫小明的个人PHP博客，分享在工作学习过程中遇到的一些技术问题，包括Yii2框架、Laravel框架、ThinkPHP框架、MySQL技术、Linux服务器，Html前端等等的一些相关知识，和读者一起努力，共同进步。';
 ?>    
 <!-- content部分start -->
 <div class="content">

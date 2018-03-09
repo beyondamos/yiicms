@@ -13,6 +13,7 @@ class Article extends AdminBase
     public $tags;
     public $file_upload;
     public $tagLists; //该篇文章的标签的数组
+    public $webTitle; //文章内容页的网页title
 
     public static function tableName()
     {
