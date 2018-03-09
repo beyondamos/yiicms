@@ -85,6 +85,7 @@ class Category extends \app\models\AdminBase
      */
     private function judgeParentId()
     {
+
         //判断是否选择自身
         if ($this->id == $this->parent_id) {
             $this->addError('parent_id', '上级分类不能选择自身');
@@ -93,8 +94,10 @@ class Category extends \app\models\AdminBase
 
         $categories = $this->_infiniteClass(self::find()->asArray()->all(), $this->id);
         if (!$categories) return true;
+
+
         foreach ($categories as $val) {
-            if ($val['parent_id'] == $this->id) {
+            if ($val['id'] == $this->parent_id) {
                 $this->addError('parent_id', '上级分类不能选择自身的子级');
                 return false;
             }
