@@ -26,6 +26,7 @@ class Category extends \app\models\AdminBase
             ['parent_id', 'required', 'message' => '上级分类必须选择'],
             ['parent_id', 'integer', 'message' => '非法的上级分类'],
             ['introduction', 'safe'],
+            ['keywords', 'safe']
         ];
     }
 
@@ -35,6 +36,7 @@ class Category extends \app\models\AdminBase
             'name' => '分类名称',
             'parent_id' => '上级分类',
             'introduction' => '分类简介',
+            'keywords' => '关键字',
         ];
     }
     

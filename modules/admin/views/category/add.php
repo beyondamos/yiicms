@@ -46,6 +46,12 @@ $labels = $model->attributeLabels();
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="category-keywords" class="col-md-1 control-label"><?php echo $labels['keywords'];?></label>
+				<div class="col-md-3">
+				<?php echo $form->field($model, 'keywords')->textInput(['class' => 'form-control', 'placeholder'=> '请输入分类关键字，用半角逗号隔开'])->label(false);?>
+				</div>
+			</div>
+			<div class="form-group">
 				<label for="category-introduction" class="col-md-1 control-label"><?php echo $labels['introduction'];?></label>
 				<div class="col-md-4">
 				<?php echo $form->field($model, 'introduction')->textarea(['class' => 'form-control', 'rows' => 4])->label(false);?>

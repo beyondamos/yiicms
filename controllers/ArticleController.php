@@ -32,7 +32,7 @@ class ArticleController extends HomeBaseController
         $category = Category::find()->where(['id' => $id])->one();
         //处理分类信息，标题、关键字、描述
         $category->webTitle = $category->name.'——PHP个人技术博客Daydaylearn';
-        $category->keywords = $category->keywords . '——PHP个人技术博客Daydaylearn';
+        $category->keywords = $category->keywords . ',PHP技术博客';
         $category->introduction = $category->introduction;
 
         $query = Article::find()->where(['status' => 1, 'catid' => $id]);
