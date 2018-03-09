@@ -35,7 +35,7 @@ class ArticleController extends HomeBaseController
         $category->keywords = $category->keywords . ',PHP技术博客';
         $category->introduction = $category->introduction;
 
-        $query = Article::find()->where(['status' => 1, 'catid' => $id]);
+        $query = Article::find()->where(['status' => 1, 'catid' => $id])->orderBy('createtime desc');
         $count = $query->count();
         $pagination = new Pagination(['pageSize' => 10, 'totalCount' => $count]);
         $articles = $query->offset($pagination->offset)->limit($pagination->limit)->all();

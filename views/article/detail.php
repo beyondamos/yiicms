@@ -14,6 +14,7 @@ $this->params['description'] = $article->abstract;
             <div class="content-left-bottom">
                 <h1 class="content-left-title"><?=$article->title;?></h1>
                 <div class="article-meta">
+                    <span>发表于：<?=date('Y-m-d', $article->createtime);?></span>
                     <span>更新于：<?=date('Y-m-d', $article->updatetime);?></span>
                     <span>作者: <i><?=$article->author;?></i></span>
                     <span>点击率：<em><?=$article->hits;?></em></span>
