@@ -1,5 +1,6 @@
 body {
 	background: #F1F1F1;
+	font-family: "microsoft yahei";
 }
 * {
 	padding: 0px;
@@ -37,8 +38,8 @@ header {
 	border: none;	
 	background: none;
 	margin-bottom: 0px;
-	min-height: 65px;
-	line-height: 65px;
+	min-height: 67px;
+	/*line-height: 67px;*/
 }
 .navbar-main .nav-main {
 	margin-top: 10px;
@@ -76,7 +77,7 @@ header {
 	height: 100%;
 }
 .navbar-form {
-	margin-top: 0px;
+	margin-top: 16px;
 	margin-bottom: 0px;
 }
 /*content部分start*/
@@ -192,11 +193,12 @@ ul.banner-r li p {
 	transition: all 1s ease;
 }
 .latest-information-r {
-
+	
 }
 .latest-information-r h3 {
 	margin: 0px;
 	padding: 10px 0;
+	width: 100%;
 }
 .latest-information-r h3 a {
 	font-family: "microsoft yahei";
@@ -465,7 +467,7 @@ h4.content-right-title {
 .article-meta {
 	color: #999;
 	font-size: 14px;
-	margin: 25px 25px;
+	margin: 15px 15px;
 	font-family: "microsoft yahei";
 }
 .article-meta span {
@@ -487,16 +489,15 @@ h4.content-right-title {
 	color: #2a2a2a;
 	font-size: 16px;
 	/*text-indent: 2em;*/
-	padding: 25px;
+	padding: 0px 25px 25px 25px;
 	word-break: break-all;
     word-wrap: break-word;
-    line-height: 30px;
+    line-height: 22px;
     font-family: "microsoft yahei";
 }
 .article-main p {
-	margin-bottom: 20px;
-	margin-top: 20px;
-	
+	margin-bottom: 15px;
+	margin-top: 15px;	
 }
 .article-main img {
 	display: block;
@@ -555,10 +556,150 @@ h4.content-right-title {
 }
 
 /*认真评论的人年薪百万……*/
+/*统计评论条数代码start*/
 .comment-main {
-	/*height: 220px;*/
-	padding: 10px 20px;
+	padding: 20px 20px 25px 20px;
+	overflow: hidden;
 }
+.comment-main-reply {
+	border: 1px solid #DDDDDD;
+	background: #F5F5F5;
+	overflow: hidden;
+	width: 100%;
+}
+.comment-main-reply-title {
+	color: #333;
+	background:#F5F5F5;
+	height: 52px;
+	line-height: 52px;
+	padding-left: 14px;
+	font-family: "microsoft yahei";
+}
+.comment-main-reply-title span {
+	padding: 0px 5px;
+}
+.comment-main-reply ul {
+	background: #fff;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+.comment-main-reply li {
+	position: relative;
+	padding-top: 10px;
+	overflow: hidden;
+	border-top: 1px solid #DDDDDD;
+	font-family: "microsoft yahei";
+	padding-bottom: 10px;
+}
+.comment-main-reply li a.member-pic {
+	position: absolute;	
+	top: 10px;
+	left: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.comment-main-reply li a.member-pic img {
+	display: block;
+	width: 100%;
+}
+.comment-main-reply li .comment-main-reply-member {
+	padding-left: 75px;
+	padding-right: 10px;
+}
+li .comment-main-reply-member .member-information {
+	font-size: 12px;
+	font-family: "microsoft yahei";
+	position: relative;
+}
+.comment-main-reply-member .member-information p {
+	position: absolute;
+	top: 0px;
+	right: 0;
+}
+.comment-main-reply-member .member-information a {
+	color: #956695;	
+}
+li .comment-main-reply-member .member-information span {
+	color: #c0c0c0;
+	margin-right: 5px;
+}
+li .comment-main-reply-member .member-information i {
+	color: #666666;
+}
+.member-information p span {
+	cursor: pointer;
+}
+.member-information p span.good {
+	padding-left: 15px;
+	position: relative;
+}
+/*.member-information p span.good img {
+	margin-right: 0px;
+	/*cursor: pointer;*/
+	/*vertical-align: middle;*/
+/*}*/
+.member-information p span.good i {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	width: 11px;
+	height: 11px;
+	background: url("../images/good.gif");
+}
+.member-information p span.good em {
+	font-style: normal;
+	color: #666;
+}
+.member-information p span.reply {
+	color: #337AB7;
+	padding-left: 15px;
+	position: relative;
+}
+.member-information p span.reply i {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	width: 13px;
+	height: 11px;
+	background: url("../images/arrow.gif");
+}
+li .comment-main-reply-member .member-detail {
+	padding-top: 15px;
+	font-size: 14px;
+	line-height: 25px;
+}
+/*添加回复 (需要登录)代码start*/
+.add-reply {
+	padding: 20px 20px 25px 20px;
+	overflow: hidden;
+}
+.add-reply .add-reply-title {
+	background: #F5F5F5;
+	height: 50px;
+	line-height:50px;
+	color: #333333;
+	padding-left: 15px;
+	font-family: "microsoft yahei";
+	border: 1px solid #DDDDDD;
+}
+.add-reply .add-reply-title span {
+	color: #8A6D3B;
+	font-size: 12px;
+}
+.add-reply .add-reply-title-con {
+	background: #fff;
+	border: 1px solid #DDDDDD;
+	border-top: 0px none;
+	padding: 20px 0px;
+	padding-left: 35px;
+	font-family: "microsoft yahei";
+	width: 100%;
+}
+.add-reply .add-reply-title-con p {
+	line-height: 42px;
+} 
 /*返回顶部 start*/
 .scroll-main {
 	position: fixed;
@@ -619,10 +760,330 @@ h4.content-right-title {
 	top: 6px;
 	color: #747474;
 }
+/*底部代码start*/
+footer {
+	background:  #fff;
+	overflow: hidden;
+	width: 100%;
+	padding: 15px 0px;
+	border-top: 1px solid #ddd;
+}
+.footer-left {
+ 	width: 70%;
+ 	padding: 30px 0;
+}
+.footer-left ul {
+
+}
+.footer-left li {
+	padding: 0px 10px;
+	border-right: 2px solid #DAD7D2;
+	float: left;
+}
+.footer-left li:last-child {
+	border-right: 0px none;
+}
+.footer-left li a {
+	font-family: "microsoft yahei";
+	font-size: 14px;
+	color: #594431;
+}
+.footer-left p {
+	font-size: 14px;
+	margin-top: 15px;
+	padding-left: 10px;
+	font-family: "microsoft yahei";
+}
+.footer-left p span {
+	padding-right: 5px;
+}
+.footer-right {
+	width: 30%;
+	padding: 8px 0;
+}
+.footer-right li {
+	float: left;
+}
+.footer-right li.pic {
+	width: 90px;
+	height: 90px;	
+	line-height: 90px;
+	margin-right: 20px;
+}
+.footer-right li img {
+	width: 100%;
+	display: block;
+}
+.footer-right li.suggestion {
+	padding: 15px 0px 15px 20px;
+	border-left: 1px solid #DFDBD8;
+	font-family: "microsoft yahei";
+	font-size: 14px;
+}
+/*会员注册页面代码开始===============================*/
+.register  {
+	margin-bottom: 50px;	
+}
+.register-container {
+	background: #fff;
+	padding-bottom: 40px;
+}
+.register-title {
+	color: #333333;
+	padding: 20px 0px 15px;
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 24px;
+	font-family: "microsoft yahei";
+	margin-bottom: 25px;
+}
+.register-left {
+	width: 40%;
+	padding-left: 30px;
+	min-width: 300px;
+	float: left;
+}
+.register-left input {
+	font-family: "microsoft yahei";
+}
+.register-left .verificationCode input {
+	width: 60%;
+	display: inline-block;
+	margin-right: 5px;
+}
+.register-left .verificationCode img {
+	width: ;
+	height: 34px;
+	border-radius: 3px;
+}
+.register-right {
+	overflow: hidden;
+	float: right;
+	width: 45%;
+	padding-top: 30px;
+}
+.register-right .register-right-pic li {
+	float: left;
+	margin-right: 20px;
+}
+.register-right .register-right-pic li a {
+	display: block;
+	height: 28px;
+	width: 28px;
+	background: url("../images/register01.gif") center center no-repeat;
+}
+.register-right .register-right-pic li a:hover {
+	background-image: url("../images/register1.gif");
+}
+.register-right .register-right-pic li:nth-child(2) a{
+	background-image: url("../images/register02.gif");
+}
+.register-right .register-right-pic li:nth-child(3) a{
+	background-image: url("../images/register03.gif");
+}
+.register-right .register-right-pic li:nth-child(2) a:hover {
+	background-image: url("../images/register2.gif");
+}
+.register-right .register-right-pic li:nth-child(3) a:hover {
+	background-image: url("../images/register3.gif");
+}
+.register-right .register-right-login {
+	font-family: "microsoft yahei";
+	padding: 10px 0;
+}
+.register-right .register-right-login a {
+	color: #337AB7;
+}
+.register-right .register-right-content {
+
+}
+.register-right .register-right-content h2 {
+	font-family: "microsoft yahei";
+	font-size: 24px;
+	margin-top: 10px;
+}
+.register-right .register-right-content p {
+	padding-left: 15px;
+	font-family: "microsoft yahei";
+}
+/*会员登录页面代码开始========================*/
+.login {
+
+}
+.login .checkbox  label {
+	color: #000;	
+	font-family: "microsoft yahei";
+	font-weight: 600;
+}
+.login .login-help {
+	font-family: "microsoft yahei";
+	padding-bottom: 15px;
+	padding-top: 10px;
+	color: #aaa;
+}
+.login .login-help a {
+	color: #337AB7;
+}
+/*Daydaylearn重置密码页面start====================================*/
+.resetpwd {
+
+}
+.resetpwd .register-right {
+	padding-top: 10px;
+}
+/*Daydaylearn会员信息页面代码start========================== */
+.controller {
+	position: relative;
+	/*min-width: 640px;*/
+}
+.controller-left {
+	width: 272px;
+	overflow: hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #fff url("../images/user-bg.jpg") no-repeat center top;
+	background-size: 100% 120px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	padding-top: 180px;
+	-moz-box-shadow: 1px 1px 5px #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.controller-left .controller-left-pic {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	top: 60px;
+}
+.controller-left .controller-left-pic img {
+	width: 100%;
+	display: block;
+}
+.controller-left .controller-left-title {
+	font-size: 28px;
+	font-family: "microsoft yahei";
+	text-align: center;
+	padding: 10px 0px 15px;
+}
+.controller-left .controller-left-line {
+	height: 0px;
+	border-bottom: 1px solid #ccc;
+	width: 85%;
+	margin: 0px auto;
+}
+.controller-left .controller-left-con {
+	padding: 20px;
+}
+.controller-left .controller-left-con a {
+	color: #0068B7;	
+}
+.controller-right {
+	margin-left: 280px;
+	overflow: hidden;
+	min-height: 410px;
+	margin-bottom: 30px;
+}
+.controller-right ul.controller-right-title {
+	height: 54px;
+	background: #fff;	
+	border-radius: 3px;
+	-moz-box-shadow: 1px 1px 5px #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.controller-right ul.controller-right-title li {
+	float: left;
+	line-height: 51px;	
+	color: #000;
+	padding: 0px 15px;
+}
+.controller-right ul.controller-right-title li.active {
+	border-bottom: 3px solid #3FCE3F;
+	color: #5CB85C;
+}
+.controller-right ul.controller-right-content {
+	/*overflow: hidden;*/
+	-moz-box-shadow: 1px 1px 5px #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.controller-right ul.controller-right-content li {
+	border-radius: 3px;
+	background: #fff;
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+	/*float: left;*/
+	/*width: 100%;*/
+}
+.controller-right ul.controller-right-content a {
+	color: #333;
+	font-family: "microsoft yahei";
+	color: #0068B7;
+}
+.controller-right ul.controller-right-content a:hover {
+	text-decoration: underline;
+}
+.controller-right ul.controller-right-content span {
+	color: #ccc;
+}
+.controller-right ul.controller-right-content p {
+	padding: 10px 0px 0px;
+	margin-bottom: 5px;
+	color: #333;
+	line-height: 22px;
+}
+.controller-right .controller-right-page {
+	text-align: center;
+}
+/*Daydaylearn会员信息密码修改页面start========================== */
+.edit-password {
+	background: #fff;
+	overflow: hidden;
+	margin-bottom: 50px;
+	min-height: 410px;
+	-moz-box-shadow: 1px 1px 5px #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.edit-password .edit-password-title {
+	color: #333;
+	font-size: 22px;
+	padding: 16px 0px;
+	border-bottom: 1px solid #DDDDDD;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+.edit-password .edit-password-title a {
+	float: right;
+	font-size: 16px;
+	color: #337AB7;
+	padding-right: 20px;
+}
+.edit-password .edit-password-title a:hover {
+	text-decoration: underline;
+}
+.edit-password form {
+	padding-left: 60px;
+	padding-top: 20px;
+}
+.edit-password .form-group {
+	margin-bottom: 20px;
+}
+.edit-password input {
+	width: 60%;
+}
+
+
+
+
+
 
 /* bootstrap基本样式修改 */
 
 @media (max-width: 650px) {
+
 	.navbar-header button.navbar-toggle {
 		margin-top: 20px;
 		margin-right: 0px;
@@ -642,19 +1103,38 @@ h4.content-right-title {
 		overflow: hidden;
 		width: 90%;
 	}
-	.latest-information-list .latest-information-r {
-		width: 95%;
-		padding: 20px;
-		margin: 0px auto;
-		float: none;
-		display: block;
+	.article-main {
+		font-size: 12px;
+		padding: 0px 15px 15px 15px;
+		line-height: 22px;
+	}
+	.news-main h1 {
+		font-size: 18px;
+	}
+	.article-main p {
+		margin-bottom: 5px;
+		margin-top: 5px;	
+	}
+	.article-meta {
+		font-size: 12px;
+		margin: 15px;
+	}
+	.latest-information-r {
+	    width: 95%;
+	    padding: 0px;
+	    margin: 0px auto;
+	    float: none;
+	    display: block;
 	}
 	.latest-information-r h3 {
 		text-align: center;
 	}
+	.latest-information-r h3 a {
+		font-size: 14px;
+	}
 	.latest-information-r p {
 		text-align: center;
-		/*height: 65px;*/
+		font-size: 12px;
 		
 	}
 	.latest-information-r p a {
@@ -675,6 +1155,62 @@ h4.content-right-title {
 	}
 	.interest-list li {
 		width: 45%;
+	}
+	.footer-right,
+	.footer-left {
+		width: 100%;
+	}
+	.register-left {
+		width: 100%;
+	}
+	.register-right {
+		width: 100%;
+		padding-left: 50px;
+	}
+	.controller-left {
+		width: 100%;
+		position: relative;
+		
+	}
+	.controller-right {
+		width: 100%;
+		margin-left: 0px;
+	}
+	.controller-left .controller-left-con {
+		padding: 20px 0px 20px 40px;
+	}
+	.edit-password input {
+		width: 80%;
+	}
+	.edit-password form {
+		padding-left: 40px;
+		padding-top: 0px;
+	}
+	.latest-information-r p {
+		text-indent: 2em;
+		line-height: 25px;
+		padding: 8px 0 0px 0;
+		color: #999;
+		font-family: "microsoft yahei";
+	}
+	/*评论*/
+	.comment-main-reply li a.member-pic {
+		position: absolute;	
+		top: 5px;
+		left: 5px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.comment-main-reply li .comment-main-reply-member {
+		padding-left: 40px;
+		padding-right: 5px;
+	}
+	.latest-information-list li {
+		padding-bottom: 20px;
+		padding-top: 30px;
+		border-bottom: 1px solid #EEEEEE;
 	}
 }
 @media (min-width: 650px) and  (max-width: 768px){
@@ -702,6 +1238,37 @@ h4.content-right-title {
 		width: 30%;
 		margin-right: 3%;
 	}
+	.footer-left {
+		width: 60%;
+	}
+	.footer-right {
+		width: 40%;
+	}
+	.footer-right li.pic {
+		width: 80px;
+		height: 80px;	
+		line-height: 80px;
+		margin-right: 10px;
+	}
+	.footer-right li.suggestion {
+		padding: 0px;
+		border-left: 0px none;
+		font-family: "microsoft yahei";
+		font-size: 12px;
+		float: none;
+	}
+	.latest-information-r p {
+		text-align: center;
+		font-size: 12px;
+	}
+	.latest-information-r h3 a {
+		font-size: 14px;
+	}
+	.latest-information-r p {
+		text-align: center;
+		font-size: 12px;
+		
+	}
 }
 
 @media (min-width: 768px) {
@@ -724,6 +1291,25 @@ h4.content-right-title {
 		/*height: 65px;*/
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	.footer-left {
+		width: 60%;
+	}
+	.footer-right {
+		width: 40%;
+	}
+	.footer-right li.pic {
+		width: 80px;
+		height: 80px;	
+		line-height: 80px;
+		margin-right: 10px;
+	}
+	.footer-right li.suggestion {
+		padding: 0px;
+		border-left: 0px none;
+		font-family: "microsoft yahei";
+		font-size: 12px;
+		float: none;
 	}
 }
 @media (min-width: 991px)  and (max-width: 1200px) {

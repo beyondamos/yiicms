@@ -14,7 +14,8 @@ use app\models\admin\Accesslog;
 class HomeBaseController extends Controller
 {
 	public $catid = 0;
-
+	public $islogin = 0;
+	public $member_id = null;
 
 	/**
 	 * 初始化
@@ -33,6 +34,11 @@ class HomeBaseController extends Controller
 
 		//热门话题
 		$this->showHotTags();
+
+		//判断是否登录
+		$this->isLogin();
+
+
 	}
 
 
@@ -102,7 +108,7 @@ class HomeBaseController extends Controller
         $accesslog->ip = ip2long($ip);
         $accesslog->url = $request->getUrl();
         $accesslog->visittime = $time;
-        $accesslog->referrer = $request->getReferrer();
+        $accesslog->referrer = !empty($request->getReferrer()) ? $request->getReferrer() : 'Browser Input';
         $accesslog->useragent = $request->getUserAgent();
         $accesslog->year = date('Y', $time);
         $accesslog->month = date('m', $time);
@@ -110,6 +116,23 @@ class HomeBaseController extends Controller
         $accesslog->save(false);
         
 	}
+
+
+	/**
+	 * 判断是否登录
+	 * @return boolean [description]
+	 */
+	public function isLogin() {
+		$session = Yii::$app->session;
+		if ( $memberinfo = $session->get('memberinfo')) {
+			$this->islogin = 1;
+			$this->member_id = $memberinfo['memberid'];
+		} else {
+			$this->islogin = 0;
+		}
+		Yii::$app->view->params['islogin'] = $this->islogin;
+	}
+
 
 
 }

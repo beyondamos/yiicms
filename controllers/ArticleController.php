@@ -6,6 +6,7 @@ use Yii;
 use app\models\Article;
 use yii\data\Pagination;
 use app\models\Category;
+use app\models\Comment;
 
 /**
  * Class ArticleController
@@ -15,10 +16,6 @@ use app\models\Category;
 
 class ArticleController extends HomeBaseController
 {
-
-
-
-
 
     /**
      * 文章栏目列表页
@@ -57,7 +54,6 @@ class ArticleController extends HomeBaseController
 
         //增加点击率
         $this->addHits($id);
-
     
         //大家都在看(栏目热门文章)
         $this->showCategoryHotArticles($article->catid);
@@ -69,7 +65,13 @@ class ArticleController extends HomeBaseController
     
         $article->tagLists = $article->getTagsArray();
 
-        return $this->render('detail', ['article' => $article, 'interestedArticles' => $interestedArticles]);
+        //获取评论信息
+        $commentData = Comment::find()->where(['article_id' => $id, 'status' => 1])->with('member')->orderBy('floor asc')->asArray()->all();
+        
+        return $this->render('detail', ['article' => $article, 
+                                        'interestedArticles' => $interestedArticles,
+                                        'commentData' => $commentData
+                            ]);
     }
 
 

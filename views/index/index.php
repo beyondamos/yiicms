@@ -69,7 +69,7 @@ $this->params['title'] = 'DayDayLearn';
                                 <p><?=$article->abstract;?></p>
                                 <div class="hidden-xs">
                                     <span class="news-category"><a href="<?=Url::to(['article/index', 'id' => $article->catename->id]);?>"><?=$article->catename->name;?></a></span>
-                                    <span class="date"><?=date('Y-m-d', $article->updatetime);?></span>
+                                    <span class="date"><?=date('Y-m-d', $article->createtime);?></span>
                                     <i>访问量: <span class="badge"><?=$article->hits;?></span></i>
                                 </div>
                                 <div class="mark-1 hidden-xs">

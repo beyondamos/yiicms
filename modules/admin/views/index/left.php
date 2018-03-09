@@ -29,8 +29,12 @@ use yii\helpers\Url;
 				</ul>
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> 会员管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="member_list.html" target="main-frame">会员列表</a></li>
-					<li><a href="member_group.html" target="main-frame">会员组管理</a></li>
+					<li><a href="<?php echo Url::to(['member/index']);?>" target="main-frame">会员列表</a></li>
+					<!-- <li><a href="member_group.html" target="main-frame">会员组管理</a></li> -->
+				</ul>
+				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-comment"></span> 评论管理&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="<?=Url::to(['comment/index']);?>" target="main-frame">评论列表</a></li>
 				</ul>
 				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal"></span> 系统统计&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
 				<ul class="nav nav-pills nav-stacked">

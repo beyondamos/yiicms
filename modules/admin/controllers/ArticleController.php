@@ -21,7 +21,20 @@ class ArticleController extends AdminBaseController
      */
     public function actionIndex()
     {
+        $searchInfo = Yii::$app->request->get();
         $query = Article::find()->where(['status' => 1]);
+
+        if (isset($searchInfo['cateId'])) {
+            $cateId = $searchInfo['cateId'];
+            if ($cateId > 0) {
+                $query->andWhere(['catid' => $cateId]);
+            }
+        }
+        if (isset($searchInfo['title'])) {
+            $searchTitle = $searchInfo['title'];
+            $query->andWhere(['like', 'title', $searchTitle]);
+        }
+
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 20]);
         $articles = $query->offset($pagination->offset)->limit($pagination->limit)
@@ -32,7 +45,15 @@ class ArticleController extends AdminBaseController
             $Articles[] = $article;
         }                    
 
-        return $this->render('index', ['articles' => $Articles, 'pagination' => $pagination]);
+        $category = new Category();
+        $categories = $category->getSelectCategory();
+        
+        return $this->render('index', ['articles' => $Articles, 
+                                    'pagination' => $pagination,
+                                    'categories' => $categories,
+                                    'searchTitle' => isset($searchTitle) ? $searchTitle : '',
+                                    'cateId' => isset($cateId) ? $cateId : '0'
+                                    ]);
     }
 
     /**
