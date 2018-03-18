@@ -2,6 +2,8 @@
 use yii\helpers\Url;
 
 $this->params['title'] = 'Daydaylearn会员注册';
+$this->params['keywords'] = '会员注册';
+$this->params['description'] = 'Daydaylearn会员注册';
 ?>
 <div class="register">
 

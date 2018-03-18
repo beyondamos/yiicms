@@ -1,6 +1,8 @@
 <?php
 use yii\helpers\Url;
-	$this->params['title'] = 'Daydaylearn会员登录';
+$this->params['title'] = 'Daydaylearn会员登录';
+$this->params['keywords'] = '会员登录';
+$this->params['description'] = 'Daydaylearn会员登录';
 ?>
 <div class="register login">
 
